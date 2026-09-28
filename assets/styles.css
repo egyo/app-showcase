@@ -119,7 +119,7 @@ img { max-width: 100%; display: block; }
 .latency-pair figure { min-width: 0; margin: 0; }
 .latency-image { display: block; position: relative; height: 220px; overflow: hidden; border-radius: 12px; background: #111426; }
 .latency-lock img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
-.latency-island img { position: absolute; top: 0; left: 50%; width: 165%; max-width: none; height: auto; transform: translateX(-50%); }
+.latency-island img { width: 100%; height: auto; }
 .latency-pair figcaption { padding: 8px 2px 0; color: var(--muted); font-size: .79rem; }
 .gesture-steps { display: grid; gap: 16px; margin: 22px 0; }
 .gesture-step { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); align-items: center; gap: 16px; min-width: 0; margin: 0; padding: 17px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
