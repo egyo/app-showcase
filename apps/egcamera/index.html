@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="egcamera は、LUT の色を撮影前に確認できる iPhone 向け写真カメラです。機能、使い方、開発状況を紹介します。">
+  <title>egcamera | egyo apps</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egcamera</nav>
+    <div class="app-hero">
+      <div><p class="eyebrow">iOS / Camera</p><h1 class="page-title">egcamera</h1><p class="lead">撮る前に色を選ぶ。仕上がりを楽しみながら、編集できる元画像も残す写真専用の iPhone カメラです。</p><div class="hero-meta"><span class="chip">iPhone</span><span class="chip">写真・LUT</span><span class="status">開発中・非公開</span></div></div>
+      <div class="hero-art camera"><img class="app-icon" src="../../assets/egcamera-icon.png" alt="egcamera のアプリアイコン" width="220" height="220"></div>
+    </div>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about"><h2>どんなアプリ？</h2><p>egcamera は、写真に色味を付ける LUT を選び、その効果をプレビューしながら撮影するアプリです。LUT を使うと、色を付けた HEIF と、LUT を付けていない Apple ProRAW DNG を別々に写真ライブラリへ保存します。LUT を使わない場合は DNG のみを保存します。</p><p>好みの仕上がりをその場で得ながら、後で編集するための元画像も残すことを目指しています。動画撮影には対応していません。</p></section>
+        <section id="features"><h2>主な機能</h2><ul><li>3D <code>.cube</code> 形式の LUT をファイルから読み込み、撮影前のプレビューと完成 HEIF に適用。</li><li>35 / 48 / 120 mm 相当の画角を撮影画面で切り替え。ほかの画角は設定画面から選択。</li><li>露出補正、フラッシュ、タイマー、タップによるピントと露出の調整、水平器などを試作中。</li><li>対応機種では側面のカメラコントロールから起動・撮影。</li></ul></section>
+        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラと写真への追加を許可します。</li><li>色味を変えたい場合は設定から <code>.cube</code> ファイルを読み込み、使う LUT を選びます。LUT の入力プロファイルも確認してください。</li><li>撮影画面で構図と画角を決め、必要に応じて露出などを調整してシャッターを押します。</li><li>撮影後、写真ライブラリで保存された画像を確認します。画面の写真ボタンからはシステムの写真ピッカーを開けます。</li></ol></section>
+        <section id="status"><h2>開発状況と対応範囲</h2><div class="callout"><p><strong>現在は開発中の試作版で、一般公開・配布はしていません。</strong> 現行の試作版は iOS 26 以降の iPhone 16 Pro / 16 Pro Max を対象にしています。今後の機種や機能の対応は検証後に決めます。</p></div><p>基本撮影、LUT の読み込み、DNG の保存などは実機で確認しています。一方、フレーム外表示やナイトモードは未実装です。ロック画面からの撮影や各条件での保存結果など、確認を続けている機能もあります。</p><p class="small-note">掲載内容は 2026年9月時点の試作版に基づきます。画面写真は準備でき次第追加します。</p></section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>
