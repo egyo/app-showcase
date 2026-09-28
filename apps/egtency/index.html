@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egtency は、通信の応答時間をアプリと Live Activity に表示する iPhone 向け試作アプリです。機能、使い方、制約を紹介します。">
+  <meta name="description" content="アンテナが立っているのにネットに繋がらないとき、通信の応答を見えるように。egtency は計測先への応答時間を Live Activity で色分けする iPhone 向け試作アプリです。">
   <title>egtency | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -18,13 +18,13 @@
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egtency</nav>
     <div class="app-hero tency-feature">
-      <div><p class="eyebrow">iOS / Network</p><h1 class="page-title">egtency</h1><p class="lead">通信の応答時間を見えるように。移動中や画面を閉じている間の通信の変化を調べるための iPhone アプリです。</p><div class="hero-meta"><span class="chip">iPhone</span><span class="chip">通信計測</span><span class="status">開発中・非公開</span></div></div>
+      <div><p class="eyebrow">iOS / Network</p><h1 class="page-title">egtency</h1><p class="lead">アンテナが立っているのに繋がらない。そんなとき、通信の応答を見えるようにする iPhone アプリです。</p><div class="hero-meta"><span class="chip">iPhone</span><span class="chip">通信計測</span><span class="status">開発中・非公開</span></div></div>
       <figure class="hero-art tency-showcase"><img src="../../assets/egtency-showcase.png" alt="egtency の計測画面、ロック画面の Live Activity、Dynamic Island を組み合わせた紹介画像" width="1536" height="1024"><figcaption>提供スクリーンショットをもとに構成した紹介画像</figcaption></figure>
     </div>
     <div class="page-layout">
       <article class="article">
-        <section id="about"><h2>どんなアプリ？</h2><p>egtency は、指定した宛先へ定期的に信号を送り、返事が届くまでの時間をミリ秒で表示します。新幹線などで移動するとき、回線の応答がどう変わるか、ほかのアプリを使っている間も計測が続くかを確かめるために作っています。</p><p>アプリ画面に加え、対応する iPhone ではロック画面の Live Activity や Dynamic Island に計測値を表示します。</p></section>
-        <section id="features"><h2>主な機能</h2><ul><li><code>1.1.1.1</code> または <code>8.8.8.8</code> を選んで通信の応答時間を計測。</li><li>応答時間を色分けして表示。応答がない場合や表示が更新されていない場合も区別。</li><li>計測ログを CSV として共有し、後から通信の変化を確認。</li><li>開始から5時間で自動停止。iOS による中断時には、可能な場合に通知で案内。</li></ul></section>
+        <section id="about"><h2>どんなアプリ？</h2><p>スマホのアンテナはバリバリ立っているのにネットに繋がらなくてイライラした経験はありませんか？このアプリでは現在の通信状態を分かりやすく色分けして可視化します。</p><p>egtency は、選んだ宛先へ定期的に ICMP Echo を送り、応答時間をミリ秒（ms）で表示する試作アプリです。ロック画面の Live Activity と、対応機種の Dynamic Island では値を緑・黄・赤に色分けし、応答がない状態も区別します。新幹線などで移動中の変化を確認できます。</p><p class="small-note">表示するのは選んだ宛先までの応答です。アンテナの本数や通信速度、インターネット全体の接続可否を判定するものではありません。</p></section>
+        <section id="features"><h2>主な機能</h2><ul><li><code>1.1.1.1</code> または <code>8.8.8.8</code> を選んで応答時間を計測。</li><li>Live Activity の値を緑・黄・赤に色分け。応答なしや更新停止も区別。</li><li>計測ログを CSV として共有し、後から通信の変化を確認。</li><li>開始から5時間で自動停止。iOS による中断時には、可能な場合に通知で案内。</li></ul></section>
         <section id="howto"><h2>基本的な使い方</h2><ol><li>計測先を <code>1.1.1.1</code> または <code>8.8.8.8</code> から選びます。</li><li>「開始」を押すと計測が始まります。必要に応じて Live Activity と通知を許可します。</li><li>アプリ画面、ロック画面、対応機種の Dynamic Island で応答時間を確認します。</li><li>終えるときは「停止」を押します。記録を残す場合は「計測ログを共有」から CSV を保存します。</li></ol></section>
         <section id="screenshots"><h2>画面で見る</h2><p>実機のスクリーンショットです。画像を選ぶと大きく表示できます。</p><div class="screenshot-grid">
           <figure><a href="../../assets/egtency-before.PNG" target="_blank" rel="noopener noreferrer"><img src="../../assets/egtency-before.PNG" alt="計測前の画面。1.1.1.1 が選ばれ、開始ボタンが押せる状態" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>① 宛先を選んで「開始」</figcaption></figure>
@@ -36,7 +36,7 @@
             <figure class="gesture-step"><div class="gesture-copy"><span class="gesture-number">01</span><h3>ホーム画面：上にスワイプ</h3><p>画面上部にバックグラウンドタスクの大きな表示が出たら、表示を上にスワイプします。Dynamic Island に収納されます。</p></div><a href="../../assets/egtency-gesture-up.png" target="_blank" rel="noopener noreferrer" aria-label="ホーム画面で上にスワイプする図を大きく表示"><img src="../../assets/egtency-gesture-up.png" alt="拡大した Dynamic Island のバックグラウンドタスク表示を、指で上にスワイプする方向を示した図" width="1552" height="1013" loading="lazy" decoding="async"></a></figure>
             <figure class="gesture-step"><div class="gesture-copy"><span class="gesture-number">02</span><h3>Dynamic Island：左にスワイプ</h3><p>Dynamic Island の右側に残るバックグラウンドタスクのアイコンも、左にスワイプすると表示を閉じられます。</p></div><a href="../../assets/egtency-gesture-island-left.png" target="_blank" rel="noopener noreferrer" aria-label="Dynamic Island の右側を左にスワイプする図を大きく表示"><img src="../../assets/egtency-gesture-island-left.png" alt="Dynamic Island の右側にある egtency のバックグラウンドタスクアイコンを、左にスワイプする方向を示した図" width="1552" height="1013" loading="lazy" decoding="async"></a></figure>
             <figure class="gesture-step"><div class="gesture-copy"><span class="gesture-number">03</span><h3>ロック画面：左にスワイプして消去</h3><p>ロック画面の灰色のバックグラウンドタスク表示を左にスワイプすると「消去」が現れます。「消去」を選ぶと表示を閉じられます。</p></div><a href="../../assets/egtency-gesture-lock-left.png" target="_blank" rel="noopener noreferrer" aria-label="ロック画面の通知を左にスワイプする図を大きく表示"><img src="../../assets/egtency-gesture-lock-left.png" alt="ロック画面の灰色のバックグラウンドタスク表示を左にスワイプすると、消去ボタンが現れることを示した図。下の緑色の Live Activity は別の表示" width="1552" height="1013" loading="lazy" decoding="async"></a></figure>
-          </div><div class="callout"><p><strong>これらの表示を閉じても、計測タスクの動作には影響しません。</strong> ロック画面の緑色の表示は別の Live Activity です。</p></div>
+          </div><div class="callout"><p><strong>実機試験では、iOS の計測タスク表示を閉じても計測は続きました。</strong> ロック画面の緑色の表示は別の Live Activity です。iOS の動作は端末や状況によって変わる可能性があります。</p></div>
         </section>
         <section id="status"><h2>開発状況と注意点</h2><div class="callout"><p><strong>現在は開発中の実証アプリで、一般公開・配布はしていません。</strong> iOS 26 以降の iPhone を対象に開発し、iPhone 16 Pro で実機確認しています。</p></div><p>画面を閉じてから5時間の計測と自動終了に成功した例がありますが、別の試験では iOS が途中で計測を終了しました。常に計測を続けられる保証はありません。値が止まった場合は、アプリを開いて「開始」を押してください。</p><p>計測中は少量の通信と電池を使用します。モバイル回線ではデータ容量と電池残量にご注意ください。</p><p class="small-note">掲載内容と画面は 2026年9月時点の試作版に基づきます。</p></section>
       </article>
