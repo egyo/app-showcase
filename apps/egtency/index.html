@@ -31,6 +31,22 @@
           <figure><a href="../../assets/egtency-active.PNG" target="_blank" rel="noopener noreferrer"><img src="../../assets/egtency-active.PNG" alt="計測中の画面。応答時間と計測先が表示され、停止とログ共有を選べる状態" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>② 応答時間を確認。ログの共有も可能</figcaption></figure>
           <figure><a href="../../assets/egtency-lock-screen.PNG" target="_blank" rel="noopener noreferrer"><img src="../../assets/egtency-lock-screen.PNG" alt="ロック画面。下部の緑色の Live Activity に egtency の応答時間が表示されている" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>③ ロック画面の Live Activity</figcaption></figure>
         </div><p class="small-note">ロック画面の緑色の表示が egtency の Live Activity です。その上の灰色の表示は iOS の計測タスク表示です。</p></section>
+        <section id="latency-colors"><h2>応答時間による色の変化</h2><p>ロック画面では Live Activity の背景と文字が変わります。Dynamic Island に収納すると、黒い背景の上で数値の文字色が変わります。以下は iPhone 16 Pro で撮影した表示例です。</p><p class="small-note">同じ色の2枚は別々の時点で撮影しており、左右の値は同時刻の測定結果ではありません。画像を選ぶと元のスクリーンショットを表示できます。</p>
+          <div class="latency-examples">
+            <div class="latency-example latency-green"><div class="latency-example-heading"><h3>緑 <small>0〜100 ms</small></h3><span>応答が速い</span></div><div class="latency-pair">
+              <figure><a class="latency-image latency-lock" href="lock-green.png" target="_blank" rel="noopener noreferrer"><img src="lock-green.png" alt="ロック画面の緑色の Live Activity。1.1.1.1 の応答時間は25 ms" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>ロック画面 · 25 ms</figcaption></figure>
+              <figure><a class="latency-image latency-island" href="island-green.png" target="_blank" rel="noopener noreferrer"><img src="island-green.png" alt="Dynamic Island の緑色の文字で70 msと表示" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>Dynamic Island · 70 ms</figcaption></figure>
+            </div></div>
+            <div class="latency-example latency-yellow"><div class="latency-example-heading"><h3>黄 <small>101〜200 ms</small></h3><span>応答がやや遅い</span></div><div class="latency-pair">
+              <figure><a class="latency-image latency-lock" href="lock-yellow.png" target="_blank" rel="noopener noreferrer"><img src="lock-yellow.png" alt="ロック画面の黄色の Live Activity。1.1.1.1 の応答時間は125 ms" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>ロック画面 · 125 ms</figcaption></figure>
+              <figure><a class="latency-image latency-island" href="island-yellow.png" target="_blank" rel="noopener noreferrer"><img src="island-yellow.png" alt="Dynamic Island の黄色の文字で110 msと表示" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>Dynamic Island · 110 ms</figcaption></figure>
+            </div></div>
+            <div class="latency-example latency-red"><div class="latency-example-heading"><h3>赤 <small>201 ms 以上</small></h3><span>応答が遅い</span></div><div class="latency-pair">
+              <figure><a class="latency-image latency-lock" href="lock-red.png" target="_blank" rel="noopener noreferrer"><img src="lock-red.png" alt="ロック画面の赤色の Live Activity。1.1.1.1 の応答時間は257 ms" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>ロック画面 · 257 ms</figcaption></figure>
+              <figure><a class="latency-image latency-island" href="island-red.png" target="_blank" rel="noopener noreferrer"><img src="island-red.png" alt="Dynamic Island の赤色の文字で558 msと表示" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>Dynamic Island · 558 ms</figcaption></figure>
+            </div></div>
+          </div><p class="small-note">この色分けは選んだ宛先への ICMP 応答時間の目安です。通信速度や、あらゆるサイトにつながることを保証する表示ではありません。</p>
+        </section>
         <section id="notifications"><h2>通知領域の表示を整理する</h2><p>egtency で計測を開始してアプリを閉じると、iOS のバックグラウンドタスク表示がホーム画面やロック画面に出ることがあります。表示が不要な場合は、次の操作で収納・消去できます。図中の指と矢印は操作を示すために合成したものです。</p>
           <div class="gesture-steps">
             <figure class="gesture-step"><div class="gesture-copy"><span class="gesture-number">01</span><h3>ホーム画面：上にスワイプ</h3><p>画面上部にバックグラウンドタスクの大きな表示が出たら、表示を上にスワイプします。Dynamic Island に収納されます。</p></div><a href="../../assets/egtency-gesture-up.png" target="_blank" rel="noopener noreferrer" aria-label="ホーム画面で上にスワイプする図を大きく表示"><img src="../../assets/egtency-gesture-up.png" alt="拡大した Dynamic Island のバックグラウンドタスク表示を、指で上にスワイプする方向を示した図" width="1552" height="1013" loading="lazy" decoding="async"></a></figure>
@@ -40,7 +56,7 @@
         </section>
         <section id="status"><h2>開発状況と注意点</h2><div class="callout"><p><strong>現在は開発中の実証アプリで、一般公開・配布はしていません。</strong> iOS 26 以降の iPhone を対象に開発し、iPhone 16 Pro で実機確認しています。</p></div><p>画面を閉じてから5時間の計測と自動終了に成功した例がありますが、別の試験では iOS が途中で計測を終了しました。常に計測を続けられる保証はありません。値が止まった場合は、アプリを開いて「開始」を押してください。</p><p>計測中は少量の通信と電池を使用します。モバイル回線ではデータ容量と電池残量にご注意ください。</p><p class="small-note">掲載内容と画面は 2026年9月時点の試作版に基づきます。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#screenshots">実際の画面</a><a href="#notifications">通知領域の操作</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egtency" href="https://x.com/intent/tweet?text=%23egtency%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegtency%2F" target="_blank" rel="noopener noreferrer">#egtency で X に共有 ↗</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#screenshots">実際の画面</a><a href="#latency-colors">緑・黄・赤の表示例</a><a href="#notifications">通知領域の操作</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egtency" href="https://x.com/intent/tweet?text=%23egtency%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegtency%2F" target="_blank" rel="noopener noreferrer">#egtency で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
