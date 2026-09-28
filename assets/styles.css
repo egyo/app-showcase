@@ -103,6 +103,13 @@ img { max-width: 100%; display: block; }
 .screenshot-grid a { display: block; overflow: hidden; border-radius: 10px; }
 .screenshot-grid img { width: 100%; height: auto; }
 .screenshot-grid figcaption { padding: 10px 2px 3px; color: var(--muted); font-size: .75rem; line-height: 1.55; }
+.gesture-steps { display: grid; gap: 16px; margin: 22px 0; }
+.gesture-step { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); align-items: center; gap: 16px; min-width: 0; margin: 0; padding: 17px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.gesture-number { color: var(--green); font-size: .74rem; font-weight: 800; letter-spacing: .12em; }
+.gesture-copy h3 { margin: 5px 0 8px; font-size: 1rem; line-height: 1.5; }
+.gesture-copy p { margin: 0; font-size: .87rem; line-height: 1.7; }
+.gesture-step a { display: block; overflow: hidden; border-radius: 12px; background: #101427; }
+.gesture-step img { width: 100%; height: auto; }
 @media (max-width: 760px) {
   .header-inner { align-items: flex-start; flex-direction: column; gap: 4px; padding: 15px 0; }
   .site-nav { gap: 6px 18px; }
@@ -116,6 +123,7 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 560px) {
   .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gesture-step { grid-template-columns: 1fr; gap: 13px; }
 }
 @media (max-width: 480px) {
   .container { width: min(100% - 30px, 1120px); }
