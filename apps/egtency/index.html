@@ -17,18 +17,23 @@
   </div></header>
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egtency</nav>
-    <div class="app-hero">
+    <div class="app-hero tency-feature">
       <div><p class="eyebrow">iOS / Network</p><h1 class="page-title">egtency</h1><p class="lead">通信の応答時間を見えるように。移動中や画面を閉じている間の通信の変化を調べるための iPhone アプリです。</p><div class="hero-meta"><span class="chip">iPhone</span><span class="chip">通信計測</span><span class="status">開発中・非公開</span></div></div>
-      <div class="hero-art tency"><img class="app-icon" src="../../assets/egtency-icon.png" alt="egtency のアプリアイコン" width="220" height="220"></div>
+      <figure class="hero-art tency-showcase"><img src="../../assets/egtency-showcase.png" alt="egtency の計測画面、ロック画面の Live Activity、Dynamic Island を組み合わせた紹介画像" width="1536" height="1024"><figcaption>提供スクリーンショットをもとに構成した紹介画像</figcaption></figure>
     </div>
     <div class="page-layout">
       <article class="article">
         <section id="about"><h2>どんなアプリ？</h2><p>egtency は、指定した宛先へ定期的に信号を送り、返事が届くまでの時間をミリ秒で表示します。新幹線などで移動するとき、回線の応答がどう変わるか、ほかのアプリを使っている間も計測が続くかを確かめるために作っています。</p><p>アプリ画面に加え、対応する iPhone ではロック画面の Live Activity や Dynamic Island に計測値を表示します。</p></section>
         <section id="features"><h2>主な機能</h2><ul><li><code>1.1.1.1</code> または <code>8.8.8.8</code> を選んで通信の応答時間を計測。</li><li>応答時間を色分けして表示。応答がない場合や表示が更新されていない場合も区別。</li><li>計測ログを CSV として共有し、後から通信の変化を確認。</li><li>開始から5時間で自動停止。iOS による中断時には、可能な場合に通知で案内。</li></ul></section>
         <section id="howto"><h2>基本的な使い方</h2><ol><li>計測先を <code>1.1.1.1</code> または <code>8.8.8.8</code> から選びます。</li><li>「開始」を押すと計測が始まります。必要に応じて Live Activity と通知を許可します。</li><li>アプリ画面、ロック画面、対応機種の Dynamic Island で応答時間を確認します。</li><li>終えるときは「停止」を押します。記録を残す場合は「計測ログを共有」から CSV を保存します。</li></ol></section>
-        <section id="status"><h2>開発状況と注意点</h2><div class="callout"><p><strong>現在は開発中の実証アプリで、一般公開・配布はしていません。</strong> iOS 26 以降の iPhone を対象に開発し、iPhone 16 Pro で実機確認しています。</p></div><p>画面を閉じてから5時間の計測と自動終了に成功した例がありますが、別の試験では iOS が途中で計測を終了しました。常に計測を続けられる保証はありません。値が止まった場合は、アプリを開いて「開始」を押してください。</p><p>計測中は少量の通信と電池を使用します。モバイル回線ではデータ容量と電池残量にご注意ください。</p><p class="small-note">掲載内容は 2026年9月時点の試作版に基づきます。画面写真は準備でき次第追加します。</p></section>
+        <section id="screenshots"><h2>画面で見る</h2><p>実機のスクリーンショットです。画像を選ぶと大きく表示できます。</p><div class="screenshot-grid">
+          <figure><a href="../../assets/egtency-before.PNG" target="_blank" rel="noopener noreferrer"><img src="../../assets/egtency-before.PNG" alt="計測前の画面。1.1.1.1 が選ばれ、開始ボタンが押せる状態" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>① 宛先を選んで「開始」</figcaption></figure>
+          <figure><a href="../../assets/egtency-active.PNG" target="_blank" rel="noopener noreferrer"><img src="../../assets/egtency-active.PNG" alt="計測中の画面。応答時間と計測先が表示され、停止とログ共有を選べる状態" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>② 応答時間を確認。ログの共有も可能</figcaption></figure>
+          <figure><a href="../../assets/egtency-lock-screen.PNG" target="_blank" rel="noopener noreferrer"><img src="../../assets/egtency-lock-screen.PNG" alt="ロック画面。下部の緑色の Live Activity に egtency の応答時間が表示されている" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption>③ ロック画面の Live Activity</figcaption></figure>
+        </div><p class="small-note">ロック画面の緑色の表示が egtency の Live Activity です。その上の灰色の表示は iOS の計測タスク表示です。</p></section>
+        <section id="status"><h2>開発状況と注意点</h2><div class="callout"><p><strong>現在は開発中の実証アプリで、一般公開・配布はしていません。</strong> iOS 26 以降の iPhone を対象に開発し、iPhone 16 Pro で実機確認しています。</p></div><p>画面を閉じてから5時間の計測と自動終了に成功した例がありますが、別の試験では iOS が途中で計測を終了しました。常に計測を続けられる保証はありません。値が止まった場合は、アプリを開いて「開始」を押してください。</p><p>計測中は少量の通信と電池を使用します。モバイル回線ではデータ容量と電池残量にご注意ください。</p><p class="small-note">掲載内容と画面は 2026年9月時点の試作版に基づきます。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egtency" href="https://x.com/intent/tweet?text=%23egtency%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegtency%2F" target="_blank" rel="noopener noreferrer">#egtency で X に共有 ↗</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#screenshots">実際の画面</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egtency" href="https://x.com/intent/tweet?text=%23egtency%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegtency%2F" target="_blank" rel="noopener noreferrer">#egtency で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
