@@ -4,10 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="egcamera は、iPhone 16 Pro / 16 Pro Max 向けに開発中の写真専用 LUT カメラです。試作版の機能と対応範囲を紹介します。">
+  <meta property="og:image" content="https://egyo.github.io/app-showcase/apps/egcamera/egcamera-showcase.png">
+  <meta property="og:image:alt" content="緑の葉と黄色い花を映した egcamera の紹介ビジュアル">
   <title>egcamera | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script defer src="../../assets/site.js"></script>
+  <style>
+    .app-hero.camera-feature { grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); gap: 30px; }
+    .camera-showcase { margin: 0; overflow: hidden; border-radius: 24px; background: #242824; }
+    .camera-showcase img { width: 100%; height: auto; }
+    .camera-showcase figcaption { padding: 9px 16px 12px; color: #e0e4df; font-size: .71rem; line-height: 1.6; }
+    .camera-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0 16px; }
+    .camera-screens figure { margin: 0; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .camera-screens a { display: block; }
+    .camera-screens img { width: 100%; height: auto; border-radius: 10px; }
+    .camera-screens figcaption { padding: 12px 2px 2px; color: var(--muted); font-size: .8rem; line-height: 1.65; }
+    .camera-screens .landscape-screen { grid-column: 1 / -1; }
+    .lut-example { margin: 18px 0; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .lut-example h3 { margin: 0 0 10px; font-size: 1.08rem; }
+    .lut-example code { overflow-wrap: anywhere; }
+    .lut-path { padding: 12px; border-radius: 10px; background: var(--paper); font-size: .82rem; line-height: 1.8; }
+    @media (max-width: 760px) { .app-hero.camera-feature { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .camera-screens { gap: 10px; } .camera-screens figure { padding: 8px; } .lut-example { padding: 16px; } }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -17,18 +37,50 @@
   </div></header>
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egcamera</nav>
-    <div class="app-hero">
+    <div class="app-hero camera-feature">
       <div><p class="eyebrow">iOS / Camera</p><h1 class="page-title">egcamera</h1><p class="lead">撮る前に色を選ぶ。仕上がりを楽しみながら、編集できる元画像も残す写真専用の iPhone カメラです。</p><div class="hero-meta"><span class="chip">iPhone</span><span class="chip">写真・LUT</span><span class="status">開発中・非公開</span></div></div>
-      <div class="hero-art camera"><img class="app-icon" src="../../assets/egcamera-icon.png" alt="egcamera のアプリアイコン" width="220" height="220"></div>
+      <figure class="camera-showcase"><img src="egcamera-showcase.png" alt="緑の葉を映す横画面と黄色い花を映す縦画面を組み合わせた egcamera の紹介ビジュアル" width="1672" height="941" fetchpriority="high"><figcaption>提供スクリーンショットをもとに AI で構成した紹介用ビジュアル。操作説明には下の実際の画面写真を使用しています。</figcaption></figure>
     </div>
     <div class="page-layout">
       <article class="article">
         <section id="about"><h2>どんなアプリ？</h2><p>egcamera は、写真に色味を付ける LUT を選び、その効果をプレビューしながら撮影するアプリです。試作版では、LUT を選択して有効にすると、LUT 適用済みの HEIF と、LUT 未適用の Apple ProRAW DNG を独立した2枚として写真ライブラリへ保存します。LUT を使わない場合は DNG のみを保存します。</p><p>好みの仕上がりをその場で得ながら、後で編集するための元画像も残すことを目指しています。HEIF はカメラが生成した処理済み画像に LUT を適用したもので、DNG をアプリ内で現像した画像ではありません。動画、Live Photos、ポートレート撮影には対応していません。</p></section>
         <section id="features"><h2>主な機能</h2><ul><li>対応範囲内の3D <code>.cube</code> LUT をファイルから読み込み、複数保存。選択した LUT を撮影前のプレビューと完成 HEIF に適用。</li><li>撮影画面の「35 / 48 / 120」で画角を切り替え。設定には「13 / 24 / 35 / 48 / 85 / 120」の選択肢があります。mm 表示と実際の画角の対応は検証中です。</li><li>露出補正、フラッシュ、タイマー、タップによるピント・露出合わせ、長押しの AE/AF ロック、水平器を実装。各撮影条件での確認を続けています。</li><li>カメラコントロールからの起動とシャッター操作に対応。ロック中は LUT を使わず DNG のみを撮影し、「LUT撮影へ」から認証を経て通常アプリへ移る設計です。ロック中の撮影・保存は個別の実機確認を継続しています。</li></ul></section>
-        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラの使用を許可します。写真への追加権限は最初の保存時に求められます。</li><li>色味を変えたい場合は設定から <code>.cube</code> ファイルを読み込み、使う LUT を選びます。読み込み前に LUT の入力プロファイルを選びます。この設定は次に読み込む LUT に適用されます。</li><li>撮影画面で構図と画角を決め、必要に応じて露出などを調整してシャッターを押します。</li><li>撮影後、写真ライブラリで保存された画像を確認します。画面の写真ボタンはシステムの写真ピッカーを開きます。保存画像の確認は写真.appで行ってください。保存に失敗した場合は、設定の「保留画像を再保存」から再試行します。</li></ol><p>設定と写真ピッカーは縦持ちで操作してください。設定を開くと、LUT 見本のために写真の読み取り・書き込み権限も求められます。許可しなくても、カメラと追加保存の権限があれば撮影できます。</p></section>
-        <section id="status"><h2>開発状況と対応範囲</h2><div class="callout"><p><strong>現在は開発中の試作版で、一般公開・配布はしていません。</strong> 現行の試作版は iOS 26 以降の iPhone 16 Pro / 16 Pro Max を対象にしています。今後の機種や機能の対応は検証後に決めます。</p></div><p>iPhone 16 Pro では、通常アプリの基本撮影、LUT の読み込み、DNG の保存、カメラコントロールからの起動を実機で確認しています。16 Pro Max や全撮影条件での動作確認が完了したことを意味しません。一方、フレーム外表示やナイトモードは未実装です。LUT 適用後の HEIF の色、画像の向き、各画角での解像度、ロック中の撮影・保存などは継続検証しています。</p><p>LUT は格子サイズ2〜65、RGB 値0〜1、入力範囲0〜1の3D <code>.cube</code> に対応します。1D LUT や範囲外のデータは読み込めません。F-Log2C 入力は近似処理で、F-Gamut C への色域変換は未実装です。プレビューと HEIF の色や、富士フイルム機との色一致を保証するものではありません。</p><p class="small-note">掲載内容は 2026年9月30日に実装と照合した試作版の説明です。画面写真は準備でき次第追加します。</p></section>
+        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラの使用を許可します。写真への追加権限は最初の保存時に求められます。</li><li>色味を変えたい場合は設定から <code>.cube</code> ファイルを読み込み、使う LUT を選びます。読み込み前に LUT の入力プロファイルを選びます。この設定は次に読み込む LUT に適用されます。</li><li>撮影画面で構図と画角を決め、必要に応じて露出などを調整してシャッターを押します。</li><li>撮影後、写真ライブラリで保存された画像を確認します。画面の写真ボタンはシステムの写真ピッカーを開きます。保存画像の確認は写真.appで行ってください。保存に失敗した場合は、設定の「保留画像を再保存」から再試行します。</li></ol><p>設定と写真ピッカーは縦持ちで操作してください。設定を開くと、LUT 見本のために写真の読み取り・書き込み権限も求められます。許可しなくても、カメラと追加保存の権限があれば撮影できます。</p>
+          <div class="camera-screens">
+            <figure><a href="camera-portrait.png" target="_blank" rel="noopener noreferrer"><img src="camera-portrait.png" alt="黄色い花を映した縦向き撮影画面。48 が選択され、シャッターと EV スライダーが下に並ぶ" width="1206" height="2622" loading="lazy"></a><figcaption><strong>撮影画面</strong><br>「35 / 48 / 120」で画角を選び、EV スライダーで明るさを調整します。左下の設定ボタンから LUT を読み込み、中央のシャッターで撮影します。</figcaption></figure>
+            <figure><a href="lut-settings.png" target="_blank" rel="noopener noreferrer"><img src="lut-settings.png" alt="LUT 設定画面。見本画像、LUT を使うスイッチ、読み込む LUT の入力、.cube を読み込む項目と登録済み LUT の一覧" width="1206" height="2622" loading="lazy"></a><figcaption><strong>LUT 設定</strong><br>入力を選んで「.cube を読み込む」へ。一覧で使う LUT を選択し、「LUT を使う」をオンにして「閉じる」で撮影へ戻ります。</figcaption></figure>
+            <figure class="landscape-screen"><a href="camera-landscape.jpeg" target="_blank" rel="noopener noreferrer"><img src="camera-landscape.jpeg" alt="緑の葉を映した横向き撮影画面。右側に画角選択、シャッター、EV スライダーが並ぶ" width="2622" height="1206" loading="lazy"></a><figcaption><strong>横向きでも撮影</strong><br>横持ちでは操作部が右側に並びます。設定や写真ピッカーを開くときは縦持ちに戻してください。画面写真はクリックすると拡大できます。</figcaption></figure>
+          </div>
+          <p class="small-note">画面写真は開発中の実画面です。LUT 設定の写真にある ARRI / SAGAMI の「F-Log2C / F-Gamut C」表示は、撮影時点の登録設定であり、各 LUT の推奨入力を示すものではありません。読み込み済み LUT の入力設定を変えるには、正しい入力を選んで読み込み直してください。</p>
+        </section>
+        <section id="luts">
+          <h2>試してみたい LUT サンプル</h2>
+          <p>色づくりを試すサンプルとして、次の3種類を紹介します。配布元から入手し、ZIP を解凍して中の <code>.cube</code> ファイルを読み込んでください。</p>
+          <p>現行版の入力設定は「sRGB」と「F-Log2C / F-Gamut C」です。LUT ファイルの読み込み対応と、配布元が想定した色の再現は別です。以下の入力条件も確認して選んでください。</p>
+          <div class="lut-example">
+            <h3>FUJIFILM — CLASSIC Neg.</h3>
+            <p><a href="https://www.fujifilm-x.com/ja-jp/support/download/lut/" target="_blank" rel="noopener noreferrer">FUJIFILM の 3D-LUT 配布ページ ↗</a>で「GFX ETERNA 55」の「Download」を選び、<code>gfx-eterna-55-3d-lut-v110.zip</code> を解凍します。</p>
+            <p class="lut-path"><code>gfx-eterna-55-3d-lut-v110 / 33Grid / F-Log2C / FLog2C_to_CLASSIC-Neg._33grid_V.1.00.cube</code></p>
+            <p>読み込む前に入力を「F-Log2C / F-Gamut C」にします。現行版の F-Log2C 処理は近似で、F-Gamut C への色域変換は未実装です。富士フイルム機と同じ色を再現するものではありません。</p>
+          </div>
+          <div class="lut-example">
+            <h3>ARRI — LogC4 → Rec.709</h3>
+            <p><a href="https://www.arri.com/en/learn-help/learn-help-camera-system/tools/lut-generator" target="_blank" rel="noopener noreferrer">ARRI の LUT 配布ページ ↗</a>の「Downloads」から「LogC4 LUT Package」を開き、「DOWNLOAD」で入手した <code>ARRI - LogC4 LUT Package_data.zip</code> を解凍します。ページ内の LUT Generator は LogC3 用なので、LogC4 は配布パッケージを使います。</p>
+            <p class="lut-path"><code>ARRI_LogC4_v1-1_LUT_Package / LUTs / ARRI_LogC4-to-Gamma24_Rec709-D65_v1_33.cube</code></p>
+            <p>想定入力は LogC4 / AWG4 です。egcamera は専用の入力変換に未対応です。読み込みと色の変化を試すサンプルとして扱ってください。「F-Log2C / F-Gamut C」を選んでも LogC4 入力にはなりません。</p>
+          </div>
+          <div class="lut-example">
+            <h3>AUXOUT — SAGAMI</h3>
+            <p><a href="https://store.auxout.jp/p/6dys/" target="_blank" rel="noopener noreferrer">AUXOUT の「FREE SAGAMI LUT」配布ページ ↗</a>で金額を「0 USD」にして「Add to cart」へ進みます。入手手続きを完了し、受信したメールの案内から <code>SAGAMI.zip</code> をダウンロードして解凍します。</p>
+            <p class="lut-path"><code>SAGAMI.zip → SAGAMI.cube</code></p>
+            <p>配布元のテスト条件は Sony a6300 の CINE2 / Pro です。egcamera はその専用入力変換に未対応です。好みの色を探す試用として、実際のプレビューで仕上がりを確認してください。</p>
+          </div>
+          <p><strong>これら以外の <code>.cube</code> 形式の3D LUT も認識・読み込みできます。</strong> 現行版は格子サイズ2〜65、RGB 値0〜1、入力範囲0〜1に対応します。1D LUT、範囲外の値、未対応のヘッダーを含むファイルは読み込めません。入力プロファイルは自動判定されません。</p>
+          <p class="small-note">入手手順とファイル名は 2026年9月30日時点の案内です。LUT 本体はこのページでは再配布していません。</p>
+        </section>
+        <section id="status"><h2>開発状況と対応範囲</h2><div class="callout"><p><strong>現在は開発中の試作版で、一般公開・配布はしていません。</strong> 現行の試作版は iOS 26 以降の iPhone 16 Pro / 16 Pro Max を対象にしています。今後の機種や機能の対応は検証後に決めます。</p></div><p>iPhone 16 Pro では、通常アプリの基本撮影、LUT の読み込み、DNG の保存、カメラコントロールからの起動を実機で確認しています。16 Pro Max や全撮影条件での動作確認が完了したことを意味しません。一方、フレーム外表示やナイトモードは未実装です。LUT 適用後の HEIF の色、画像の向き、各画角での解像度、ロック中の撮影・保存などは継続検証しています。</p><p>LUT は格子サイズ2〜65、RGB 値0〜1、入力範囲0〜1の3D <code>.cube</code> に対応します。1D LUT や範囲外のデータは読み込めません。F-Log2C 入力は近似処理で、F-Gamut C への色域変換は未実装です。プレビューと HEIF の色や、富士フイルム機との色一致を保証するものではありません。</p><p class="small-note">掲載内容は 2026年9月30日に実装と照合した試作版の説明です。提供された画面写真を掲載しています。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#luts">LUT サンプル</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
