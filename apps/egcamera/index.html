@@ -10,6 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script defer src="../../assets/site.js"></script>
+  <script defer src="comparison.js"></script>
   <style>
     .app-hero.camera-feature { grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); gap: 30px; }
     .camera-showcase { margin: 0; overflow: hidden; border-radius: 24px; background: #242824; }
@@ -25,6 +26,19 @@
     .lut-example h3 { margin: 0 0 10px; font-size: 1.08rem; }
     .lut-example code { overflow-wrap: anywhere; }
     .lut-path { padding: 12px; border-radius: 10px; background: var(--paper); font-size: .82rem; line-height: 1.8; }
+    .photo-comparison { margin: 24px 0; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .photo-comparison h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    .photo-comparison .lut-filename { margin: 0 0 16px; font-size: .8rem; overflow-wrap: anywhere; }
+    .comparison-frame { --position: 50%; position: relative; overflow: hidden; isolation: isolate; border-radius: 12px; background: #242824; cursor: ew-resize; touch-action: pan-y; }
+    .comparison-frame.portrait { max-width: 480px; margin-inline: auto; }
+    .comparison-frame img { width: 100%; height: auto; user-select: none; pointer-events: none; }
+    .comparison-lut { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--position)) 0 0); }
+    .comparison-divider { position: absolute; z-index: 2; top: 0; bottom: 0; left: var(--position); width: 2px; transform: translateX(-50%); background: white; box-shadow: 0 0 8px #0008; pointer-events: none; }
+    .comparison-divider::after { content: "↔"; display: grid; place-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border: 2px solid white; border-radius: 50%; background: #202b30; color: white; font-size: 24px; }
+    .comparison-range { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; pointer-events: none; }
+    .comparison-frame:focus-within { outline: 3px solid var(--green); outline-offset: 4px; }
+    .comparison-labels { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 12px; font-size: .8rem; font-weight: 700; color: var(--ink); }
+    .comparison-originals { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .8rem; }
     @media (max-width: 760px) { .app-hero.camera-feature { grid-template-columns: 1fr; } }
     @media (max-width: 480px) { .camera-screens { gap: 10px; } .camera-screens figure { padding: 8px; } .lut-example { padding: 16px; } }
   </style>
@@ -53,6 +67,34 @@
           </div>
           <p class="small-note">画面写真は開発中の実画面です。LUT 設定の写真にある ARRI / SAGAMI の「F-Log2C / F-Gamut C」表示は、撮影時点の登録設定であり、各 LUT の推奨入力を示すものではありません。読み込み済み LUT の入力設定を変えるには、正しい入力を選んで読み込み直してください。</p>
         </section>
+        <section id="samples">
+          <h2>撮影サンプル：LUT あり／なしを比較</h2>
+          <p>中央のバーを左右にドラッグすると、同じ構図の写真を重ねて比較できます。左側が「LUT あり」、右側が「LUT なし（RAW 現像）」です。スマートフォンでは指で左右に動かせます。キーボードでは Tab で比較画面を選び、左右の矢印キーで調整できます。</p>
+          <p class="small-note">LUT ありは egcamera で LUT を適用して撮影した写真、LUT なしは LUT 未適用の RAW から現像した写真です。現像処理による違いも含む、実際の撮影結果の比較です。</p>
+          <figure class="photo-comparison">
+            <figcaption><h3 id="classic-neg-title">緑の葉 — CLASSIC Neg.</h3><p class="lut-filename">使用 LUT：<code>FLog2C_to_CLASSIC-Neg._33grid_V.1.00.cube</code></p></figcaption>
+            <div class="comparison-frame" data-comparison>
+              <img src="sample-classic-neg-raw.jpeg" alt="緑の葉 — CLASSIC Neg.：LUT 未適用の RAW から現像した写真" width="4032" height="3024" loading="lazy" draggable="false">
+              <img class="comparison-lut" src="sample-classic-neg-lut.jpeg" alt="緑の葉 — CLASSIC Neg.：LUT 適用済みの撮影写真" width="4032" height="3024" loading="lazy" draggable="false">
+              <span class="comparison-divider" aria-hidden="true"></span>
+              <input class="comparison-range" type="range" min="0" max="100" value="50" step="1" aria-label="緑の葉 — CLASSIC Neg.：LUT ありの表示割合" aria-valuetext="LUT あり 50%、LUT なし 50%">
+            </div>
+            <div class="comparison-labels" aria-hidden="true"><span>← LUT あり</span><span>LUT なし（RAW 現像） →</span></div>
+            <div class="comparison-originals"><a href="sample-classic-neg-lut.jpeg" target="_blank" rel="noopener noreferrer">LUT ありの写真を開く ↗</a><a href="sample-classic-neg-raw.jpeg" target="_blank" rel="noopener noreferrer">LUT なしの写真を開く ↗</a></div>
+          </figure>
+          <figure class="photo-comparison">
+            <figcaption><h3 id="arri-title">黄色い花 — ARRI LogC4 → Rec.709</h3><p class="lut-filename">使用 LUT：<code>ARRI_LogC4-to-Gamma24_Rec709-D65_v1_33.cube</code></p></figcaption>
+            <div class="comparison-frame portrait" data-comparison>
+              <img src="sample-arri-raw.jpeg" alt="黄色い花 — ARRI LogC4 → Rec.709：LUT 未適用の RAW から現像した写真" width="3024" height="4032" loading="lazy" draggable="false">
+              <img class="comparison-lut" src="sample-arri-lut.jpeg" alt="黄色い花 — ARRI LogC4 → Rec.709：LUT 適用済みの撮影写真" width="3024" height="4032" loading="lazy" draggable="false">
+              <span class="comparison-divider" aria-hidden="true"></span>
+              <input class="comparison-range" type="range" min="0" max="100" value="50" step="1" aria-label="黄色い花 — ARRI LogC4 → Rec.709：LUT ありの表示割合" aria-valuetext="LUT あり 50%、LUT なし 50%">
+            </div>
+            <div class="comparison-labels" aria-hidden="true"><span>← LUT あり</span><span>LUT なし（RAW 現像） →</span></div>
+            <div class="comparison-originals"><a href="sample-arri-lut.jpeg" target="_blank" rel="noopener noreferrer">LUT ありの写真を開く ↗</a><a href="sample-arri-raw.jpeg" target="_blank" rel="noopener noreferrer">LUT なしの写真を開く ↗</a></div>
+          </figure>
+          <noscript><p>比較バーを動かすには JavaScript を有効にしてください。各写真のリンクから個別に確認することもできます。</p></noscript>
+        </section>
         <section id="luts">
           <h2>試してみたい LUT サンプル</h2>
           <p>色づくりを試すサンプルとして、次の3種類を紹介します。配布元から入手し、ZIP を解凍して中の <code>.cube</code> ファイルを読み込んでください。</p>
@@ -80,7 +122,7 @@
         </section>
         <section id="status"><h2>開発状況と対応範囲</h2><div class="callout"><p><strong>現在は開発中の試作版で、一般公開・配布はしていません。</strong> 現行の試作版は iOS 26 以降の iPhone 16 Pro / 16 Pro Max を対象にしています。今後の機種や機能の対応は検証後に決めます。</p></div><p>iPhone 16 Pro では、通常アプリの基本撮影、LUT の読み込み、DNG の保存、カメラコントロールからの起動を実機で確認しています。16 Pro Max や全撮影条件での動作確認が完了したことを意味しません。一方、フレーム外表示やナイトモードは未実装です。LUT 適用後の HEIF の色、画像の向き、各画角での解像度、ロック中の撮影・保存などは継続検証しています。</p><p>LUT は格子サイズ2〜65、RGB 値0〜1、入力範囲0〜1の3D <code>.cube</code> に対応します。1D LUT や範囲外のデータは読み込めません。F-Log2C 入力は近似処理で、F-Gamut C への色域変換は未実装です。プレビューと HEIF の色や、富士フイルム機との色一致を保証するものではありません。</p><p class="small-note">掲載内容は 2026年9月30日に実装と照合した試作版の説明です。提供された画面写真を掲載しています。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#luts">LUT サンプル</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#samples">撮影サンプル比較</a><a href="#luts">LUT サンプル</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
