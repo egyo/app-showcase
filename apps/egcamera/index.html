@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egcamera は、LUT の色を撮影前に確認できる iPhone 向け写真カメラです。機能、使い方、開発状況を紹介します。">
+  <meta name="description" content="egcamera は、iPhone 16 Pro / 16 Pro Max 向けに開発中の写真専用 LUT カメラです。試作版の機能と対応範囲を紹介します。">
   <title>egcamera | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -23,10 +23,10 @@
     </div>
     <div class="page-layout">
       <article class="article">
-        <section id="about"><h2>どんなアプリ？</h2><p>egcamera は、写真に色味を付ける LUT を選び、その効果をプレビューしながら撮影するアプリです。LUT を使うと、色を付けた HEIF と、LUT を付けていない Apple ProRAW DNG を別々に写真ライブラリへ保存します。LUT を使わない場合は DNG のみを保存します。</p><p>好みの仕上がりをその場で得ながら、後で編集するための元画像も残すことを目指しています。動画撮影には対応していません。</p></section>
-        <section id="features"><h2>主な機能</h2><ul><li>3D <code>.cube</code> 形式の LUT をファイルから読み込み、撮影前のプレビューと完成 HEIF に適用。</li><li>35 / 48 / 120 mm 相当の画角を撮影画面で切り替え。ほかの画角は設定画面から選択。</li><li>露出補正、フラッシュ、タイマー、タップによるピントと露出の調整、水平器などを試作中。</li><li>対応機種では側面のカメラコントロールから起動・撮影。</li></ul></section>
-        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラと写真への追加を許可します。</li><li>色味を変えたい場合は設定から <code>.cube</code> ファイルを読み込み、使う LUT を選びます。LUT の入力プロファイルも確認してください。</li><li>撮影画面で構図と画角を決め、必要に応じて露出などを調整してシャッターを押します。</li><li>撮影後、写真ライブラリで保存された画像を確認します。画面の写真ボタンからはシステムの写真ピッカーを開けます。</li></ol></section>
-        <section id="status"><h2>開発状況と対応範囲</h2><div class="callout"><p><strong>現在は開発中の試作版で、一般公開・配布はしていません。</strong> 現行の試作版は iOS 26 以降の iPhone 16 Pro / 16 Pro Max を対象にしています。今後の機種や機能の対応は検証後に決めます。</p></div><p>基本撮影、LUT の読み込み、DNG の保存などは実機で確認しています。一方、フレーム外表示やナイトモードは未実装です。ロック画面からの撮影や各条件での保存結果など、確認を続けている機能もあります。</p><p class="small-note">掲載内容は 2026年9月時点の試作版に基づきます。画面写真は準備でき次第追加します。</p></section>
+        <section id="about"><h2>どんなアプリ？</h2><p>egcamera は、写真に色味を付ける LUT を選び、その効果をプレビューしながら撮影するアプリです。試作版では、LUT を選択して有効にすると、LUT 適用済みの HEIF と、LUT 未適用の Apple ProRAW DNG を独立した2枚として写真ライブラリへ保存します。LUT を使わない場合は DNG のみを保存します。</p><p>好みの仕上がりをその場で得ながら、後で編集するための元画像も残すことを目指しています。HEIF はカメラが生成した処理済み画像に LUT を適用したもので、DNG をアプリ内で現像した画像ではありません。動画、Live Photos、ポートレート撮影には対応していません。</p></section>
+        <section id="features"><h2>主な機能</h2><ul><li>対応範囲内の3D <code>.cube</code> LUT をファイルから読み込み、複数保存。選択した LUT を撮影前のプレビューと完成 HEIF に適用。</li><li>撮影画面の「35 / 48 / 120」で画角を切り替え。設定には「13 / 24 / 35 / 48 / 85 / 120」の選択肢があります。mm 表示と実際の画角の対応は検証中です。</li><li>露出補正、フラッシュ、タイマー、タップによるピント・露出合わせ、長押しの AE/AF ロック、水平器を実装。各撮影条件での確認を続けています。</li><li>カメラコントロールからの起動とシャッター操作に対応。ロック中は LUT を使わず DNG のみを撮影し、「LUT撮影へ」から認証を経て通常アプリへ移る設計です。ロック中の撮影・保存は個別の実機確認を継続しています。</li></ul></section>
+        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラの使用を許可します。写真への追加権限は最初の保存時に求められます。</li><li>色味を変えたい場合は設定から <code>.cube</code> ファイルを読み込み、使う LUT を選びます。読み込み前に LUT の入力プロファイルを選びます。この設定は次に読み込む LUT に適用されます。</li><li>撮影画面で構図と画角を決め、必要に応じて露出などを調整してシャッターを押します。</li><li>撮影後、写真ライブラリで保存された画像を確認します。画面の写真ボタンはシステムの写真ピッカーを開きます。保存画像の確認は写真.appで行ってください。保存に失敗した場合は、設定の「保留画像を再保存」から再試行します。</li></ol><p>設定と写真ピッカーは縦持ちで操作してください。設定を開くと、LUT 見本のために写真の読み取り・書き込み権限も求められます。許可しなくても、カメラと追加保存の権限があれば撮影できます。</p></section>
+        <section id="status"><h2>開発状況と対応範囲</h2><div class="callout"><p><strong>現在は開発中の試作版で、一般公開・配布はしていません。</strong> 現行の試作版は iOS 26 以降の iPhone 16 Pro / 16 Pro Max を対象にしています。今後の機種や機能の対応は検証後に決めます。</p></div><p>iPhone 16 Pro では、通常アプリの基本撮影、LUT の読み込み、DNG の保存、カメラコントロールからの起動を実機で確認しています。16 Pro Max や全撮影条件での動作確認が完了したことを意味しません。一方、フレーム外表示やナイトモードは未実装です。LUT 適用後の HEIF の色、画像の向き、各画角での解像度、ロック中の撮影・保存などは継続検証しています。</p><p>LUT は格子サイズ2〜65、RGB 値0〜1、入力範囲0〜1の3D <code>.cube</code> に対応します。1D LUT や範囲外のデータは読み込めません。F-Log2C 入力は近似処理で、F-Gamut C への色域変換は未実装です。プレビューと HEIF の色や、富士フイルム機との色一致を保証するものではありません。</p><p class="small-note">掲載内容は 2026年9月30日に実装と照合した試作版の説明です。画面写真は準備でき次第追加します。</p></section>
       </article>
       <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
     </div>
