@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="egweight は、ヘルスケアの体重を朝・夜に分け、7日間の移動平均とひとことメモで変化を振り返る iPhone アプリです。現在は設計・開発段階で、一般公開・配布していません。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="egweight | egyo apps">
+  <meta property="og:description" content="朝と夜の体重を分けて、変化をやさしく振り返る。開発中・非公開の iPhone アプリ。">
+  <meta property="og:url" content="https://egyo.github.io/app-showcase/apps/egweight/">
+  <meta property="og:image" content="https://egyo.github.io/app-showcase/assets/egweight-icon.png">
+  <meta property="og:image:alt" content="体重計の表示窓に小文字のegを入れた、セージ色のegweightアイコン">
+  <title>egweight | egyo apps</title>
+  <link rel="canonical" href="https://egyo.github.io/app-showcase/apps/egweight/">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egweight</nav>
+    <div class="app-hero">
+      <div>
+        <p class="eyebrow">iOS / Daily journal</p>
+        <h1 class="page-title">egweight</h1>
+        <p class="lead">朝と夜の体重を分けて、<br>変化をやさしく振り返る。</p>
+        <p class="weight-hero-copy">毎日の測定値と7日間の平均を眺めながら、言い訳も、がんばったこともひとこと残す。自分のペースで続けるための体重日記です。</p>
+        <div class="hero-meta"><span class="chip">iPhone</span><span class="chip">ヘルスケア連携を予定</span><span class="status">開発中・非公開</span></div>
+      </div>
+      <div class="hero-art weight"><img class="app-icon" src="../../assets/egweight-icon.png" alt="egweight の採用アイコン。セージ色を背景に、体重計の表示窓に小文字のeg" width="1254" height="1254"></div>
+    </div>
+    <div class="notice">現在は設計・開発段階で、アプリは一般公開・配布していません。このページは予定している機能と使い方の紹介です。掲載画像はUIデザイン案で、実機スクリーンショットではありません。</div>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about">
+          <h2>どんなアプリ？</h2>
+          <p>egweight は、Appleの「ヘルスケア」に保存された体重を、朝と夜に分けて折れ線グラフで振り返るiPhoneアプリとして開発を進めています。</p>
+          <p>1回の増減だけで結論を出さず、朝は朝、夜は夜という同じ時間帯の変化を眺められるように。それぞれの7日間の移動平均を重ね、日々の数字と続けて見える傾向を一緒に確認できる設計です。</p>
+          <p>数字にひとこと添える欄には、食事や日常の出来事、よく歩いたこと、測り忘れたことも気軽に。増減や欠測を責めず、また始めやすい「やさしい日記帳」を目指します。</p>
+          <blockquote class="weight-encouragement"><p>はかり忘れても気にしない。<br>思い出したら再開して！</p></blockquote>
+        </section>
+        <section id="features">
+          <h2>予定している主な機能</h2>
+          <ul class="weight-features">
+            <li><h3>ヘルスケアから体重を取得</h3><p>測定元アプリがヘルスケアに保存した体重を読み取り、測定時刻で分類します。1日の同じ時間帯に複数回測ったときは、最後の測定値を使います。</p></li>
+            <li><h3>朝と夜を分けて表示</h3><p>朝はオレンジ、夜は青。横の位置も少しずらして見分けやすくします。昼の記録は参考情報として持ち、グラフには朝と夜だけを表示します。</p></li>
+            <li><h3>朝・夜それぞれの7日平均</h3><p>過去7日間にある測定値だけで平均を計算し、測定日数も確認できます。測れなかった日を0kgとして扱うことはありません。</p></li>
+            <li><h3>期間を動かして振り返る</h3><p>今週・2週間・1ヶ月・3ヶ月を切り替え、矢印やグラフの左右スワイプで過去へ。下の最新測定値はそのままに、以前の変化を見られます。</p></li>
+          </ul>
+          <h3>差分と、ひとことの振り返り</h3>
+          <p>朝と夜、夜と翌朝の変動を確認し、設定した目安に応じてひとことの振り返りを促します。「ひとこと言い訳・がんばったこと」は、注意の有無にかかわらず任意で記録できる予定です。</p>
+          <p class="small-note">差分の目安は試用しながら調整します。数値の変化から、食べ過ぎ・運動量・体調の原因を判定する機能は設けません。</p>
+        </section>
+        <section id="howto">
+          <h2>基本的な使い方</h2>
+          <p class="small-note">以下は、プロトタイプで予定している操作の流れです。実装・試用を通じて調整します。</p>
+          <ol>
+            <li><strong>ヘルスケアと連携する。</strong> egweightで体重の読み取りを許可します。使用する体重計や測定元アプリから、体重がヘルスケアに保存されていることが前提です。</li>
+            <li><strong>自分のペースで測る。</strong> 朝だけ、夜だけ、測れない日があっても続けられる設計です。朝は03:00〜11:59、夜は18:00〜翌02:59に分類し、深夜の測定は前日の夜として扱います。</li>
+            <li><strong>グラフで変化を眺める。</strong> 期間を選び、＜ ＞または左右スワイプで移動します。初期案では右へのスワイプで過去、左で新しい期間へ。上の日付範囲がグラフに連動し、下の最新値は維持されます。</li>
+            <li><strong>ひとこと残す。</strong> メモ欄をタップして、言い訳やがんばったことを記録します。カードの変動とグラフの点では比較する測定が異なるため、詳細で比較元も確認できるようにします。</li>
+          </ol>
+          <div class="weight-range-table">
+            <table>
+              <caption>期間ごとのグラフの見え方（初期仕様）</caption>
+              <thead><tr><th scope="col">期間</th><th scope="col">測定値の表示</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">今週（過去7日）</th><td>前回の同じ時間帯からの増減を▲・▼・●で表示</td></tr>
+                <tr><th scope="row">2週間（過去14日）</th><td>測定点をすべて●で表示</td></tr>
+                <tr><th scope="row">1ヶ月（過去30日）</th><td>点を表示しない、シンプルな折れ線</td></tr>
+                <tr><th scope="row">3ヶ月（過去90日）</th><td>点を表示しない、シンプルな折れ線</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small-note">どの期間でも朝・夜の7日平均を表示し、未来の日付へは進みません。今週の●は前回の同じ時間帯との差が−100g〜＋100gの場合。2週間の●は測定がある位置を示します。</p>
+        </section>
+        <section id="design">
+          <h2>画面のイメージ</h2>
+          <p>やさしい配色と方眼グラフを中心にした、画像生成によるUIデザイン案です。日付・体重・メモは架空の例で、動作確認済みのアプリ画面ではありません。画像を選ぶと大きく表示できます。</p>
+          <div class="screenshot-grid weight-screens">
+            <figure>
+              <a href="../../assets/egweight-month-design.png" target="_blank" rel="noopener noreferrer"><img src="../../assets/egweight-month-design.png" alt="egweightの1ヶ月表示のUIデザイン案。朝と夜の折れ線に各7日平均を重ね、下に最新の夜と朝の値とメモを配置" width="853" height="1844" loading="lazy" decoding="async"></a>
+              <figcaption><strong>1ヶ月の変化を眺める</strong><br>測定点を省いた折れ線と、朝・夜の7日平均。UIデザイン案。</figcaption>
+            </figure>
+            <figure>
+              <a href="../../assets/egweight-history-design.png" target="_blank" rel="noopener noreferrer"><img src="../../assets/egweight-history-design.png" alt="egweightの過去2週間表示のUIデザイン案。グラフは9月5日から18日、下の最新カードは10月1日の夜と2日の朝を維持" width="853" height="1844" loading="lazy" decoding="async"></a>
+              <figcaption><strong>過去を見ても、最新値はそのまま</strong><br>2週間の丸い測定点と左右の期間移動。UIデザイン案。</figcaption>
+            </figure>
+          </div>
+          <p class="small-note">画像は雰囲気と配置の参考です。点の位置や平均線の数値の正確さを示すものではなく、実装時に仕様に合わせて仕上げます。実機スクリーンショットはプロトタイプの準備後に掲載します。</p>
+        </section>
+        <section id="questions">
+          <h2>利用に向けて</h2>
+          <h3>どの体重計でも使えますか？</h3>
+          <p>ヘルスケアに体重が保存されることが前提です。体重計への直接接続は初期版の対象に含めず、使用する測定元アプリとの連携を実機で確認する予定です。</p>
+          <h3>記録がない日や、片方しか測っていない日は？</h3>
+          <p>測定値を作って補わず、ある記録を使って振り返ります。差分は必要な2件がそろう場合に計算し、比較できない場合はそのことが分かる表示にします。</p>
+          <h3>体重やメモはどこに保存しますか？</h3>
+          <p>体重の原本はヘルスケア、メモは端末内に保存する方針です。メモの復元や機種変更時の扱いは検討中です。保存範囲とプライバシーの説明は、配布前に整えます。</p>
+        </section>
+        <section id="status">
+          <h2>開発状況と公開について</h2>
+          <div class="callout"><p><strong>現在は設計・開発段階で、一般公開・配布していません。</strong> 機能とUIの方向性を整理し、プロトタイプの実装を準備しています。このサイトで公開しているのは紹介ページです。</p></div>
+          <p>ヘルスケア連携、計算、グラフの操作、メモ保存はこれから実装・実機検証を進めます。対応するiPhone・最低対応OS、公開時期、配布方法、価格は未定です。ダウンロードや試用の募集は現在行っていません。</p>
+          <p class="small-note">掲載内容は2026年10月1日時点の設計に基づきます。機能・操作・画面は今後変更される場合があります。健康状態や減量の成否を判断するアプリではなく、数値とメモを振り返るための道具として設計しています。</p>
+        </section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内">
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">予定している機能</a><a href="#howto">使い方</a><a href="#design">画面のイメージ</a><a href="#questions">利用に向けて</a><a href="#status">開発状況</a>
+        <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
+        <a class="share-link" data-share="egweight" href="https://x.com/intent/tweet?text=%23egweight%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegweight%2F" target="_blank" rel="noopener noreferrer">#egweight で X に共有 ↗</a>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>
