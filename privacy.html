@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="egyo の iOS・macOS アプリと紹介サイトのプライバシーポリシー。写真、通信の計測ログ、ヘルスケア情報、コメントの利用・保存・削除について説明します。">
+  <title>プライバシーポリシー | egyo apps</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="./" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="./#ios">iOS アプリ</a><a href="./#macos">macOS アプリ</a><a href="privacy.html" aria-current="page">プライバシー</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="./">アプリ一覧</a><span>/</span>プライバシーポリシー</nav>
+    <section class="intro" aria-labelledby="privacy-title">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1 id="privacy-title" class="page-title">プライバシーポリシー</h1>
+      <p class="lead">写真や日々の記録を、あなたの手元に。アプリが利用する情報と、保存・共有・削除の方法を説明します。</p>
+      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定・最終更新：<time datetime="2026-10-02">2026年10月2日</time></span></div>
+      <div class="notice">本ポリシーは、2026年10月2日時点のアプリの実装と紹介サイトに基づきます。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
+    </section>
+    <div class="page-layout">
+      <article class="article" aria-label="プライバシーポリシー本文">
+        <section id="scope"><h2>1. 適用範囲と基本方針</h2>
+          <p>本ポリシーは、egyo（以下「開発者」）が提供する egcamera、egtency、egweight、QuietBlack と、このアプリ紹介サイトに適用します。アプリごとの説明には、ロック画面撮影拡張や Widget など付属する機能を含みます。</p>
+          <div class="callout"><p>現在のアプリには、開発者のサーバーへ利用情報を自動送信する機能、広告 SDK、アクセス解析 SDK、広告目的の追跡、利用者アカウントの登録機能はありません。</p></div>
+          <p>アプリの機能に必要な情報は、原則として端末内で処理します。egtency の計測通信、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
+        </section>
+        <section id="egcamera"><h2>2. egcamera：写真と撮影設定</h2>
+          <ul>
+            <li><strong>カメラ画像・撮影した写真：</strong>撮影、プレビュー、色の調整に使用します。撮影した DNG／HEIF は端末の写真ライブラリへ保存します。ロック画面撮影では DNG を扱います。</li>
+            <li><strong>写真ライブラリの画像：</strong>許可された範囲の最新の写真を、LUT の仕上がり見本として一時的に読み込みます。開発者へ送信しません。</li>
+            <li><strong>読み込んだ LUT ファイルと設定：</strong>利用者が選んだファイルを端末内へコピーし、一覧・選択・並び順などを保存します。露出や撮影の連番などの設定も端末内に保存します。クラウドのファイルを選んだ場合、ファイルの取得は選択したファイル提供サービスの設定に従います。</li>
+            <li><strong>端末の傾き：</strong>モーションセンサーの重力・向きの情報を水平器に使用します。開発者へ送信せず、行動履歴として保存しません。</li>
+            <li><strong>保存待ち画像・診断表示：</strong>写真ライブラリへ保存するまで、撮影画像をアプリや撮影拡張の保存領域に保留します。保存が成功すると保留分の削除を行い、失敗したものは再保存のために保持します。撮影状態やエラーなどの診断情報は端末内で扱い、自動送信しません。</li>
+          </ul>
+          <p>カメラ・写真のアクセスは iOS の許可に従います。許可は iOS の設定から変更でき、許可しない機能は利用できない場合があります。アプリはマイクによる録音や位置情報の取得を行いません。</p>
+          <p><strong>削除：</strong>保存済みの写真は「写真」アプリで、取り込んだ LUT はアプリの管理画面で削除できます。アプリ内の設定や保存待ちデータは、iOS でアプリを削除すると削除されます。「App を取り除く」はデータを残す操作です。写真ライブラリに保存済みの写真は、アプリを削除しても残ります。</p>
+        </section>
+        <section id="egtency"><h2>3. egtency：計測通信とログ</h2>
+          <p>利用者が宛先を選び計測を開始すると、Cloudflare の 1.1.1.1 または Google の 8.8.8.8 へ、応答時間を測る ICMP Echo（ping）を送ります。IPv6 の経路では、同じ提供元の 2606:4700:4700::1111 または 2001:4860:4860::8888 を使用する場合があります。</p>
+          <p><strong>この通信では、送信元の公開 IP アドレスや通信の時刻などが、宛先の提供元や経由するネットワークに伝わります。</strong>開発者のサーバーを経由する計測ではありません。写真・ヘルスケア情報・コメント・保存済みの計測ログを ping に含めて送信することはありません。宛先の情報の扱いは、各提供元の方針に従います（<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a>／<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google</a>）。</p>
+          <ul>
+            <li><strong>端末内の記録：</strong>計測日時、宛先、応答時間、タイムアウト・エラー、Wi-Fi／モバイル回線などの経路状態、アプリの前面・背面の変化、計測の開始・終了などを CSV に保存します。位置情報や閲覧履歴は取得しません。</li>
+            <li><strong>表示と通知：</strong>宛先や計測結果を Live Activity、Dynamic Island、iOS の計測タスク表示へ渡します。通知は許可された場合に端末上で行います。ロック画面に出す情報は、周囲から見える場合があります。</li>
+            <li><strong>共有：</strong>「計測ログを共有」で選んだ CSV を、利用者が指定するアプリや相手へ渡します。共有しない限り、ログを開発者へ送信することはありません。</li>
+          </ul>
+          <p><strong>停止・削除：</strong>「停止」で計測通信を終了できます。保存済みログは次の計測後も残り、計測と停止処理が終了した後の「全消去」、または iOS でのアプリ削除により削除できます。共有済みのコピーは、共有先で別途削除してください。通知や Live Activity の許可は iOS の設定で変更できます。</p>
+        </section>
+        <section id="egweight"><h2>4. egweight：ヘルスケア情報とコメント</h2>
+          <p>利用者が許可した場合に限り、HealthKit から<strong>体重、測定日時・記録の識別情報・記録元、歩数</strong>を読み取り、体重の推移、日別の代表値、平均・差分、歩数に応じた表示に使用します。体重や歩数を HealthKit へ書き込む機能はありません。</p>
+          <ul>
+            <li><strong>健康情報：</strong>取得した値や計算結果は端末のメモリ内で扱います。アプリ独自の健康情報データベースやサーバーへ保存・送信せず、広告、マーケティング、追跡、第三者への販売に使用しません。アプリ独自に健康情報を iCloud へ保存する機能はありません。</li>
+            <li><strong>日別コメント：</strong>入力した本文、対象日、作成・更新日時を端末内のファイルへ保存します。iOS のファイル保護を使用し、この保存領域はバックアップの対象から除外しています。デモ用と実際の記録用は分けて保存します。</li>
+            <li><strong>設定・デモ：</strong>デモ利用などの設定を端末内に保存します。デモは架空の測定値を使い、HealthKit へ書き込みません。</li>
+          </ul>
+          <p><strong>許可の変更：</strong>ヘルスケアまたは iOS の設定から、egweight の体重・歩数の読み取り許可を変更・取り消せます。許可しない情報は表示できない場合があります。</p>
+          <p><strong>削除と保存期間：</strong>コメントは「設定 → コメントの日付別管理」で日付ごとに削除できます。削除するまで端末に残り、同じアプリの再起動や上書き更新では維持します。アプリ削除・再インストール・機種変更では失われ、開発者が復元することはできません。体重・歩数の原本は HealthKit にあり、egweight を削除しても原本は消えません。原本の削除はヘルスケア側で行ってください。</p>
+        </section>
+        <section id="quietblack"><h2>5. QuietBlack：操作の有無と画面の状態</h2>
+          <p>無操作時間を判定するため、マウスの位置の変化、マウス・キーボードなどのイベント回数や最後の操作からの時間を端末内で確認します。黒画面の表示範囲を決めるためディスプレイ構成を、動画再生などの間に自動表示を保留するため macOS の画面スリープ防止要求の状態を使用します。</p>
+          <p>入力したキーの文字列、画面の画像、ブラウザ履歴、動画の内容は取得・保存しません。アプリ自身のネットワーク通信、広告、利用状況の自動送信はありません。</p>
+          <p><strong>保存・終了：</strong>待ち時間と自動表示の設定を Mac 内の環境設定に保存します。操作状態は動作中の判定に使用し、操作履歴として保存しません。アプリを終了すると確認処理は止まります。「ログイン時に起動」は macOS が管理します。Mac ではアプリ本体を削除しても環境設定やログイン項目が残る場合があるため、削除前に自動起動を解除してください。設定の削除方法が必要な場合は、下記窓口へお問い合わせください。</p>
+        </section>
+        <section id="sharing"><h2>6. 外部サービス・共有・バックアップ</h2>
+          <p>開発者は、アプリ内の写真、健康情報、コメント、計測ログを自動収集・販売しません。利用者が明示的に共有した情報は、指定した共有先のサービスや相手の管理下に移ります。</p>
+          <p>iCloud 写真、ヘルスケアの同期、OS のバックアップなどは、Apple と利用者の設定によって管理されます。アプリ内での削除だけで、写真ライブラリ、バックアップ、共有先のコピーまで削除されるとは限りません。egweight のコメントは、前述のとおりバックアップ対象外です。</p>
+          <p>App Store や TestFlight を通じて利用する場合、Apple が配布・診断・フィードバックに関する情報を扱い、開発者にクラッシュ情報、利用状況、利用者が送ったフィードバックや画像などを提供する場合があります。TestFlight では一部の情報が自動共有されます。開発者は提供された情報を不具合の調査、品質改善、試用の運営に使用し、広告や追跡には使用しません。詳細は <a href="https://www.apple.com/legal/privacy/jp/" target="_blank" rel="noopener noreferrer">Apple のプライバシーポリシー</a>と <a href="https://www.apple.com/legal/privacy/data/en/test-flight/" target="_blank" rel="noopener noreferrer">TestFlight とプライバシー</a>をご確認ください。</p>
+        </section>
+        <section id="website"><h2>7. この紹介サイト</h2>
+          <p>本サイトは GitHub Pages で公開しています。開発者は独自のアクセス解析ツール、広告、追跡用 Cookie を設置していません。画像・スタイルなどは本サイト内のファイルを使用しています。</p>
+          <p>ホスティングを提供する GitHub は、セキュリティのため、サイト訪問者の IP アドレスを記録・保存します。開発者がアプリ内の情報を送信する処理とは別のものです。詳細は <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub のプライバシーに関する声明</a>をご確認ください。</p>
+          <p>X のお問い合わせ・共有リンクなどを開くと、リンク先のサービスにアクセスします。その後の情報の扱いは各サービスのポリシーに従います。本サイトには X の投稿を埋め込む機能はありません。</p>
+        </section>
+        <section id="contact"><h2>8. お問い合わせと情報の管理</h2>
+          <p>本ポリシーや情報の扱いについては、<a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へお問い合わせください。開発者は、連絡時に利用者が提供したアカウント名、連絡先、問い合わせ内容、任意の添付資料を、回答、不具合の調査、対応の記録のために使用します。</p>
+          <p>公開投稿に健康情報や個人が写った写真を載せないでください。最初の連絡ではアプリ名と問題の概要をお伝えください。ログや画像を送る場合は、不要な個人情報を除いてください。</p>
+          <p>開発者が保有する問い合わせ・診断資料は、対応と関連する調査に必要な期間に限り保持し、不要になった情報を削除します。アクセスを必要な範囲に限定して管理し、本人の同意や法令上の義務がある場合を除き第三者へ提供しません。</p>
+          <p>開発者が保有する情報の確認・訂正・削除・利用停止を希望する場合も、同じ窓口へご連絡ください。本人の情報であることを必要な範囲で確認し、適用される法令と各サービスの機能に従って対応します。開発者が保有していない端末内データは、各アプリ・OS の操作で管理してください。X や Apple などが保有する情報は、そのサービスの窓口・設定で管理してください。</p>
+        </section>
+        <section id="changes"><h2>9. ポリシーの変更</h2>
+          <p>アプリの機能、外部サービス、情報の利用目的などが変わる場合は、本ページを更新し、最終更新日を変更します。情報の扱いに重要な変更がある場合は、本ページに加え、該当アプリや配布時の案内などで知らせます。新たな許可・同意が必要な場合は、情報を利用する前に取得します。</p>
+        </section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#quietblack">QuietBlack</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="./">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>
