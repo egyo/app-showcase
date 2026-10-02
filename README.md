@@ -26,7 +26,7 @@ egcamera、egtency、egweight、QuietBlack を紹介する静的サイトです�
 
 ## プライバシーポリシー
 
-- 公開ページ：`privacy.html`（https://egyo.github.io/app-showcase/privacy.html）
+- 公開ページ：[プライバシーポリシー](https://egyo.github.io/app-showcase/privacy.html)（`privacy.html`）
 - トップページはフッターにリンクのみを配置し、本文は専用ページへ掲載しています。
 - 共通の `assets/styles.css` を使用し、アプリ紹介ページのナビゲーション・文字組み・目次と揃えています。
 
