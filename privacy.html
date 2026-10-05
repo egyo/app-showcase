@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egyo の iOS・macOS アプリと紹介サイトのプライバシーポリシー。写真、通信の計測ログ、ヘルスケア情報、コメントの利用・保存・削除について説明します。">
+  <meta name="description" content="egyo の iOS・macOS アプリと紹介サイトのプライバシーポリシー。写真、通信の計測ログ、ヘルスケア情報、コメント、egsplan の通知設定の利用・保存・削除について説明します。">
   <title>プライバシーポリシー | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css">
@@ -20,15 +20,15 @@
       <p class="eyebrow">Privacy Policy</p>
       <h1 id="privacy-title" class="page-title">プライバシーポリシー</h1>
       <p class="lead">写真や日々の記録を、あなたの手元に。アプリが利用する情報と、保存・共有・削除の方法を説明します。</p>
-      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定・最終更新：<time datetime="2026-10-02">2026年10月2日</time></span></div>
-      <div class="notice">本ポリシーは、2026年10月2日時点のアプリの実装と紹介サイトに基づきます。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
+      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定：<time datetime="2026-10-02">2026年10月2日</time></span><span class="chip">最終更新：<time datetime="2026-10-05">2026年10月5日</time></span></div>
+      <div class="notice">本ポリシーは開発中のアプリの実装と紹介サイトに基づきます。2026年10月5日に egsplan の説明を追加しました。その他のアプリの説明は2026年10月2日時点の確認内容です。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
     </section>
     <div class="page-layout">
       <article class="article" aria-label="プライバシーポリシー本文">
         <section id="scope"><h2>1. 適用範囲と基本方針</h2>
-          <p>本ポリシーは、egyo（以下「開発者」）が提供する egcamera、egtency、egweight、QuietBlack と、このアプリ紹介サイトに適用します。アプリごとの説明には、ロック画面撮影拡張や Widget など付属する機能を含みます。</p>
-          <div class="callout"><p>現在のアプリには、開発者のサーバーへ利用情報を自動送信する機能、広告 SDK、アクセス解析 SDK、広告目的の追跡、利用者アカウントの登録機能はありません。</p></div>
-          <p>アプリの機能に必要な情報は、原則として端末内で処理します。egtency の計測通信、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
+          <p>本ポリシーは、egyo（以下「開発者」）が提供する egcamera、egtency、egweight、egsplan、QuietBlack と、このアプリ紹介サイトに適用します。アプリごとの説明には、ロック画面撮影拡張や Widget など付属する機能を含みます。</p>
+          <div class="callout"><p>現在のアプリには、広告 SDK、アクセス解析 SDK、広告目的の追跡、利用者アカウントの登録機能はありません。egsplan は通知機能のため、端末単位の登録を行い、通知条件・通知先・通知予約を開発者のサーバーに保存します。</p></div>
+          <p>egcamera、egtency、egweight、QuietBlack は、開発者のサーバーへ利用情報を自動送信しません。egsplan のサーバーでの処理、egtency の計測通信、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
         </section>
         <section id="egcamera"><h2>2. egcamera：写真と撮影設定</h2>
           <ul>
@@ -61,32 +61,44 @@
           <p><strong>許可の変更：</strong>ヘルスケアまたは iOS の設定から、egweight の体重・歩数の読み取り許可を変更・取り消せます。許可しない情報は表示できない場合があります。</p>
           <p><strong>削除と保存期間：</strong>コメントは「設定 → コメントの日付別管理」で日付ごとに削除できます。削除するまで端末に残り、同じアプリの再起動や上書き更新では維持します。アプリ削除・再インストール・機種変更では失われ、開発者が復元することはできません。体重・歩数の原本は HealthKit にあり、egweight を削除しても原本は消えません。原本の削除はヘルスケア側で行ってください。</p>
         </section>
-        <section id="quietblack"><h2>5. QuietBlack：操作の有無と画面の状態</h2>
+        <section id="egsplan"><h2>5. egsplan：通知条件・通知先・予定</h2>
+          <p>対戦予定の絞り込みとプッシュ通知のため、開発者が運用する Cloudflare Workers / D1 に端末を登録し、以下の情報を保存します。ログインや Nintendo アカウントとの連携は不要です。</p>
+          <ul>
+            <li><strong>通知条件：</strong>選択した時間帯・ルール・マッチ・ステージ、通知の有効／無効、開始前の通知タイミング、まとめ通知の時刻を保存し、対象予定の判定と通知予約に使用します。</li>
+            <li><strong>端末の登録・通知先：</strong>端末ごとのランダムな識別子、認証トークンのハッシュ、Apple のプッシュ通知用デバイストークン、通知環境、設定の更新日時を保存します。認証情報は端末の Keychain に保存し、設定や通知先などは端末内にも保持します。</li>
+            <li><strong>通知予約・送信状態：</strong>通知時刻・本文・送信状態・再試行の情報を保存し、Apple Push Notification service（APNs）に通知先と本文を渡して配信します。本文には対戦時刻・ルール・マッチ・ステージ名などが含まれ、ロック画面で周囲から見える場合があります。</li>
+            <li><strong>接続に伴う情報：</strong>通信先の Cloudflare には公開 IP アドレスなどが伝わります。アプリの API は IP アドレスをリクエストの回数制限に使用します。Cloudflare の情報の扱いは<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">同社のポリシー</a>に従います。</li>
+          </ul>
+          <p>対戦予定はサーバーが <a href="https://splatoon3.ink/" target="_blank" rel="noopener noreferrer">Splatoon3.ink</a> から取得して保存し、端末の条件と照合します。この取得リクエストには利用者の通知条件やデバイストークンを含めません。アプリは Nintendo アカウント情報、ゲームのプレイ履歴、位置情報、写真、ヘルスケア情報を取得しません。</p>
+          <p><strong>停止・削除：</strong>「通知条件」で通知をオフにして保存すると、未送信の通知予約を停止します。条件自体は保存され、対象予定を確認できます。「接続・情報 → サーバーの登録を削除」で登録削除が成功すると、サーバーの端末登録・条件・通知先・関連する予約を削除します。アプリの削除だけではサーバーの登録は削除されません。通知許可は iOS の設定で変更できます。すでに APNs へ渡した通知は取り消せません。</p>
+          <p><strong>保存期間：</strong>端末情報と条件は登録削除まで保持します。期限を過ぎた通知予約は7日後を基準に削除し、対戦予定データは更新時に置き換えます。</p>
+        </section>
+        <section id="quietblack"><h2>6. QuietBlack：操作の有無と画面の状態</h2>
           <p>無操作時間を判定するため、マウスの位置の変化、マウス・キーボードなどのイベント回数や最後の操作からの時間を端末内で確認します。黒画面の表示範囲を決めるためディスプレイ構成を、動画再生などの間に自動表示を保留するため macOS の画面スリープ防止要求の状態を使用します。</p>
           <p>入力したキーの文字列、画面の画像、ブラウザ履歴、動画の内容は取得・保存しません。アプリ自身のネットワーク通信、広告、利用状況の自動送信はありません。</p>
           <p><strong>保存・終了：</strong>待ち時間と自動表示の設定を Mac 内の環境設定に保存します。操作状態は動作中の判定に使用し、操作履歴として保存しません。アプリを終了すると確認処理は止まります。「ログイン時に起動」は macOS が管理します。Mac ではアプリ本体を削除しても環境設定やログイン項目が残る場合があるため、削除前に自動起動を解除してください。設定の削除方法が必要な場合は、下記窓口へお問い合わせください。</p>
         </section>
-        <section id="sharing"><h2>6. 外部サービス・共有・バックアップ</h2>
+        <section id="sharing"><h2>7. 外部サービス・共有・バックアップ</h2>
           <p>開発者は、アプリ内の写真、健康情報、コメント、計測ログを自動収集・販売しません。利用者が明示的に共有した情報は、指定した共有先のサービスや相手の管理下に移ります。</p>
           <p>iCloud 写真、ヘルスケアの同期、OS のバックアップなどは、Apple と利用者の設定によって管理されます。アプリ内での削除だけで、写真ライブラリ、バックアップ、共有先のコピーまで削除されるとは限りません。egweight のコメントは、前述のとおりバックアップ対象外です。</p>
           <p>App Store や TestFlight を通じて利用する場合、Apple が配布・診断・フィードバックに関する情報を扱い、開発者にクラッシュ情報、利用状況、利用者が送ったフィードバックや画像などを提供する場合があります。TestFlight では一部の情報が自動共有されます。開発者は提供された情報を不具合の調査、品質改善、試用の運営に使用し、広告や追跡には使用しません。詳細は <a href="https://www.apple.com/legal/privacy/jp/" target="_blank" rel="noopener noreferrer">Apple のプライバシーポリシー</a>と <a href="https://www.apple.com/legal/privacy/data/en/test-flight/" target="_blank" rel="noopener noreferrer">TestFlight とプライバシー</a>をご確認ください。</p>
         </section>
-        <section id="website"><h2>7. この紹介サイト</h2>
+        <section id="website"><h2>8. この紹介サイト</h2>
           <p>本サイトは GitHub Pages で公開しています。開発者は独自のアクセス解析ツール、広告、追跡用 Cookie を設置していません。画像・スタイルなどは本サイト内のファイルを使用しています。</p>
           <p>ホスティングを提供する GitHub は、セキュリティのため、サイト訪問者の IP アドレスを記録・保存します。開発者がアプリ内の情報を送信する処理とは別のものです。詳細は <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub のプライバシーに関する声明</a>をご確認ください。</p>
           <p>X のお問い合わせ・共有リンクなどを開くと、リンク先のサービスにアクセスします。その後の情報の扱いは各サービスのポリシーに従います。本サイトには X の投稿を埋め込む機能はありません。</p>
         </section>
-        <section id="contact"><h2>8. お問い合わせと情報の管理</h2>
+        <section id="contact"><h2>9. お問い合わせと情報の管理</h2>
           <p>本ポリシーや情報の扱いについては、<a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へお問い合わせください。開発者は、連絡時に利用者が提供したアカウント名、連絡先、問い合わせ内容、任意の添付資料を、回答、不具合の調査、対応の記録のために使用します。</p>
           <p>公開投稿に健康情報や個人が写った写真を載せないでください。最初の連絡ではアプリ名と問題の概要をお伝えください。ログや画像を送る場合は、不要な個人情報を除いてください。</p>
           <p>開発者が保有する問い合わせ・診断資料は、対応と関連する調査に必要な期間に限り保持し、不要になった情報を削除します。アクセスを必要な範囲に限定して管理し、本人の同意や法令上の義務がある場合を除き第三者へ提供しません。</p>
           <p>開発者が保有する情報の確認・訂正・削除・利用停止を希望する場合も、同じ窓口へご連絡ください。本人の情報であることを必要な範囲で確認し、適用される法令と各サービスの機能に従って対応します。開発者が保有していない端末内データは、各アプリ・OS の操作で管理してください。X や Apple などが保有する情報は、そのサービスの窓口・設定で管理してください。</p>
         </section>
-        <section id="changes"><h2>9. ポリシーの変更</h2>
+        <section id="changes"><h2>10. ポリシーの変更</h2>
           <p>アプリの機能、外部サービス、情報の利用目的などが変わる場合は、本ページを更新し、最終更新日を変更します。情報の扱いに重要な変更がある場合は、本ページに加え、該当アプリや配布時の案内などで知らせます。新たな許可・同意が必要な場合は、情報を利用する前に取得します。</p>
         </section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#quietblack">QuietBlack</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#egsplan">egsplan</a><a href="#quietblack">QuietBlack</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="./">アプリ一覧に戻る</a></div></footer>
