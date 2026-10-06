@@ -7,6 +7,7 @@
   <title>StartMyMac | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="notifications.css">
   <script defer src="../../assets/site.js"></script>
 </head>
 <body class="startup-page">
@@ -50,12 +51,30 @@
         <section id="howto"><h2>初回の使い方</h2><p class="small-note">以下は検証用アプリにアクセスできる方に向けた手順です。一般向けのダウンロードは用意していません。</p><ol>
           <li><strong>アプリを開く：</strong>StartMyMac.app を「アプリケーション」へ移動して起動します。初回は設定画面を表示し、ワークフローは実行しません。</li>
           <li><strong>接続先を自分の環境に合わせる：</strong>初期設定を確認し、共有名まで含む URL、ユーザー名、パスワードを入力して「設定を保存」を押します。例：<code>smb://server.local/Shared%20Files</code>。認証情報は URL に含めず、専用欄へ入力します。保存だけでは処理は始まりません。</li>
-          <li><strong>権限を確認する：</strong>入力切り替えを使う場合は「アクセシビリティ設定」から許可します。「通知を許可」を押し、macOS がローカルネットワークの許可を求める場合は接続に必要な許可を設定します。</li>
+          <li><strong>権限を確認する：</strong>入力切り替えを使う場合は「アクセシビリティ設定」から許可します。「通知を許可」を押し、<a href="#notifications">通知のおすすめ設定</a>を確認します。macOS がローカルネットワークの許可を求める場合は接続に必要な許可を設定します。</li>
           <li><strong>開くものを選ぶ：</strong>「アプリを追加…」「フォルダを追加…」で項目を追加し、待機時間と順序を調整して保存します。「パスを入力」なら、まだ接続していない共有上のフォルダも絶対パスで登録できます。</li>
           <li><strong>操作せずに確認する：</strong>「操作せず確認」で解除対象と手順を確認します。このモードでは解除・接続・キー送信・起動・表示・通知を行いません。アプリやフォルダの実在確認も行いません。</li>
           <li><strong>手動で動作を確かめる：</strong>共有上で使用中のファイルを閉じてから「今すぐ実行」を押し、結果とログを確認します。編集中の設定がある場合は先に保存してください。</li>
           <li><strong>次のログインから自動実行する：</strong>「アプリ起動時にワークフローを自動実行」と「ログイン時にStartMyMacを起動」を有効にします。承認待ちの場合はログイン項目の承認画面で許可します。置き換える Automator のログイン項目は外し、次のログインで結果を確認します。</li>
         </ol><p>設定画面を閉じた後も、メニューバーから設定・ログ・実行・中止・終了を選べます。自動起動をやめる場合は、設定でログイン時の起動をオフにします。</p></section>
+        <section id="notifications"><h2>通知のおすすめ設定</h2>
+          <p>準備が終わったことを見逃さず、起動時の音は控える設定です。StartMyMac の「通知を許可」で許可した後、<strong>システム設定 → 通知 → StartMyMac</strong>を開いて調整します。ここでのおすすめは使い方に合わせた設定例で、アプリの初期値ではありません。</p>
+          <figure class="startup-notification-screen"><a href="notification-settings.png" target="_blank" rel="noopener noreferrer" aria-label="StartMyMac の通知設定画像を原寸で開く（新しいタブ）"><img src="notification-settings.png" alt="macOS の StartMyMac 通知設定。通知を許可、デスクトップ、持続的を選択。通知センター、ロック画面、通知音はオフ。プレビューは常に表示、グループ化はアプリケーション別。通知を要約はオン。" width="980" height="868" loading="lazy"></a><figcaption>提供された macOS の通知設定画面（2026年10月6日）。画像をクリックすると原寸で確認できます。画面内のアイコンは検証版のものです。</figcaption></figure>
+          <div class="callout"><p><strong>画像と異なるおすすめは「通知を要約：オフ」です。</strong>添付画像ではオンですが、StartMyMac の短い結果通知は、日時・完了件数・エラー件数を元の文面で確認できる設定をおすすめします。</p></div>
+          <div class="startup-settings"><table><caption>StartMyMac の推奨通知設定</caption><thead><tr><th scope="col">項目</th><th scope="col">推奨値</th><th scope="col">理由・補足</th></tr></thead><tbody>
+            <tr><th scope="row">通知を許可</th><td><strong>オン</strong></td><td>処理の完了とエラーの有無を受け取ります。</td></tr>
+            <tr><th scope="row">デスクトップ</th><td><strong>オン</strong></td><td>作業画面で準備完了を確認できます。</td></tr>
+            <tr><th scope="row">通知センター</th><td><strong>オフ</strong></td><td>日々の完了通知をためない設定です。後から通知を見返したい場合はオンにします。</td></tr>
+            <tr><th scope="row">ロック画面</th><td><strong>オフ</strong></td><td>ログイン後の確認を基本にし、ロック画面への結果表示を控えます。</td></tr>
+            <tr><th scope="row">通知スタイル</th><td><strong>持続的</strong></td><td>閉じるまで画面に残るので、完了やエラーを見逃しにくくなります。</td></tr>
+            <tr><th scope="row">通知音を鳴らす</th><td><strong>オフ</strong></td><td>毎回のログイン時に音を鳴らさず、表示で確認します。</td></tr>
+            <tr><th scope="row">プレビューを表示</th><td><strong>常に表示</strong></td><td>日時と各処理・エラーの件数を確認しやすくします。共有環境では「ロックされていないときのみ」も選べます。</td></tr>
+            <tr><th scope="row">通知のグループ化</th><td><strong>アプリケーション別</strong></td><td>通知センターをオンにする場合、StartMyMac の通知をまとめられます。オフの間は表示に影響しません。</td></tr>
+            <tr><th scope="row">通知を要約</th><td><strong>オフ</strong></td><td>短い結果通知を要約せずに読みます。添付画像はオンのため、この項目だけ変更をおすすめします。</td></tr>
+          </tbody></table></div>
+          <p>通知には実行日時、接続・アプリ起動・フォルダ表示の件数、エラー件数が表示されます。エラーがあった場合の詳細は、メニューバーから実行ログを開いて確認してください。通知をオフにしてもワークフローは実行されます。途中で中止した場合は完了通知を出しません。</p>
+          <p class="small-note">通知が出ない場合は、通知の許可と集中モードも確認してください。macOS のバージョンや Apple Intelligence の対応状況により、項目名や「通知を要約」の有無は異なります。各設定の意味は <a href="https://support.apple.com/ja-jp/guide/mac-help/mh40583/mac" target="_blank" rel="noopener noreferrer">Apple の「通知」設定ガイド</a>を参照しています。推奨値は StartMyMac の使い方に合わせたものです。</p>
+        </section>
         <section id="notes"><h2>使う前に確認したいこと</h2><ul>
           <li><strong>解除対象は設定した接続先だけではありません。</strong>macOS がネットワークボリュームと判定する、マウント中の共有をすべて対象にします。使用中の共有は強制解除しません。「操作せず確認」で対象を確認してください。</li>
           <li>実行するのは<strong>ユーザーのログイン後</strong>です。ログイン画面や FileVault の解除前には動作しません。</li>
@@ -65,9 +84,9 @@
           <li>中止しても、すでに終わった解除・接続・起動・表示は元に戻りません。タイムアウトや中止の後に OS 側の操作が完了する場合もあるため、Finder と対象アプリで状態を確認してください。</li>
         </ul></section>
         <section id="privacy"><h2>設定・認証情報とログ</h2><p>接続先、ユーザー名、アプリ・フォルダのパス、待機時間などは Mac 内に保存し、パスワードは macOS キーチェーンのアプリ専用項目に保存します。設定やログにパスワードを埋め込みません。接続時の認証情報は、指定した共有への接続に利用します。</p><p>実行ログは今回の実行分をメモリに保持し、必要なときに「ログを書き出す」でファイル保存します。接続先名、パス、エラーが含まれる場合があるため、共有する際は内容を確認してください。詳しくは<a href="../../privacy.html#startmymac">プライバシーポリシー</a>をご覧ください。</p></section>
-        <section id="status"><h2>開発状況</h2><div class="callout"><p><strong>現在は開発中・非公開です。アプリ本体とソースコードの一般公開・配布は行っていません。</strong>公開時期・価格は未定です。機能や画面は今後変更される場合があります。</p></div><p>掲載内容は <time datetime="2026-10-06">2026年10月6日</time>時点の1.2の仕様に基づきます。Apple Silicon / Intel 向けの Universal ビルドと自動テストが確認され、1.1の検証用アプリでは実環境での動作確認も行われています。1.2は Developer ID 署名と Apple の公証を取得していますが、実際の共有への接続とログイン時の動作は利用環境での確認が必要です。</p><p class="small-note">掲載アイコンは、この紹介ページ用に制作した独自の図案です。検証版のアプリアイコンとは異なります。実際の画面写真は、公開用に確認できたものを準備でき次第追加します。</p></section>
+        <section id="status"><h2>開発状況</h2><div class="callout"><p><strong>現在は開発中・非公開です。アプリ本体とソースコードの一般公開・配布は行っていません。</strong>公開時期・価格は未定です。機能や画面は今後変更される場合があります。</p></div><p>掲載内容は <time datetime="2026-10-06">2026年10月6日</time>時点の1.2の仕様に基づきます。Apple Silicon / Intel 向けの Universal ビルドと自動テストが確認され、1.1の検証用アプリでは実環境での動作確認も行われています。1.2は Developer ID 署名と Apple の公証を取得していますが、実際の共有への接続とログイン時の動作は利用環境での確認が必要です。</p><p class="small-note">掲載アイコンは、この紹介ページ用に制作した独自の図案です。検証版のアプリアイコンとは異なります。通知設定の画面写真は、提供された macOS の実際の画面を掲載しています。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#workflow">実行する順序</a><a href="#howto">初回の使い方</a><a href="#notes">注意点</a><a href="#privacy">設定・認証情報とログ</a><a href="#status">開発状況</a><p>Mac にログインした後の、いつもの準備をまとめるアプリです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="StartMyMac" href="https://x.com/intent/tweet?text=%23StartMyMac%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fstartmymac%2F" target="_blank" rel="noopener noreferrer">#StartMyMac で X に共有 ↗</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#workflow">実行する順序</a><a href="#howto">初回の使い方</a><a href="#notifications">通知のおすすめ設定</a><a href="#notes">注意点</a><a href="#privacy">設定・認証情報とログ</a><a href="#status">開発状況</a><p>Mac にログインした後の、いつもの準備をまとめるアプリです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="StartMyMac" href="https://x.com/intent/tweet?text=%23StartMyMac%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fstartmymac%2F" target="_blank" rel="noopener noreferrer">#StartMyMac で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#startmymac">プライバシーポリシー</a><a href="../../#macos">アプリ一覧に戻る</a></div></footer>

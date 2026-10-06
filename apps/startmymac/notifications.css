@@ -1,0 +1,19 @@
+.startup-notification-screen { margin: 24px 0; padding: 12px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.startup-notification-screen a { display: block; }
+.startup-notification-screen img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.startup-notification-screen figcaption { padding: 12px 5px 3px; color: var(--muted); font-size: .85rem; line-height: 1.7; }
+.startup-settings { margin: 24px 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); }
+.startup-settings table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; font-size: .87rem; overflow-wrap: anywhere; }
+.startup-settings caption { padding: 14px 16px; text-align: left; font-weight: 750; background: #e4eef5; }
+.startup-settings th, .startup-settings td { padding: 13px 16px; vertical-align: top; }
+.startup-settings thead { background: #f3f7fa; }
+.startup-settings thead th:nth-child(1) { width: 29%; }
+.startup-settings thead th:nth-child(2) { width: 23%; }
+.startup-settings tr { border-bottom: 1px solid var(--line); }
+.startup-settings tbody tr:last-child { border-bottom: 0; }
+.startup-settings tbody th { font-weight: 650; }
+@media (max-width: 560px) {
+  .startup-notification-screen { padding: 7px; }
+  .startup-settings th, .startup-settings td { padding: 11px 8px; }
+  .startup-settings table { font-size: .8rem; }
+}
