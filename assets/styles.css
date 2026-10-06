@@ -12,6 +12,17 @@
   --radius: 24px;
 }
 
+/* StartMyMac: original artwork and a compact, readable workflow overview. */
+.hero-art.startup { margin: 0; padding: 28px 16px 20px; gap: 20px; background: #e2edf4; }
+.startup figcaption { color: #34566e; font-size: .72rem; text-align: center; }
+.article .startup-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+.article .startup-flow li { display: flex; flex-direction: column; gap: 7px; margin: 0; padding: 17px; border: 1px solid #ccdfe9; border-radius: 16px; background: #edf4f8; }
+.startup-flow span { color: #34566e; font-size: .73rem; font-weight: 750; }
+.startup-flow strong { font-size: .94rem; }
+.startup-flow small { color: var(--muted); font-size: .77rem; line-height: 1.6; }
+.startup-page .article code { padding: 2px 5px; border-radius: 4px; background: #e9eeeb; font-size: .85em; overflow-wrap: anywhere; }
+@media (max-width: 560px) { .article .startup-flow { grid-template-columns: 1fr; } }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
