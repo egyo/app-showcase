@@ -20,15 +20,15 @@
       <p class="eyebrow">Privacy Policy</p>
       <h1 id="privacy-title" class="page-title">プライバシーポリシー</h1>
       <p class="lead">写真や日々の記録を、あなたの手元に。アプリが利用する情報と、保存・共有・削除の方法を説明します。</p>
-      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定：<time datetime="2026-10-02">2026年10月2日</time></span><span class="chip">最終更新：<time datetime="2026-10-05">2026年10月5日</time></span></div>
-      <div class="notice">本ポリシーは開発中のアプリの実装と紹介サイトに基づきます。2026年10月5日に egsplan の説明を追加しました。その他のアプリの説明は2026年10月2日時点の確認内容です。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
+      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定：<time datetime="2026-10-02">2026年10月2日</time></span><span class="chip">最終更新：<time datetime="2026-10-06">2026年10月6日</time></span></div>
+      <div class="notice">本ポリシーは開発中のアプリの実装と紹介サイトに基づきます。2026年10月6日に StartMyMac の説明を追加しました。egsplan は2026年10月5日、その他のアプリは2026年10月2日時点の確認内容です。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
     </section>
     <div class="page-layout">
       <article class="article" aria-label="プライバシーポリシー本文">
         <section id="scope"><h2>1. 適用範囲と基本方針</h2>
-          <p>本ポリシーは、egyo（以下「開発者」）が提供する egcamera、egtency、egweight、egsplan、QuietBlack と、このアプリ紹介サイトに適用します。アプリごとの説明には、ロック画面撮影拡張や Widget など付属する機能を含みます。</p>
+          <p>本ポリシーは、egyo（以下「開発者」）が提供する egcamera、egtency、egweight、egsplan、QuietBlack、StartMyMac と、このアプリ紹介サイトに適用します。アプリごとの説明には、ロック画面撮影拡張や Widget など付属する機能を含みます。</p>
           <div class="callout"><p>現在のアプリには、広告 SDK、アクセス解析 SDK、広告目的の追跡、利用者アカウントの登録機能はありません。egsplan は通知機能のため、端末単位の登録を行い、通知条件・通知先・通知予約を開発者のサーバーに保存します。</p></div>
-          <p>egcamera、egtency、egweight、QuietBlack は、開発者のサーバーへ利用情報を自動送信しません。egsplan のサーバーでの処理、egtency の計測通信、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
+          <p>egcamera、egtency、egweight、QuietBlack、StartMyMac は、開発者のサーバーへ利用情報を自動送信しません。egsplan のサーバーでの処理、egtency の計測通信、StartMyMac の共有への接続、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
         </section>
         <section id="egcamera"><h2>2. egcamera：写真と撮影設定</h2>
           <ul>
@@ -78,27 +78,39 @@
           <p>入力したキーの文字列、画面の画像、ブラウザ履歴、動画の内容は取得・保存しません。アプリ自身のネットワーク通信、広告、利用状況の自動送信はありません。</p>
           <p><strong>保存・終了：</strong>待ち時間と自動表示の設定を Mac 内の環境設定に保存します。操作状態は動作中の判定に使用し、操作履歴として保存しません。アプリを終了すると確認処理は止まります。「ログイン時に起動」は macOS が管理します。Mac ではアプリ本体を削除しても環境設定やログイン項目が残る場合があるため、削除前に自動起動を解除してください。設定の削除方法が必要な場合は、下記窓口へお問い合わせください。</p>
         </section>
-        <section id="sharing"><h2>7. 外部サービス・共有・バックアップ</h2>
+        <section id="startmymac"><h2>7. StartMyMac：接続先・認証情報と実行ログ</h2>
+          <p>ログイン後のネットワーク共有への再接続、アプリ起動、フォルダ表示のため、Mac のマウント情報と利用者が登録した設定を使用します。開発者のサーバーへ設定や実行ログを自動送信する機能はありません。</p>
+          <ul>
+            <li><strong>Mac 内の設定：</strong>接続先の名前・URL・ユーザー名、有効／無効、起動するアプリと開くフォルダのパス・順序、待機時間などを Mac 内の環境設定に保存します。</li>
+            <li><strong>認証情報：</strong>入力したパスワードは macOS キーチェーンのアプリ専用項目に保存します。設定データや実行ログ、プロセスの引数には埋め込みません。接続時は macOS の接続処理を通じて、指定した共有への認証に使用します。</li>
+            <li><strong>共有との通信：</strong>利用者が指定した NAS・サーバーと接続・認証の通信を行い、通信先や経由するネットワークには接続元のアドレスなどが伝わります。開くフォルダや起動するアプリが行う通信・保存は、それぞれのサービスやアプリの設定に従います。</li>
+            <li><strong>入力切り替えと通知：</strong>入力切り替えを有効にした場合は、アクセシビリティの許可を使って Finder に英数・かなキーを送信します。入力した文章を収集する機能ではありません。通知を許可すると、処理結果の日時・件数・エラー件数を表示します。</li>
+            <li><strong>実行ログ：</strong>今回の実行分をメモリ内に保持します。日時、処理内容、接続先の名前、ボリュームやアプリ・フォルダのパス、エラーなどが含まれる場合があります。「ログを書き出す」で選んだ場所にファイルを保存します。開発者へ自動送信しません。</li>
+          </ul>
+          <p><strong>停止・削除：</strong>自動起動を止める場合は設定で「ログイン時にStartMyMacを起動」をオフにし、メニューから終了します。保存パスワードは各接続先の「保存パスワードを削除」で削除できます。接続先を一覧から削除して設定を保存した場合も、対応するキーチェーン項目を削除します。パスワード欄を空にして保存するだけでは、保存済みパスワードは削除されません。</p>
+          <p>Mac ではアプリ本体を削除しても、環境設定・キーチェーン項目・書き出したログが残る場合があります。削除前に自動起動と保存パスワードを整理し、書き出したログは保存先で削除してください。環境設定の削除方法が必要な場合は、下記窓口へお問い合わせください。権限は macOS のシステム設定で変更できます。ログを共有する際は、接続先やパスなど不要な情報を除いてください。</p>
+        </section>
+        <section id="sharing"><h2>8. 外部サービス・共有・バックアップ</h2>
           <p>開発者は、アプリ内の写真、健康情報、コメント、計測ログを自動収集・販売しません。利用者が明示的に共有した情報は、指定した共有先のサービスや相手の管理下に移ります。</p>
           <p>iCloud 写真、ヘルスケアの同期、OS のバックアップなどは、Apple と利用者の設定によって管理されます。アプリ内での削除だけで、写真ライブラリ、バックアップ、共有先のコピーまで削除されるとは限りません。egweight のコメントは、前述のとおりバックアップ対象外です。</p>
           <p>App Store や TestFlight を通じて利用する場合、Apple が配布・診断・フィードバックに関する情報を扱い、開発者にクラッシュ情報、利用状況、利用者が送ったフィードバックや画像などを提供する場合があります。TestFlight では一部の情報が自動共有されます。開発者は提供された情報を不具合の調査、品質改善、試用の運営に使用し、広告や追跡には使用しません。詳細は <a href="https://www.apple.com/legal/privacy/jp/" target="_blank" rel="noopener noreferrer">Apple のプライバシーポリシー</a>と <a href="https://www.apple.com/legal/privacy/data/en/test-flight/" target="_blank" rel="noopener noreferrer">TestFlight とプライバシー</a>をご確認ください。</p>
         </section>
-        <section id="website"><h2>8. この紹介サイト</h2>
+        <section id="website"><h2>9. この紹介サイト</h2>
           <p>本サイトは GitHub Pages で公開しています。開発者は独自のアクセス解析ツール、広告、追跡用 Cookie を設置していません。画像・スタイルなどは本サイト内のファイルを使用しています。</p>
           <p>ホスティングを提供する GitHub は、セキュリティのため、サイト訪問者の IP アドレスを記録・保存します。開発者がアプリ内の情報を送信する処理とは別のものです。詳細は <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub のプライバシーに関する声明</a>をご確認ください。</p>
           <p>X のお問い合わせ・共有リンクなどを開くと、リンク先のサービスにアクセスします。その後の情報の扱いは各サービスのポリシーに従います。本サイトには X の投稿を埋め込む機能はありません。</p>
         </section>
-        <section id="contact"><h2>9. お問い合わせと情報の管理</h2>
+        <section id="contact"><h2>10. お問い合わせと情報の管理</h2>
           <p>本ポリシーや情報の扱いについては、<a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へお問い合わせください。開発者は、連絡時に利用者が提供したアカウント名、連絡先、問い合わせ内容、任意の添付資料を、回答、不具合の調査、対応の記録のために使用します。</p>
           <p>公開投稿に健康情報や個人が写った写真を載せないでください。最初の連絡ではアプリ名と問題の概要をお伝えください。ログや画像を送る場合は、不要な個人情報を除いてください。</p>
           <p>開発者が保有する問い合わせ・診断資料は、対応と関連する調査に必要な期間に限り保持し、不要になった情報を削除します。アクセスを必要な範囲に限定して管理し、本人の同意や法令上の義務がある場合を除き第三者へ提供しません。</p>
           <p>開発者が保有する情報の確認・訂正・削除・利用停止を希望する場合も、同じ窓口へご連絡ください。本人の情報であることを必要な範囲で確認し、適用される法令と各サービスの機能に従って対応します。開発者が保有していない端末内データは、各アプリ・OS の操作で管理してください。X や Apple などが保有する情報は、そのサービスの窓口・設定で管理してください。</p>
         </section>
-        <section id="changes"><h2>10. ポリシーの変更</h2>
+        <section id="changes"><h2>11. ポリシーの変更</h2>
           <p>アプリの機能、外部サービス、情報の利用目的などが変わる場合は、本ページを更新し、最終更新日を変更します。情報の扱いに重要な変更がある場合は、本ページに加え、該当アプリや配布時の案内などで知らせます。新たな許可・同意が必要な場合は、情報を利用する前に取得します。</p>
         </section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#egsplan">egsplan</a><a href="#quietblack">QuietBlack</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#egsplan">egsplan</a><a href="#quietblack">QuietBlack</a><a href="#startmymac">StartMyMac</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="./">アプリ一覧に戻る</a></div></footer>
