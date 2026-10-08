@@ -13,6 +13,18 @@ egcamera、egtency、egweight、egsplan、QuietBlack、StartMyMac を紹介す�
 
 アプリ本体とそのソースコードはこの公開リポジトリに含めません。
 
+## egcamera の掲載内容と更新
+
+- 紹介ページ：`apps/egcamera/index.html`
+- 画面写真・比較作例：`apps/egcamera/`、2026年9月30日に提供された旧版資料
+- 比較操作：`apps/egcamera/comparison.js`
+
+2026年10月9日に処理版2026-10-05.3の実装・現行仕様と照合しました。RAW×LUTの保存構成、HEICのHDR／SDR、5画角と接写、最長10秒のタップAF、LUT管理の固定表示・非選択インポート、公式F-Log2C / F-Gamut C変換へ説明を更新しています。旧版のスクリーンショットや作例と、現行の配置・色処理・実機確認範囲を区別します。アプリ本体は変更していません。
+
+「試してみたい LUT サンプル」はFUJIFILM→SONY（Y2氏のDreamy Night）→ARRI→AUXOUTの順です。SonyのMy Sony ID要件、利用者提供のZIP／.cube名と取得経路、ほかのクリエイターの取得手順を掲載しました。公式作例はS-Log3 / S-Gamut3.Cineですが、現行アプリの4入力にこの変換はなく、CINE2 / Proも代替ではありません。Sony本体の読み込み・画質は未検証と記載し、LUTは再配布しません。
+
+配布ページの案内は2026年10月9日に再確認しました。Sonyのログイン後のZIP内容と、既存3例のZIP内パスは今回再検証していません。プライバシーポリシーのegcamera節も、直近DNGの見本・読取許可の時機・診断ログとLUT名の扱いを実装に合わせています。次回は実装・対応入力・公開配布の状態と個別の実機結果を照合し、画面写真を更新するときは撮影時点を明記してください。
+
 ## StartMyMac の掲載内容とアイコン
 
 - 紹介ページ：`apps/startmymac/index.html`
