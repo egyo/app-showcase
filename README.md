@@ -1,6 +1,6 @@
 # egyo apps
 
-egcamera、egtency、egweight、egsplan、QuietBlack、StartMyMac を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
+egcamera、egtency、egweight、egsplan、egview、QuietBlack、StartMyMac を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
 
 ## 更新方法
 
@@ -91,3 +91,20 @@ egcamera、egtency、egweight、egsplan、QuietBlack、StartMyMac を紹介す�
 - [GitHub Pages のアクセス記録について](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 
 Apple がいう「収集」と、端末内の読み取り・処理は同じ意味ではありません。一律に「データ未収集」と決めず、配布版と問い合わせ等の運用に基づいて回答してください。
+
+
+## egview の掲載内容と更新
+
+- 紹介ページ：`apps/egview/index.html`
+- 個別の表示調整：`apps/egview/egview.css`（共通CSSは変更しない）
+- 採用アイコン：`assets/egview-icon.png`（モノトーンの写真コラージュ＋小文字eg）
+- プライバシーの説明：`privacy.html#egview`
+- 公開URL：https://egyo.github.io/app-showcase/apps/egview/
+
+2026年10月10日のユーザー確定仕様をもとに、目的、予定機能、操作、対応プラットフォーム、開発中・非公開／未配布であることを掲載しました。アプリ本体・実機スクリーンショットはなく、認証済みAPIの検証は未実施です。公開ページでは配信やリブログが対応済みと表現しません。
+
+表示・先読みはAPIの従来形式でphotoと返る投稿のみ。画像入りtextは除外します。10投稿先読みでPhotosetは1投稿として全画像、GIFは再生、各端末ローカル最長3日／初期1000MBでiCloud共有は取りやめた仕様を記載しています。成人向けブログ・ラベル付きphotoの表示、成人向けリブログでのラベル必須・継承は要件として記載し、実API保証と区別しています。非公式アプリの表示と、プライバシーの設計段階も明記しました。
+
+OAuth登録のアプリケーションウェブサイトには上記の紹介URLを使用できます。OAuthコールバックは別の受信先であり、この公開サイトに認証Secretやトークン交換処理を置きません。登録用の秘密情報、本人のダッシュボード、ユーザー提供の実投稿画像URL、Privateリポジトリの仕様全文は掲載しません。公開しているアイコンはユーザー採用済みの生成画像です。
+
+機能・認証方式・保存先が確定または変更したときは、紹介本文とプライバシー欄を同時に更新します。配布開始時には最低対応OS、入手方法、実機確認範囲を追記してください。

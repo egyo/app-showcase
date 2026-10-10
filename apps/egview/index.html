@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="egviewは、Tumblrのphoto投稿を黒背景の全画面で閲覧する個人用の画像ビューアです。Photoset、GIF、キューへのリブログを予定。現在は設計・開発中で、一般公開・配布していません。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="egview | egyo apps">
+  <meta property="og:description" content="好きな写真を、ひとつずつ。Tumblrの画像を静かに眺める、開発中・非公開の個人用ビューア。">
+  <meta property="og:url" content="https://egyo.github.io/app-showcase/apps/egview/">
+  <meta property="og:image" content="https://egyo.github.io/app-showcase/assets/egview-icon.png">
+  <meta property="og:image:alt" content="モノトーンの写真コラージュに小文字のegを重ねたegviewアイコン">
+  <title>egview | egyo apps</title>
+  <link rel="canonical" href="https://egyo.github.io/app-showcase/apps/egview/">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="egview.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body class="view-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egview</nav>
+    <div class="app-hero">
+      <div>
+        <p class="eyebrow">iOS / Tumblr photo viewer</p>
+        <h1 class="page-title">egview</h1>
+        <p class="view-tagline">好きな写真を、ひとつずつ。</p>
+        <p class="lead">黒い背景に、写真と小さな操作だけ。<br>Tumblrの画像を、静かに眺めるためのビューアです。</p>
+        <div class="hero-meta"><span class="chip">iPhoneから開発</span><span class="chip">個人用</span><span class="status">開発中・非公開</span></div>
+      </div>
+      <figure class="hero-art view-art"><img class="app-icon" src="../../assets/egview-icon.png" alt="egviewの採用アイコン。山や海、建物などの写真をモノトーンで重ね、小文字のegを配置" width="1254" height="1254"><figcaption>採用したアプリアイコン</figcaption></figure>
+    </div>
+    <div class="notice">現在は仕様策定・開発準備の段階で、アプリは一般公開・配布していません。このページは予定する機能と使い方の紹介です。アプリ本体とTumblr APIでの動作確認はこれから進めます。</div>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about">
+          <h2>写真に集中するために。</h2>
+          <p>egviewは、自分のTumblrアカウントのダッシュボード、ライクした投稿、自分のブログにある写真を、1投稿ずつ全画面で見る個人用アプリとして設計しています。使ってきたビューアの代替として、画像閲覧に必要な操作をシンプルにまとめることが目的です。</p>
+          <p>写真の縦横比を保ち、画面内に全体が収まるように表示します。余白は黒にして、切り替えのアニメーションは付けない方針です。画面下には「←」「リブログ」「ライク」「設定」を常に置き、投稿ブログ名と出典リンクも小さく表示する予定です。</p>
+          <p>新しい画像やオリジナル投稿を作成する機能は設けません。気に入った投稿は、元の本文・出典・Photosetを保ったまま、自分のブログの予約投稿キューへリブログする設計です。</p>
+        </section>
+        <section id="features">
+          <h2>予定している主な機能</h2>
+          <ul class="view-features">
+            <li><h3>写真だけを、全画面で</h3><p>縦持ちの画面に写真全体をフィット。本文、引用、リンク、音声、動画は表示せず、画像を見るためのUIに絞ります。</p></li>
+            <li><h3>PhotosetとGIF</h3><p>複数画像の投稿は左右スワイプで1枚ずつ。上部のドットで枚数と位置を示し、GIFはアニメーション再生する予定です。</p></li>
+            <li><h3>10投稿を先読み</h3><p>表示対象のphoto投稿を10件先読み。Photosetは1投稿として、その中の画像をすべて取得します。APIが提供する高画質候補を優先します。</p></li>
+            <li><h3>キューへリブログ</h3><p>ダブルタップや下部ボタンで、投稿全体を自分のブログのキューへ。追加成功後に次の投稿へ進み、公開時刻はTumblr側のキュー設定に従います。</p></li>
+            <li><h3>表示先を切り替え</h3><p>設定からダッシュボード、ライク、自分のブログへ。下部のライクボタンは、操作後も同じ投稿に留まる方針です。</p></li>
+            <li><h3>端末内の一時キャッシュ</h3><p>各端末のローカルに最長3日間だけ保存。初期上限は1000MBで、MB単位の変更、使用容量の表示、手動削除を予定しています。iCloud Driveへの保存・共有は行わない方針です。</p></li>
+          </ul>
+          <div class="callout"><p><strong>表示対象は、APIでphotoとして返る投稿のみです。</strong> 画像を含んでいてもtextとして返る投稿は表示・先読みの対象にしません。PhotosetとGIFも、photo投稿に含まれるものを対象とします。</p></div>
+          <p class="small-note view-followup">先読みの件数が揃わない場合や容量不足、通信失敗の扱いは検証予定です。通信中の画像まで瞬時に表示できることを保証するものではありません。</p>
+        </section>
+        <section id="howto">
+          <h2>基本的な使い方</h2>
+          <p>まずTumblrの公式認可画面で、自分のアカウントの利用を許可する流れを予定しています。egview内にTumblrのパスワードを入力させる設計にはしません。ログイン後はダッシュボードの表示対象から閲覧を始めます。</p>
+          <div class="view-table"><table>
+            <caption>閲覧画面の操作（予定）</caption>
+            <thead><tr><th scope="col">操作</th><th scope="col">動作</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1本指でシングルタップ</th><td>閲覧領域のどの位置からでも、次の投稿へ進みます。Photosetの次の1枚への操作とは別です。</td></tr>
+              <tr><th scope="row">1本指でダブルタップ</th><td>現在の投稿全体をキューへリブログし、成功後に次の投稿へ進みます。</td></tr>
+              <tr><th scope="row">2本指でタップ</th><td>ダッシュボードを再取得し、最新の表示対象へ移動します。</td></tr>
+              <tr><th scope="row">左から右へスワイプ</th><td>前の投稿へ戻ります。Photosetでは前の画像へ戻り、1枚目からさらに同方向へスワイプすると前の投稿へ戻ります。</td></tr>
+              <tr><th scope="row">右から左へスワイプ</th><td>Photoset内の次の画像へ進む操作を予定しています。左右の矢印は案内表示で、タップするボタンにはしません。</td></tr>
+              <tr><th scope="row">下部の「←」</th><td>Photosetの表示位置にかかわらず、前の投稿へ戻ります。</td></tr>
+              <tr><th scope="row">下部の「リブログ」</th><td>キューへ追加し、成功後に次の投稿へ進みます。</td></tr>
+              <tr><th scope="row">下部の「ライク」</th><td>現在の投稿をライクし、その場に留まります。</td></tr>
+              <tr><th scope="row">下部の「設定」</th><td>表示先やキャッシュ容量を変更し、キャッシュ削除などを行います。</td></tr>
+            </tbody>
+          </table></div>
+          <p class="small-note">下部ボタンや出典リンクはそれぞれの操作を優先します。Photosetの最後での挙動や再訪時の位置など、細部は実装・試用で調整する予定です。</p>
+        </section>
+        <section id="mature">
+          <h2>成人向け表示とコンテンツラベル</h2>
+          <p>Tumblrが許容し、本人の年齢・表示設定と公式APIによって利用できる範囲で、「成人向け」とマークされたブログやコンテンツラベル付きのphoto投稿を表示することを目指しています。Tumblrによる削除やアクセス制限を尊重し、非表示・ぼかし・年齢制限を迂回する機能は設けません。</p>
+          <p>成人向け投稿をリブログするときは、コンテンツラベルの付与を必須とし、元投稿にラベルがあれば引き継ぐ方針です。必要なラベルの付与・保持を保証できない場合は、リブログを送信しない設計を検討しています。</p>
+          <p><strong>成人向け投稿の取得・表示と、ラベルを保ったキューリブログのAPI検証は未実施です。</strong> このページは対応済みの保証ではありません。これらを開発初期の重要な確認事項としています。</p>
+          <p class="small-note">egviewはTumblrの非公式アプリです。Tumblrの運営・承認を受けたアプリではありません。参考：<a href="https://help.tumblr.com/knowledge-base/content-labels/" target="_blank" rel="noopener noreferrer">Tumblrのコンテンツラベルの説明 ↗</a></p>
+        </section>
+        <section id="privacy">
+          <h2>アカウントと画像の扱い</h2>
+          <p>Tumblrへの認可情報は画像キャッシュと分け、Keychainで保管する方針です。画像の一時キャッシュは各端末のみで管理し、永久保存や端末間の同期を目的にしません。リブログとライクは利用者の操作でTumblrへ送信する予定です。</p>
+          <p>認証方式やログアウト時の削除範囲は検討中です。実装が固まった段階で情報の保存先・削除方法を更新します。現段階の設計方針は<a href="../../privacy.html#egview">プライバシーポリシーのegview欄</a>にまとめています。</p>
+        </section>
+        <section id="status">
+          <h2>開発状況と公開について</h2>
+          <div class="callout"><p><strong>アプリは開発中・非公開で、一般配布していません。</strong> 公開しているのはこの紹介ページです。現在は仕様を整理し、公式OAuth APIによる取得・表示の検証を準備しています。</p></div>
+          <p>まず個人用のiOS版を完成させ、その後iPadOS・macOSへ展開する予定です。macOS版は公証取得を予定しています。最低対応OS、完成時期、一般向けの配布方法、価格は未定です。App Storeでの公開は将来検討します。ダウンロードや試用の募集は現在行っていません。</p>
+          <p class="small-note">掲載内容は<time datetime="2026-10-10">2026年10月10日</time>時点の仕様に基づきます。機能・操作・対応範囲は、API検証と実装を通じて変更される場合があります。実機スクリーンショットはまだ用意していません。</p>
+        </section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内">
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">予定している機能</a><a href="#howto">使い方</a><a href="#mature">成人向け表示とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
+        <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
+        <a class="share-link" data-share="egview" href="https://x.com/intent/tweet?text=%23egview%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegview%2F" target="_blank" rel="noopener noreferrer">#egview で X に共有 ↗</a>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a><a href="../../privacy.html#egview">プライバシーポリシー</a></div></footer>
+</body>
+</html>

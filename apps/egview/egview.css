@@ -1,0 +1,21 @@
+/* egview: a monochrome accent within the existing showcase layout. */
+.view-page .view-tagline { margin: 20px 0 0; color: var(--ink); font-size: clamp(1.25rem, 2.5vw, 1.7rem); font-weight: 750; letter-spacing: -.045em; }
+.view-page .view-art { margin: 0; padding: 26px 18px; gap: 22px; background: #e6e7e5; }
+.view-art figcaption { color: #535e61; font-size: .76rem; }
+.article .view-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 22px 0; padding: 0; list-style: none; }
+.view-features li { min-width: 0; margin: 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.view-features h3 { margin: 0 0 8px; line-height: 1.6; }
+.view-features p { margin: 0; font-size: .89rem; }
+.article .view-followup { margin-top: 15px; }
+.view-table { margin: 22px 0 16px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.view-table table { width: 100%; border-collapse: collapse; text-align: left; font-size: .88rem; overflow-wrap: anywhere; }
+.view-table caption { padding: 14px 17px; background: #e9ece9; text-align: left; font-weight: 750; }
+.view-table th, .view-table td { padding: 13px 17px; vertical-align: top; }
+.view-table thead { background: #f2f4f2; }
+.view-table tbody, .view-table tr + tr { border-top: 1px solid var(--line); }
+.view-table th[scope="row"] { width: 35%; font-weight: 650; }
+@media (max-width: 560px) {
+  .article .view-features { grid-template-columns: 1fr; }
+  .view-table th, .view-table td { padding: 11px 12px; }
+  .view-table th[scope="row"] { width: 38%; }
+}
