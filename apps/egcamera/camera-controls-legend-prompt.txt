@@ -1,0 +1,11 @@
+Asset: camera-controls-legend.png
+Created: 2026-10-11
+Tool: built-in image_gen (imagegen skill)
+References: Two user-provided egcamera images, with and without numbered callouts, supplied 2026-10-11. The generated asset is an explanatory illustration, not a device screenshot or validation result. Reference originals are not included in this public repository.
+
+Use case: precise-object-edit / infographic-diagram.
+Asset type: egcamera public website numbered operation-screen legend.
+Input images: Image 1 is the numbered layout reference; Image 2 is the clean screen and device to preserve.
+Primary request: Produce one polished portrait legend image using the supplied egcamera screenshot. Preserve exactly the device outline, pink cosmos photograph, all UI controls and their positions, green focus square and level, orange padlock, yellow 35 button, amber pause icon, shutter and EV slider. Change only external annotation styling and outer background. Use an opaque warm off-white (#f7f8f5) background outside the device instead of black, professional Apple support diagram clarity. Keep dark charcoal thin leader lines and dark charcoal circles with white readable digits. Every number 1 through 10 appears exactly once; no captions, title, extra UI or words.
+Callout targets: 1 top-right orange focus lock padlock; 2 finder upper right edge; 3 green horizontal level at center; 4 green focus rectangle around flower, from left; 5 the 35/48/120 field-of-view buttons from right; 6 amber saving pause icon bottom-left of finder from left; 7 photo-library icon lower right from right; 8 central circular shutter from right in the gap before 7; 9 settings sliders icon lower left from left; 10 EV slider bottom from right.
+Match reference 1 callout routing precisely, improve spacing where needed so leader lines do not overlap other controls, all digits clear, all callouts fully inside canvas. The image must show the complete phone with generous margins. Do not change screenshot content. No watermark.
