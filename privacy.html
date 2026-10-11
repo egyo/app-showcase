@@ -20,15 +20,15 @@
       <p class="eyebrow">Privacy Policy</p>
       <h1 id="privacy-title" class="page-title">プライバシーポリシー</h1>
       <p class="lead">写真や日々の記録を、あなたの手元に。アプリが利用する情報と、保存・共有・削除の方法を説明します。</p>
-      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定：<time datetime="2026-10-02">2026年10月2日</time></span><span class="chip">最終更新：<time datetime="2026-10-11">2026年10月11日</time></span></div>
-      <div class="notice">本ポリシーは開発中のアプリの実装と紹介サイトに基づきます。2026年10月7日に egsplan の登録・削除の説明を実装と再照合しました。StartMyMac は2026年10月7日に1.3の終了時処理とログ保持も確認しました。egcamera は2026年10月11日に処理版2026-10-11.1の写真見本・LUT入力解析・診断・LUT名の扱いを確認しました。egtency、egweight、QuietBlackは2026年10月2日時点の確認内容です。egviewは2026年10月10日時点の設計方針を追加し、実装済みの説明と区別しています。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
+      <div class="hero-meta"><span class="chip">運営・開発者：egyo</span><span class="chip">制定：<time datetime="2026-10-02">2026年10月2日</time></span><span class="chip">最終更新：<time datetime="2026-10-12">2026年10月12日</time></span></div>
+      <div class="notice">本ポリシーは開発中のアプリの実装と紹介サイトに基づきます。2026年10月7日に egsplan の登録・削除の説明を実装と再照合しました。StartMyMac は2026年10月7日に1.3の終了時処理とログ保持も確認しました。egcamera は2026年10月11日に処理版2026-10-11.1の写真見本・LUT入力解析・診断・LUT名の扱いを確認しました。egtency、egweight、QuietBlackは2026年10月2日時点の確認内容です。egviewは2026年10月12日にiOSプロトタイプ0.1.10の認証サービス・端末内キャッシュ・ログアウト・明示共有を実装と照合しました。配布版で情報の扱いが変わる場合は、変更内容を反映します。</div>
     </section>
     <div class="page-layout">
       <article class="article" aria-label="プライバシーポリシー本文">
         <section id="scope"><h2>1. 適用範囲と基本方針</h2>
           <p>本ポリシーは、egyo（以下「開発者」）が提供する egcamera、egtency、egweight、egsplan、egview、QuietBlack、StartMyMac と、このアプリ紹介サイトに適用します。アプリごとの説明には、ロック画面撮影拡張や Widget など付属する機能を含みます。</p>
           <div class="callout"><p>現在のアプリには、広告 SDK、アクセス解析 SDK、広告目的の追跡、利用者アカウントの登録機能はありません。egsplan は通知機能のため、端末単位の登録を行い、通知条件・通知先・通知予約を開発者のサーバーに保存します。</p></div>
-          <p>egcamera、egtency、egweight、QuietBlack、StartMyMac は、開発者のサーバーへ利用情報を自動送信しません。egsplan のサーバーでの処理、egtency の計測通信、StartMyMac の共有への接続、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
+          <p>egcamera、egtency、egweight、QuietBlack、StartMyMac は、開発者のサーバーへ利用情報を自動送信しません。egsplan のサーバーでの処理、egtency の計測通信、StartMyMac の共有への接続、egview のTumblr連携と認証サービス、利用者が選ぶ共有、Apple の配布・診断サービス、お問い合わせと紹介サイトへのアクセスについては、以下で説明します。</p>
         </section>
         <section id="egcamera"><h2>2. egcamera：写真と撮影設定</h2>
           <ul>
@@ -92,15 +92,17 @@
           <p><strong>停止・削除：</strong>自動起動を止める場合は設定で「ログイン時にStartMyMacを起動」をオフにし、メニューから終了します。保存パスワードは各接続先の「保存パスワードを削除」で削除できます。接続先を一覧から削除して設定を保存した場合も、対応するキーチェーン項目を削除します。パスワード欄を空にして保存するだけでは、保存済みパスワードは削除されません。</p>
           <p>Mac ではアプリ本体を削除しても、環境設定・キーチェーン項目・書き出したログが残る場合があります。削除前に自動起動と保存パスワードを整理し、書き出したログは保存先で削除してください。環境設定の削除方法が必要な場合は、下記窓口へお問い合わせください。権限は macOS のシステム設定で変更できます。ログを共有する際は、接続先やパスなど不要な情報を除いてください。</p>
         </section>
-        <section id="egview"><h2>8. egview：Tumblr連携と一時キャッシュ（設計段階）</h2>
-          <p><strong>egviewは現在、仕様策定・開発準備の段階で、アプリ本体の実装と認証済みAPIの検証は未実施です。</strong> 以下は2026年10月10日時点の設計方針で、動作済みの情報管理を保証するものではありません。配布前に実装に合わせて更新します。</p>
+        <section id="egview"><h2>8. egview：Tumblr連携と一時キャッシュ</h2>
+          <p>2026年10月12日時点のiOSプロトタイプ0.1.10の情報管理を説明します。アプリは個人用・開発中で、一般配布していません。</p>
           <ul>
-            <li><strong>認可とアカウント：</strong>Tumblrの公式OAuth画面で本人が許可した範囲のアカウント・所有ブログ情報を使用します。egview内でTumblrのパスワードを収集せず、トークンは画像キャッシュと分けてKeychainで保管する方針です。コード交換の方式や認証サーバーの有無は未確定です。</li>
-            <li><strong>投稿と画像：</strong>ダッシュボード、ライク、自分のブログから取得できるphoto投稿の画像、投稿ID、出典、ラベル・表示制限等の情報を閲覧と適切なリブログに使用する予定です。画像は各端末に最長3日間の一時キャッシュとして保存し、初期上限1000MB、MB数値設定、容量表示と手動削除を用意する方針です。iCloud Drive保存・端末共有・バックアップの対象にしない設計です。</li>
-            <li><strong>Tumblrへの送信：</strong>リブログとライクは利用者の操作でTumblrへ送信する予定です。リブログは自分のブログのキューに入り、Tumblr側の設定時間に公開されます。新規のオリジナル投稿・画像アップロード機能は設けません。成人向けリブログのラベルは付与・継承を必須とし、保証できない場合の送信停止を検討しています。</li>
-            <li><strong>接続に伴う情報：</strong>TumblrのAPIや画像配信先への接続には、公開IPアドレスなどの通信情報が伴います。Tumblr側での情報の扱いは<a href="https://www.tumblr.com/policy/privacy" target="_blank" rel="noopener noreferrer">Tumblrのプライバシーポリシー</a>に従います。この紹介サイトにはTumblrログイン機能やトークン入力欄を置いていません。</li>
+            <li><strong>認可とアカウント：</strong>Tumblrの公式OAuth画面で本人がbasic・write・offline_accessを許可し、アカウントと所有ブログを確認します。アプリ内でTumblrのパスワードを収集しません。認可情報は画像と分けて、この端末のみで利用できるKeychainへ保存します。</li>
+            <li><strong>認証サービス：</strong>開発者のCloudflare Workerで認可コードの交換とトークン更新を行います。TumblrのConsumer SecretはWorkerだけで使用します。コード・トークンは交換／更新処理中に扱い、端末への受け渡しには短時間有効な暗号化チケットを使います。現行Workerコードはトークンをデータベース等へ永続保存しません。Cloudflare側の通信情報等の取り扱いは<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflareのポリシー</a>に従います。</li>
+            <li><strong>投稿と画像：</strong>ダッシュボード・ライク・所有ブログから取得できる画像入りtext／photo投稿の画像、ID、ブログ名、出典、画像寸法、リブログキー、ライク状態等を閲覧と投稿操作に使用します。投稿一覧と閲覧位置はセッションのメモリ内で管理します。画像は端末内の一時領域へ保存し、取得から72時間・既定200MBの制限を併用します。MB上限変更・使用量表示・手動削除を用意し、iCloud Drive同期・端末共有・バックアップの対象にしません。停止中の任意時刻の物理削除は保証できず、起動／復帰等で期限を整理します。</li>
+            <li><strong>Tumblrへの送信：</strong>リブログとライク付与・解除は利用者の操作でTumblrへ送信します。リブログは選択した所有ブログのキューへ投稿全体を追加します。新規オリジナル投稿や画像アップロード、追加Matureラベル／NSFWタグの送信は行いません。元ラベル継承は引き続き実機確認中です。</li>
+            <li><strong>診断とURL確認：</strong>利用者が診断メモを作成し、共有操作を選んだ場合に共有先へ渡します。診断にはOS・件数・キャッシュ量・処理状況等を含み、トークンは含めません。投稿URLの入力と照合結果は永続保存しませんが、照合結果の共有には入力した投稿URLが含まれます。共有内容と送り先を確認してください。</li>
+            <li><strong>接続に伴う情報：</strong>Tumblr API・画像配信先・認証サービスへの通信には公開IPアドレス等が伴います。Tumblr側の取り扱いは<a href="https://www.tumblr.com/policy/privacy" target="_blank" rel="noopener noreferrer">Tumblrのプライバシーポリシー</a>に従います。紹介サイトにはTumblrログイン機能やトークン入力欄を置いていません。</li>
           </ul>
-          <p><strong>削除・認可の管理：</strong>キャッシュの期限切れ・容量超過時の削除と、設定からのこの端末のキャッシュ削除を予定しています。期限切れや削除・アクセス不可と判明した投稿を表示し続けない方針です。ログアウト時の画像・トークン削除の範囲、認可の取消手順、アプリ停止中の期限処理は実装・実機検証に合わせて明示します。端末のキャッシュ削除は、Tumblr上のリブログやライクを取り消す操作ではありません。</p>
+          <p><strong>削除とログアウト：</strong>設定の「キャッシュを削除」は、この端末の画像ファイル・索引・表示用メモリを削除します。再表示時には必要な画像を再取得します。「ログアウト・この端末の画像を削除」は認可情報もKeychainから削除し、同梱サンプルに戻ります。再接続成功時も以前の画像を削除します。Tumblrへ送ったライク・キュー投稿や、外部へ共有したメモは端末のキャッシュ削除では消えません。Tumblr側のアプリ連携解除はTumblrのアカウント設定で行ってください。</p>
         </section>
         <section id="sharing"><h2>9. 外部サービス・共有・バックアップ</h2>
           <p>開発者は、アプリ内の写真、健康情報、コメント、計測ログを自動収集・販売しません。利用者が明示的に共有した情報は、指定した共有先のサービスや相手の管理下に移ります。</p>
@@ -122,7 +124,7 @@
           <p>アプリの機能、外部サービス、情報の利用目的などが変わる場合は、本ページを更新し、最終更新日を変更します。情報の扱いに重要な変更がある場合は、本ページに加え、該当アプリや配布時の案内などで知らせます。新たな許可・同意が必要な場合は、情報を利用する前に取得します。</p>
         </section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#egsplan">egsplan</a><a href="#quietblack">QuietBlack</a><a href="#startmymac">StartMyMac</a><a href="#egview">egview（設計段階）</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#scope">適用範囲・基本方針</a><a href="#egcamera">egcamera</a><a href="#egtency">egtency</a><a href="#egweight">egweight</a><a href="#egsplan">egsplan</a><a href="#quietblack">QuietBlack</a><a href="#startmymac">StartMyMac</a><a href="#egview">egview</a><a href="#sharing">外部サービス・共有</a><a href="#website">紹介サイト</a><a href="#contact">お問い合わせ・管理</a><a href="#changes">ポリシーの変更</a><p>各アプリが扱う情報と、削除・許可変更の方法を確認できます。</p><a href="./">アプリ一覧に戻る</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="./">アプリ一覧に戻る</a></div></footer>

@@ -19,3 +19,15 @@
   .view-table th, .view-table td { padding: 11px 12px; }
   .view-table th[scope="row"] { width: 38%; }
 }
+.view-screen-layout { display: grid; grid-template-columns: minmax(0, 290px) minmax(0, 1fr); gap: 30px; align-items: center; margin: 24px 0; }
+.view-screen { margin: 0; min-width: 0; }
+.view-screen img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 22px; background: #000; }
+.view-screen figcaption { margin-top: 12px; color: var(--muted); font-size: .76rem; line-height: 1.8; }
+.view-screen-notes { min-width: 0; }
+.view-screen-notes ol { padding-left: 1.4em; }
+.view-screen-notes li { margin: 18px 0; }
+.view-screen-notes li p { margin: 6px 0 0; font-size: .9rem; }
+@media (max-width: 680px) {
+  .view-screen-layout { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+  .view-screen { width: min(100%, 310px); margin-inline: auto; }
+}
