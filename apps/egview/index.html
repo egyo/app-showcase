@@ -31,7 +31,7 @@
         <h1 class="page-title">egview</h1>
         <p class="view-tagline">好きな写真を、ひとつずつ。</p>
         <p class="lead">黒い背景に、写真と小さな操作だけ。<br>Tumblrの画像を、静かに眺めるためのビューアです。</p>
-        <div class="hero-meta"><span class="chip">iOS 18以上</span><span class="chip">個人用</span><span class="status">開発中・未配布</span></div>
+        <div class="hero-meta"><span class="chip">iOS 18以上</span><span class="chip">Wi-Fi推奨</span><span class="chip">個人用</span><span class="status">開発中・未配布</span></div>
       </div>
       <figure class="hero-art view-art"><img class="app-icon" src="../../assets/egview-icon.png" alt="egviewの採用アイコン。山や海、建物などの写真をモノトーンで重ね、小文字のegを配置" width="1254" height="1254"><figcaption>採用したアプリアイコン</figcaption></figure>
     </div>
@@ -75,6 +75,11 @@
           <div class="callout"><p><strong>表示対象は、公式APIでtext／photoとして返り、画像を含む投稿です。</strong> 画像のない投稿や他のタイプを除き、同じ元投稿のリブログは最初の1件だけを表示します。Webの全投稿・件数・順序と一致するとは限りません。</p></div>
           <p>Webの「お気に入りをトップに表示する」と同じ推薦順には未対応です。Webの「フォロー中」と比較する場合は、Tumblr側のこの設定をOFFにすることを推奨しています。投稿URLを設定から個別に開き、ダッシュボード内の位置を照合する機能もあります。</p>
           <p class="small-note view-followup">先読みは通信や容量の影響を受けます。未準備の画像は現在の画像を保って待ち、取得できない投稿はスキップします。通信中まで瞬時に切り替わることや、停止中の厳密な72時間の物理削除は保証していません。</p>
+        </section>
+        <section id="network">
+          <h2>通信量と推奨環境</h2>
+          <div class="callout"><p><strong>Wi-Fi環境での利用を推奨します。</strong> 高画質の画像・GIFと10投稿の全画像を先読みするため、<strong>モバイル回線では大量のデータ通信（パケット）を消費します。</strong> Photosetや長時間の閲覧では通信量がさらに増えます。</p></div>
+          <p>キャッシュ上限200MBは端末内の保存容量であり、通信量の上限ではありません。現行版にはWi-Fi接続時だけ取得・先読みする制限はありません。</p>
         </section>
         <section id="howto">
           <h2>基本的な使い方</h2>
@@ -121,7 +126,7 @@
         </section>
       </article>
       <aside class="side-panel" aria-label="ページ案内">
-        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screen">画面の見方</a><a href="#features">主な機能</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screen">画面の見方</a><a href="#features">主な機能</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
         <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
         <a class="share-link" data-share="egview" href="https://x.com/intent/tweet?text=%23egview%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegview%2F" target="_blank" rel="noopener noreferrer">#egview で X に共有 ↗</a>
       </aside>
