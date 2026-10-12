@@ -1,0 +1,19 @@
+egcamera showcase renewal — 2026-10-12
+Tool: built-in image_gen; no CLI/API fallback.
+Style reference: previous egcamera-showcase.png (dark studio, silver frames, landscape + portrait).
+Screen sources: IMG_0091.jpg and IMG_9535.PNG, supplied by user on 2026-10-12 as current-build screenshots.
+This asset is an AI marketing composite, not an unmodified screenshot or a device validation result.
+Separate real screenshots on the page: IMG_0097.PNG / IMG_9823.PNG / IMG_9866.jpg.
+
+Initial prompt:
+Use case: compositing
+Asset type: egcamera website hero, wide 16:9 landscape product visual.
+Primary request: Renew the existing egcamera-showcase image while keeping its understated dark charcoal-green studio atmosphere, soft surface reflections, thin silver rounded device frames, a large landscape screen on the left and a slightly overlapping portrait screen on the right, and small lowercase 'egcamera' text at upper left.
+Input images: Image 1 existing hero is composition/style reference only, replace its obsolete screens. Image 2 IMG_0091.jpg is exact supporting landscape screen insert (bright green maple leaves and temple roof). Image 3 IMG_9535.PNG is exact supporting portrait screen insert (pink cosmos flower against blue sky, current egcamera controls).
+Keep both supplied screen interfaces, icons, numbers, and photographic scenes faithful. Show whole screens with their charcoal interface bars and original aspect ratios. Landscape screen across left lower area, portrait front right, balanced generous margin. No extra screenshots or photographic scenes. Preserve the original subtle premium studio lighting. Use original screenshot imagery rather than inventing photos. Don't add slogans, feature text, hands, people, camera hardware, or extra buttons. Only text outside screens: 'egcamera'. This is a marketing composite, not a new UI design.
+
+Targeted correction:
+Use case: compositing. Edit the first image only.
+Keep its background, lowercase egcamera typography, device frames, shadows, layout, and right portrait cosmos screen unchanged.
+Replace the contents of the LEFT landscape device screen with the complete EXACT second image IMG_0091.jpg. Fit full screenshot within the existing landscape screen aspect ratio without cropping. Do not reuse its old UI: preserve EV '+0.7' from second image (the first image incorrectly says '-1.7'), preserve green horizontal level centered across maple scene, amber pause ring at lower right of photo, 48 white selected, 120/35 unselected, the exact scene, all interface bars, icons, time 13:25 and status bar. Copy screenshot faithfully instead of redrawing/reinterpreting it. Third image IMG_9535.PNG is right portrait insert reference only. Right screen already has correct cosmos and yellow35, keep it unchanged. No new text or elements.
+

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="egcamera は、iPhone 16 Pro / 16 Pro Max 向けに開発中の写真専用 LUT カメラです。試作版の機能と対応範囲を紹介します。">
   <meta property="og:image" content="https://egyo.github.io/app-showcase/apps/egcamera/egcamera-showcase.png">
-  <meta property="og:image:alt" content="緑の葉と黄色い花を映した egcamera の紹介ビジュアル">
+  <meta property="og:image:alt" content="緑の葉とピンクのコスモスを映した egcamera の紹介ビジュアル">
   <title>egcamera | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -54,7 +54,7 @@
     .comparison-labels { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 12px; font-size: .8rem; font-weight: 700; color: var(--ink); }
     .comparison-originals { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .8rem; }
     @media (max-width: 760px) { .app-hero.camera-feature { grid-template-columns: 1fr; } }
-    @media (max-width: 480px) { .camera-screens { gap: 10px; } .camera-screens figure { padding: 8px; } .lut-example { padding: 16px; } }
+    @media (max-width: 480px) { .camera-screens { grid-template-columns: 1fr; gap: 16px; } .camera-screens figure { padding: 8px; } .lut-example { padding: 16px; } }
   </style>
 </head>
 <body>
@@ -67,7 +67,7 @@
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egcamera</nav>
     <div class="app-hero camera-feature">
       <div><p class="eyebrow">iOS / Camera</p><h1 class="page-title">egcamera</h1><p class="lead">撮る前に色を選ぶ。仕上がりを楽しみながら、必要に応じて編集用の ProRAW も残せる写真専用の iPhone カメラです。</p><div class="hero-meta"><span class="chip">iPhone</span><span class="chip">写真・LUT</span><span class="status">開発中・非公開</span></div></div>
-      <figure class="camera-showcase"><img src="egcamera-showcase.png" alt="緑の葉を映す横画面と黄色い花を映す縦画面を組み合わせた egcamera の紹介ビジュアル" width="1672" height="941" fetchpriority="high"><figcaption>旧版の提供スクリーンショットをもとに AI で構成した紹介用ビジュアル。下には旧版の実画面を掲載し、現行版との違いを説明しています。</figcaption></figure>
+      <figure class="camera-showcase"><img src="egcamera-showcase.png" alt="緑の葉と寺院を映す横画面とピンクのコスモスを映す縦画面を組み合わせた egcamera の紹介ビジュアル" width="1672" height="941" fetchpriority="high"><figcaption>2026年10月12日提供の画面写真をもとに AI で合成した紹介用ビジュアル。実際の撮影画面・LUT 設定は下の「基本的な使い方」で確認できます。</figcaption></figure>
     </div>
     <div class="page-layout">
       <article class="article">
@@ -110,7 +110,7 @@
               <li><strong>水平器</strong>端末の傾きを確認できます。水平になると緑色になり、その状態が3秒続くと消えます。床や空に向けた撮影にも対応します。</li>
               <li><strong>マニュアルフォーカスポイント</strong>タップして指定したピント位置を緑の枠で1秒表示します。指定位置で一度オートフォーカスを行い、最長10秒保持する「タップAF」です。ピント距離を手動で調整する機能ではありません。</li>
               <li><strong>画角スイッチ（接写モード切替）</strong>35 / 48 / 120 mm 相当を選びます。選択中のボタンを再タップすると白の通常モードから黄色の接写へ切り替わり、もう一度で通常に戻ります。</li>
-              <li><strong>保存インジケーター</strong>撮影・画像処理・保存中はリングが回転します。端末の負荷・高温・省電力などで保存を一時停止すると、アンバー色の一時停止マークになります。表示中も、シャッターが有効なら追加撮影できます。</li>
+              <li><strong>保存インジケーター</strong>撮影・画像処理・保存中はリングが回転します。端末の負荷・高温・省電力などによる保存待ちが連続3秒続くと、アンバー色の一時停止マークになります。待機解除を判定すると回転を再開します。表示中も、シャッターが有効なら追加撮影できます。</li>
               <li><strong>写真ライブラリ</strong>システムの写真ピッカーを開きます。保存済み写真の確認・管理は「写真」アプリで行えます。</li>
               <li><strong>シャッターボタン</strong>指を置いた時点で撮影を受け付けます。未準備・レンズ切替・LUT 読込中や処理枠が満杯の間はグレーになり、撮影できません。</li>
               <li><strong>設定</strong>LUT の読み込み・選択、画角、フラッシュ、タイマー、RAW・HDR の保存、保留画像や撮影診断を確認できます。</li>
@@ -118,15 +118,16 @@
             </ol>
           </div>
           <p><strong>側面のボタンでも撮影できます。</strong> iPhone のカメラコントロール、音量を上げる／下げるボタンは、撮影画面でシャッターが有効なときに押し始めを受け付けます。タイマー設定時はカウントダウンを開始します。</p>
-          <p class="small-note">⑥は状態表示で、タップして保存を止めるボタンではありません。撮影中と撮影終了後2秒は自動保存を待ちます。保存失敗や写真追加の権限待ちでも一時停止表示になります。保留の理由と再保存は「設定 → 保存の保留中」で確認できます。</p>
+          <p class="small-note">⑥は状態表示で、タップして保存を止めるボタンではありません。撮影中と撮影終了後2秒は自動保存を待ちます。保存失敗・写真追加の権限拒否・アプリを開いて許可する必要がある場合など、保存ワーカーが停止して未保存写真が残ると、一時停止表示になります。保留の理由と再保存は「設定 → 保存の保留中」で確認できます。</p>
         </section>
-        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラの使用を許可します。写真への追加権限は最初の保存時に求められます。</li><li>設定の「読み込むLUTの入力」で、使う LUT に合う入力を選びます（初期値は F-Log2C / F-Gamut C）。続いて「選択LUTの管理 → .cubeを読み込む」で追加し、使う行をタップして「LUTを使う」をオンにします。新しい LUT は未選択で一覧の先頭に追加され、既存の選択は維持されます。読み込み時にファイル内の入力記述・TITLE・元ファイル名を解析し、特定できる場合は対応する入力を登録します。判定できない場合や情報が矛盾する場合は、あらかじめ選んだ入力を使います。設定の入力変更は登録済み LUT を変えません。登録後の入力は各行の情報ボタンから確認・修正できます。</li><li>撮影画面で構図と画角を決め、必要に応じて露出を調整してシャッターを押します。EV スライダーのトラックやポインタをダブルタップすると0へ戻ります。RAW・HDRの保存設定も撮影前に確認してください。</li><li>撮影後、写真ライブラリで保存された画像を確認します。画面の写真ボタンはシステムの写真ピッカーを開きます。保存画像の確認は写真.appで行ってください。撮影・画像処理・保存中はリングが回転し、省電力・高温・連続撮影中などで保存を待つ間はアンバー色の一時停止表示になります。表示中もシャッターが有効なら追加撮影できます。設定の「保存の保留中」で状態を確認し、失敗した写真は「保留画像を再保存」から再試行します。</li></ol><p>設定と写真ピッカーは縦持ちで操作してください。「選択LUTの管理」を開くと、LUT 見本のために写真の読み取り・書き込み権限も求められます。見本には直近保存した DNG を使い、読めない場合は許可された最新写真を使います。見本は表示専用で、保存済み写真を変更しません。許可しなくても、カメラと追加保存の権限があれば撮影できます。</p>
+        <section id="howto"><h2>基本的な使い方</h2><ol><li>アプリを開き、カメラの使用を許可します。写真への追加権限は最初の保存時に求められます。</li><li>設定の「読み込むLUTの入力」で、使う LUT に合う入力を選びます（初期値は F-Log2C / F-Gamut C）。続いて「選択LUTの管理 → .cubeを読み込む」で追加し、使う行をタップして「LUTを使う」をオンにします。入力は各行の情報ボタンから確認・修正できます。</li><li>撮影画面で構図と画角を決め、必要に応じて露出を調整してシャッターを押します。EV スライダーのトラックやポインタをダブルタップすると0へ戻ります。RAW・HDRの保存設定も撮影前に確認してください。</li><li>撮影後は「写真」アプリで保存された画像を確認します。画面の写真ボタンはシステムの写真ピッカーを開きます。リングが回転中なら撮影・処理・保存中、アンバー色の一時停止マークなら保存の保留中です。シャッターが有効なら追加撮影できます。保留の理由は「設定 → 保存の保留中」で確認し、失敗した写真は「保留画像を再保存」から再試行します。</li></ol><p>設定と写真ピッカーは縦持ちで操作してください。「選択LUTの管理」を開くと、LUT 見本のために写真の読み取り・書き込み権限も求められます。見本には直近保存した DNG を使い、読めない場合は許可された最新写真を使います。見本は表示専用で、保存済み写真を変更しません。許可しなくても、カメラと追加保存の権限があれば撮影できます。</p>
           <div class="camera-screens">
-            <figure><a href="camera-portrait.png" target="_blank" rel="noopener noreferrer"><img src="camera-portrait.png" alt="黄色い花を映した縦向き撮影画面。48 が選択され、シャッターと EV スライダーが下に並ぶ" width="1206" height="2622" loading="lazy"></a><figcaption><strong>撮影画面</strong><br>「35 / 48 / 120」で画角を選び、EV スライダーで明るさを調整します。左下の設定ボタンから LUT を読み込み、中央のシャッターで撮影します。</figcaption></figure>
-            <figure><a href="lut-settings.png" target="_blank" rel="noopener noreferrer"><img src="lut-settings.png" alt="LUT 設定画面。見本画像、LUT を使うスイッチ、読み込む LUT の入力、.cube を読み込む項目と登録済み LUT の一覧" width="1206" height="2622" loading="lazy"></a><figcaption><strong>LUT 設定</strong><br>現行版は設定で入力を選び、「選択LUTの管理」で読み込み・選択・並び替えを行います。見本・「LUTを使う」・読み込みボタンは固定され、一覧だけをスクロールします。この写真は旧版の配置です。</figcaption></figure>
-            <figure class="landscape-screen"><a href="camera-landscape.jpeg" target="_blank" rel="noopener noreferrer"><img src="camera-landscape.jpeg" alt="緑の葉を映した横向き撮影画面。右側に画角選択、シャッター、EV スライダーが並ぶ" width="2622" height="1206" loading="lazy"></a><figcaption><strong>横向きでも撮影</strong><br>現行版は撮影画面の縦配置を保ち、数字とアイコンを端末の向きに合わせて回転します。写真は撮影時の向きで保存します。この写真は旧版の横向き配置です。画面写真はクリックすると拡大できます。</figcaption></figure>
+            <figure><a href="camera-portrait.png" target="_blank" rel="noopener noreferrer"><img src="camera-portrait.png" alt="緑の木々を映した現行ビルドの縦向き撮影画面。通常35 mm と EV ＋1.7 が選択され、下に設定・シャッター・写真ボタンが並ぶ" width="1206" height="2622" loading="lazy"></a><figcaption><strong>撮影画面</strong><br>「35 / 48 / 120」で画角を選び、EV スライダーで明るさを調整します。左下の設定ボタンから LUT を読み込み、中央のシャッターで撮影します。</figcaption></figure>
+            <figure><a href="lut-settings.png" target="_blank" rel="noopener noreferrer"><img src="lut-settings.png" alt="現行ビルドの選択 LUT の管理画面。蝶の見本画像、LUT を使うスイッチ、.cube を読み込む項目と、情報・削除・並び替えボタン付きの LUT 一覧" width="1206" height="2622" loading="lazy"></a><figcaption><strong>LUT 設定</strong><br>「選択LUTの管理」で読み込み・選択・削除・並び替えを行います。チェック付きの行が選択中の LUT です。ⓘ から入力を確認・修正できます。見本・「LUTを使う」・読み込みボタンは固定され、一覧だけをスクロールします。読み込み前の入力は一つ前の設定画面で選びます。</figcaption></figure>
+            <figure class="landscape-screen"><a href="camera-landscape.jpeg" target="_blank" rel="noopener noreferrer"><img src="camera-landscape.jpeg" alt="黄色い花を映した現行ビルドの横向き撮影画面。35 mm 接写が黄色で選択され、オレンジの鍵はフォーカス保持中、右側にシャッターと EV スライダーが並ぶ" width="2622" height="1206" loading="lazy"></a><figcaption><strong>横向きでも撮影</strong><br>横持ちでは、数字とアイコンが端末の向きに合わせて回転します。右側にシャッターと EV スライダーが見える配置です。黄色の35は接写、オレンジの鍵はフォーカス保持中を示します。写真は撮影時の向きで保存します。画面写真はクリックすると拡大できます。</figcaption></figure>
           </div>
-          <p class="small-note">画面写真は2026年9月30日に提供された旧版の実画面で、現行版の配置や操作と異なります。LUT 設定の写真にある ARRI / SAGAMI の「F-Log2C / F-Gamut C」表示は、撮影時点の登録設定であり、各 LUT の推奨入力を示すものではありません。現行版では、読み込み済み LUT の入力を各行の情報ボタンから確認・修正できます。一覧の名前の下には入力・格子数・解析結果を表示しません。</p>
+          <details class="lut-example"><summary>LUT の追加と入力設定について</summary><p>新しい LUT は未選択で一覧の先頭に追加され、既存の選択は維持されます。同じファイル名の LUT は内容が違っても追加せず、登録済みの LUT を先頭へ移します。別名でもファイル内容が完全に一致すれば追加しません。既存の入力・選択・オン／オフは変わりません。同名の更新版に置き換えたい場合は、別名で読み込むか、既存の項目を削除してから読み込んでください。</p><p>読み込み時にファイル内の入力記述・TITLE・元ファイル名を解析し、特定できる場合は対応する入力を登録します。判定できない場合や情報が矛盾する場合は、あらかじめ選んだ入力を使います。設定の入力変更は登録済み LUT を変えません。登録後の入力は各行の情報ボタンから確認・修正できます。</p></details>
+          <p class="small-note">上の3枚は2026年10月12日に利用者から提供された、現在のビルドの実画面です。LUT 一覧の名前は登録例です。各 LUT の推奨入力は配布元で確認し、ⓘ から登録入力を確認・修正してください。</p>
         </section>
         <section id="samples">
           <h2>撮影サンプル：LUT あり／なしを比較</h2>
@@ -193,12 +194,12 @@
         <section id="status">
           <h2>開発状況と対応範囲</h2>
           <div class="callout"><p><strong>現在は開発中で、一般公開・配布はしていません。</strong> iOS 26 以降の iPhone 16 Pro / 16 Pro Max が対象です。今後の機種や機能の対応は検証後に決めます。</p></div>
-          <p>2026年10月11日、処理版「2026-10-11.1」の実装・現行仕様と説明を照合しました。起動・復帰、LUT の見本取得と取消、近距離警告の計算、保存済み画像の後片付けなどを整理した版です。Version / Build は0.1.0 / 1です。</p>
-          <p>この版には、署名なし iOS Debug / Release のビルド成功、Mac での自動検証6,624件・0失敗の記録があります。写真ライブラリへの追加はモックによる検証です。今回の紹介文更新でアプリのビルドや実機試験を再実行したものではありません。iPhone での色・画質・HDR・解像度・保存・長時間負荷、16 Pro Max、ロック中の撮影は個別の継続確認が必要です。</p>
-          <p>利用者からは、以前の版で iPhone 16 Pro の基本撮影・LUT 読み込み・DNG 保存・カメラコントロール起動を確認したとの報告があります。10月9日の輝度・LUT 一覧・レンズフェード・近距離警告、10月10日の即時シャッターにも良好との報告があり、10月11日朝には長時間スリープ後の復帰問題が再現しなくなったとの報告を受けています。条件や試行回数は未提示で、今回の最適化版の全機能確認や復帰問題の恒久的解消を示すものではありません。</p>
+          <p>2026年10月12日、処理版「2026-10-12.1」の実装・現行仕様と説明を照合しました。同名・同一内容の LUT の重複読み込みを防ぎ、負荷・温度・省電力による保存待ちの表示を連続3秒後に切り替える版です。Version / Build は0.1.0 / 1です。</p>
+          <p>この版には、署名なし iOS Debug / Release のビルド成功、Mac での自動検証6,650件・0失敗の記録があります。写真ライブラリへの追加はモックによる検証です。今回の紹介文更新でアプリのビルドや実機試験を再実行したものではありません。iPhone での色・画質・HDR・解像度・保存・長時間負荷、16 Pro Max、ロック中の撮影は個別の継続確認が必要です。</p>
+          <p>利用者からは、以前の版で iPhone 16 Pro の基本撮影・LUT 読み込み・DNG 保存・カメラコントロール起動を確認したとの報告があります。10月9日の輝度・LUT 一覧・レンズフェード・近距離警告、10月10日の即時シャッターにも良好との報告があり、10月11日朝には長時間スリープ後の復帰問題が再現しなくなったとの報告を受けています。条件や試行回数は未提示で、現行版の全機能確認や復帰問題の恒久的解消を示すものではありません。</p>
           <p>「離れてください」は AF の状態とフォーカス点周辺の画像から近距離での合焦不足を推定する案内です。望遠では一度出た警告を、極端な接近で画像を判定できなくなっても、回復を確認するまで維持します。暗所・無地では案内が残ることがあります。現在の被写体距離を測る機能や、画像全域のピントを完全に判定する機能ではありません。警告中も撮影できます。</p>
           <p>F-Log2C / F-Gamut C、ARRI LogC4 / AWG4、S-Log3 / S-Gamut3.Cine は公式曲線と色域変換、CINE2 / Pro は近似・試験用です。iPhone の処理済み画像に LUT を適用する方式で、メーカー固有の色や Log 撮影のダイナミックレンジを復元するものではありません。LUT 出力色空間の厳密な変換も未実装です。選択した LUT の読み込み・適用に失敗した場合はエラーを表示し、無加工の撮影へ自動では戻りません。</p>
-          <p class="small-note">番号付きの操作説明図は2026年10月11日提供の画像から作成しました。既存の実画面写真と撮影比較作例は2026年9月30日提供の旧版資料で、現行版の配置や色・画質の検証とは区別しています。</p>
+          <p class="small-note">番号付きの操作説明図は2026年10月11日提供の画像から作成しました。使い方の3枚は2026年10月12日提供の現行ビルドの実画面です。撮影比較作例は2026年9月30日提供の旧版資料で、現行版の色・画質の検証とは区別しています。</p>
         </section>
       </article>
       <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#controls">撮影画面の凡例</a><a href="#howto">使い方</a><a href="#samples">撮影サンプル比較</a><a href="#luts">LUT サンプル</a><a href="#status">開発状況</a><p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p><a class="share-link" data-share="egcamera" href="https://x.com/intent/tweet?text=%23egcamera%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegcamera%2F" target="_blank" rel="noopener noreferrer">#egcamera で X に共有 ↗</a></aside>
