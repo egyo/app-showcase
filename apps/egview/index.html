@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egviewは、Tumblrの画像を黒背景の全画面で眺める個人用ビューア。Photoset、GIF、ピンチ拡大、ライク付与・解除、キューへのリブログを備えたiOSプロトタイプです。開発中・未配布。">
+  <meta name="description" content="egviewは、Tumblrの画像・無音動画を黒背景の全画面で眺める個人用ビューア。iPhone Duoの単一・デュアル表示、Photoset、GIF、スライドショーに対応。開発中・未配布。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="egview | egyo apps">
-  <meta property="og:description" content="好きな写真を、ひとつずつ。Tumblrの画像を静かに眺める、開発中の個人用ビューア。画面例と使い方を紹介します。">
+  <meta property="og:description" content="好きな写真を、自分のペースで。Tumblrの画像・無音動画を眺める個人用ビューア。iPhone Duo Simulatorをもとにした画面例と使い方を紹介します。">
   <meta property="og:url" content="https://egyo.github.io/app-showcase/apps/egview/">
   <meta property="og:image" content="https://egyo.github.io/app-showcase/assets/egview-icon.png">
   <meta property="og:image:alt" content="モノトーンの写真コラージュに小文字のegを重ねたegviewアイコン">
@@ -27,106 +27,136 @@
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egview</nav>
     <div class="app-hero">
       <div>
-        <p class="eyebrow">iOS / Tumblr image viewer</p>
+        <p class="eyebrow">iOS / Tumblr media viewer</p>
         <h1 class="page-title">egview</h1>
-        <p class="view-tagline">好きな写真を、ひとつずつ。</p>
-        <p class="lead">黒い背景に、写真と小さな操作だけ。<br>Tumblrの画像を、静かに眺めるためのビューアです。</p>
-        <div class="hero-meta"><span class="chip">iOS 18以上</span><span class="chip">Wi-Fi推奨</span><span class="chip">個人用</span><span class="status">開発中・未配布</span></div>
+        <p class="view-tagline">好きな写真を、自分のペースで。</p>
+        <p class="lead">黒い背景に、写真と小さな操作だけ。<br>Tumblrの画像と無音動画を、静かに眺めるためのビューアです。</p>
+        <div class="hero-meta"><span class="chip">iOS 18以上</span><span class="chip">iPhone Duo対応</span><span class="chip">Wi-Fi推奨</span><span class="chip">個人用</span><span class="status">開発中・未配布</span></div>
       </div>
       <figure class="hero-art view-art"><img class="app-icon" src="../../assets/egview-icon.png" alt="egviewの採用アイコン。山や海、建物などの写真をモノトーンで重ね、小文字のegを配置" width="1254" height="1254"><figcaption>採用したアプリアイコン</figcaption></figure>
     </div>
-    <div class="notice">現在は個人用のiOSプロトタイプを実機で試している段階です。画像閲覧とキューへのリブログは実機での動作報告があり、細かな操作や長時間の負荷を引き続き確認しています。一般公開・配布や試用の募集は行っていません。</div>
+    <div class="notice">現在は個人用のiOSプロトタイプを開発・試用しています。画像閲覧・キューへのリブログ・動画切り替えには本人の動作確認報告があり、Duoの画面構成はシミュレータでも確認しています。実機の長時間負荷などは引き続き検証中です。一般配布や試用の募集は行っていません。</div>
     <div class="page-layout">
       <article class="article">
         <section id="about">
           <h2>写真に集中するために。</h2>
-          <p>egviewは、自分のTumblrアカウントのダッシュボード、ライクした投稿、所有ブログの画像を、1投稿ずつ全画面で眺める個人用アプリです。画像閲覧に必要な操作をシンプルにまとめ、好きな写真を自分のペースで見ることを目的に開発しています。</p>
-          <p>画像の縦横比を保ち、最初は全体が画面に収まるように表示します。余白は黒、切り替えのアニメーションはありません。画像を画面全体に広げ、枚数・出典・小さな操作バーをその上に重ねます。ピンチで気になる部分を拡大できます。</p>
+          <p>egviewは、自分のTumblrアカウントのダッシュボード、ライクした投稿、所有ブログの画像・動画を、黒背景の全画面で眺める個人用アプリです。通常のiPhoneは縦の単一表示、iPhone Duoはアウターとインナーの縦横表示に対応し、インナー横では2つのメディアを並べられます。</p>
+          <p>最初は縦横比を保って画像全体をフィットさせ、余白は黒に。本文やキャプションは表示せず、ページ表記・小さな出典ラベル・操作バーを写真に重ねます。画像や投稿の切り替えにはスライドやフェードを付けません。ピンチで気になる部分を拡大できます。</p>
           <p>気に入った投稿は、投稿全体を自分のブログの予約投稿キューへリブログできます。新しい画像のアップロードやオリジナル投稿の作成は行いません。</p>
         </section>
         <section id="screen">
-          <h2>画像を主役にした画面</h2>
-          <div class="view-screen-layout">
-            <figure class="view-screen">
-              <a href="viewer-sample.png" aria-label="差し替え済みのegview画面例を大きく表示"><img src="viewer-sample.png" alt="生成した山と湖の風景に差し替えたegviewの画面例。上部に2枚中2枚目の表示、下部に元投稿リンクと前の投稿・リブログ・ライク・設定の操作バー" width="851" height="1848" loading="lazy" decoding="async"></a>
-              <figcaption>実機画面をもとにした掲載用の画面例。表示写真は生成したサンプル風景、ブログ名は架空のものに差し替えています。UIも画像生成による再現のため、実際の表示と細部が異なる場合があります。</figcaption>
+          <h2>iPhone Duoで、閉じても、開いても。</h2>
+          <p>iPhone Duoのシミュレータで撮影された2点のスクリーンショットをもとにした掲載用の画面例です。写真は新しく生成した風景に、ブログ名は架空の「sample」に差し替えています。</p>
+          <div class="duo-outer-layout">
+            <figure class="duo-example duo-outer-example">
+              <p class="duo-label">iPhone Duo <span>アウター・縦</span></p>
+              <a class="duo-device duo-device-outer" href="duo-outer-sample.png" aria-label="iPhone Duoアウター縦の掲載用画面例を拡大">
+                <span class="duo-display"><img src="duo-outer-sample.png" alt="生成した夕日の草原を表示するegview。iPhone Duoのアウター縦画面を模式枠に収め、右側に再生・リブログ・ハート・設定を縦に配置" width="1040" height="1513" loading="lazy" decoding="async"></span>
+                <span class="duo-camera" aria-hidden="true"></span>
+              </a>
+              <figcaption>アウターディスプレイの単一表示。<br>iPhone Duo Simulator／2026年10月16日提供</figcaption>
             </figure>
             <div class="view-screen-notes">
-              <h3>画面の見方</h3>
-              <ol>
-                <li><strong>上部のドットと枚数</strong><p>Photosetの画像数と現在位置を示します。この例では2枚目を表示しています。</p></li>
-                <li><strong>画像と出典</strong><p>左右の矢印はスワイプの案内です。下部のブログ名や「元投稿」リンクから出典を確認できます。</p></li>
-                <li><strong>下部の操作バー</strong><p>前の投稿へ戻る、キューへリブログ、ライクの付与・解除、設定を開く、の4操作をまとめています。</p></li>
-              </ol>
-              <p class="small-note">iOS 26以降ではLiquid Glass、それ以前の対応OSでは半透明のMaterialを使います。操作バーと枚数は、画像を拡大しても同じ大きさです。</p>
+              <h3>写真のそばに、4つの操作。</h3>
+              <p>アウター縦の新規起動では、再生・リブログ・ライク・設定が右上に並びます。回転時は端末上の操作位置を保ち、図柄を正立させる設計です。</p>
+              <p>下部の「ブログ名 · 元投稿 ↗」から元の投稿へ。下スワイプで操作UIを隠すと、画像に集中できます。もう一度下スワイプすると再表示します。</p>
+              <p class="small-note">Duoの再生は現在の画像・動画から。通常iPhoneでは先頭に再生ボタンが現れ、フィード先頭から始まります。</p>
             </div>
           </div>
+          <figure class="duo-example duo-inner-example">
+            <p class="duo-label">iPhone Duo <span>インナー・横／デュアル表示</span></p>
+            <a class="duo-device duo-device-inner" href="duo-inner-sample.png" aria-label="iPhone Duoインナー横の掲載用画面例を拡大">
+              <span class="duo-display"><img src="duo-inner-sample.png" alt="生成した青い山の湖と木漏れ日の森を左右に並べたegview。開いたiPhone Duoの模式枠、右上の操作、右下の単一・デュアル切替、各面下部の出典ラベル" width="1494" height="1052" loading="lazy" decoding="async"></span>
+            </a>
+            <figcaption>インナーディスプレイのデュアル表示。共通のリブログ・ライク・再生は右側が対象です。<br>iPhone Duo Simulator／2026年10月16日提供</figcaption>
+          </figure>
+          <p class="small-note duo-disclosure">掲載画像は、シミュレータの実画面を参考に写真とUIを画像生成で再構成したものです。無加工のスクリーンショットではなく、UIの細部は実際の表示と異なる場合があります。端末枠は説明用の模式図です。Apple公式の製品画像・正確な筐体寸法を示すものではありません。</p>
         </section>
         <section id="features">
           <h2>主な機能</h2>
           <ul class="view-features">
-            <li><h3>写真だけを、全画面で</h3><p>縦持ちのiPhoneで画像全体をフィット。本文や動画・音声を描画せず、画像を眺めるための画面に絞ります。ピンチで1〜5倍に拡大できます。</p></li>
-            <li><h3>PhotosetとGIF</h3><p>複数画像は左右スワイプで1枚ずつ。上部のドットと枚数で位置を示し、GIFはアニメーション再生します。戻ると以前の画像位置を復元します。</p></li>
-            <li><h3>10投稿の全画像を先読み</h3><p>現在を含む10投稿の画像を順次準備します。Photosetは1投稿として全画像を対象にし、APIが提供する高画質候補を優先します。閲覧が進むと続きを補充します。</p></li>
-            <li><h3>キューへリブログ</h3><p>ダブルタップや下部ボタンで、投稿全体を選んだ所有ブログのキューへ。成功後に次の投稿へ進み、公開時刻はTumblr側のキュー設定に従います。</p></li>
-            <li><h3>表示先とライク</h3><p>設定からダッシュボード、ライク、所有ブログへ。ハートでライクを付け、もう一度押すと解除できます。ライク操作後は同じ投稿に留まります。</p></li>
-            <li><h3>端末内の一時キャッシュ</h3><p>取得から72時間を期限とし、初期上限は200MB。MB単位の上限変更、使用量表示、手動削除ができます。表示に必要な画像を優先し、iCloud同期は行いません。</p></li>
+            <li><h3>画像と無音動画を、全画面で</h3><p>画像全体をフィットし、ピンチで1〜5倍に拡大。直接再生できる動画は無音で自動ループします。動画専用の再生・シーク・音量UIは表示しません。</p></li>
+            <li><h3>PhotosetとGIF</h3><p>投稿内の画像・動画は左右スワイプで移動し、GIFはアニメーション再生。Duoデュアルではどちらの面のスワイプでも左右の表示組が連動します。</p></li>
+            <li><h3>必要な画像を先読み</h3><p>通常は現在を含む10投稿、省エネルギーモードでは3投稿を順次準備します。Photosetは1投稿として全画像が対象。APIが提供する高画質候補を優先します。</p></li>
+            <li><h3>キューへリブログ・ライク</h3><p>ダブルタップや操作バーで投稿全体を選んだ所有ブログのキューへ。成功後に次へ進みます。ハートの付与・解除では同じ投稿に留まります。</p></li>
+            <li><h3>スライドショーと時計</h3><p>順再生とシャッフルで自動送り。間隔は5秒〜10分の8種類、時計は日付・曜日・秒の有無で6種類。一時停止・再開、時計の切り替えも操作バーから行えます。</p></li>
+            <li><h3>UIを隠す・1枚を保存</h3><p>下スワイプで操作UIを切り替え、画像の長押しで現在の1枚を保存確認へ。写真のフルアクセスを許可するとegviewアルバムへ保存します。動画保存には対応しません。</p></li>
+            <li><h3>表示先を選ぶ</h3><p>ダッシュボード、ライク、所有ブログを切り替えられます。ダッシュボードでは自分の所有ブログの投稿や、自分が元投稿者のリブログを除外します。</p></li>
+            <li><h3>端末内の一時キャッシュ</h3><p>画像は取得から72時間を期限とし、既定上限200MB。上限変更・使用量表示・手動削除に対応。動画ファイルやオフライン用の動画キャッシュは作りません。</p></li>
           </ul>
-          <div class="callout"><p><strong>表示対象は、公式APIでtext／photoとして返り、画像を含む投稿です。</strong> 画像のない投稿や他のタイプを除き、同じ元投稿のリブログは最初の1件だけを表示します。Webの全投稿・件数・順序と一致するとは限りません。</p></div>
-          <p>Webの「お気に入りをトップに表示する」と同じ推薦順には未対応です。Webの「フォロー中」と比較する場合は、Tumblr側のこの設定をOFFにすることを推奨しています。投稿URLを設定から個別に開き、ダッシュボード内の位置を照合する機能もあります。</p>
-          <p class="small-note view-followup">先読みは通信や容量の影響を受けます。未準備の画像は現在の画像を保って待ち、取得できない投稿はスキップします。通信中まで瞬時に切り替わることや、停止中の厳密な72時間の物理削除は保証していません。</p>
+          <div class="callout"><p><strong>表示対象は、公式APIのtext／photo／video投稿に含まれる画像と直接再生動画です。</strong> NPFの画像・動画が混在する投稿も扱い、本文は表示しません。Web埋め込みだけの動画は対象外。同じ元投稿のリブログは最初の1件だけを表示し、ダッシュボードの自分投稿除外はライクや所有ブログには適用しません。</p></div>
+          <p>Webの「お気に入りをトップに表示する」と同じ推薦順には未対応です。Webの「フォロー中」と比較する場合は、Tumblr側のこの設定をOFFにすることを推奨しています。対象外投稿の除外やAPIの取得範囲により、件数・順序の完全一致は保証しません。</p>
+          <p class="small-note view-followup">未準備の画像は現在の画像を保って待ち、準備待ちが3秒を超えた場合だけ通知します。読み込み失敗やAPI制限では停止・手動再開が必要な場合があります。通信中の瞬時表示や、アプリ停止中の厳密な72時間での物理削除は保証していません。</p>
         </section>
         <section id="network">
           <h2>通信量と推奨環境</h2>
-          <div class="callout"><p><strong>Wi-Fi環境での利用を推奨します。</strong> 高画質の画像・GIFと10投稿の全画像を先読みするため、<strong>モバイル回線では大量のデータ通信（パケット）を消費します。</strong> Photosetや長時間の閲覧では通信量がさらに増えます。</p></div>
-          <p>キャッシュ上限200MBは端末内の保存容量であり、通信量の上限ではありません。現行版にはWi-Fi接続時だけ取得・先読みする制限はありません。</p>
+          <div class="callout"><p><strong>Wi-Fi環境での利用を推奨します。</strong> 高画質画像・GIFの先読みと動画のストリーミング再生で、<strong>モバイル回線では大量のデータ通信（パケット）を消費します。</strong> Photosetや長時間の閲覧、Duoの左右動画では通信量がさらに増える場合があります。</p></div>
+          <p>キャッシュ上限200MBは端末内の保存容量であり、通信量の上限ではありません。モバイル回線での新規起動時は大量通信の警告を表示し、選択まで初期読み込みを待ちます。「次から表示しない」は警告を隠す設定で、通信を禁止する設定ではありません。設定の「通信」から警告をリセットできます。</p>
+          <p>Wi-Fi専用制限や、起動後の回線切り替え・背景復帰時の追加警告はありません。必要ならiPhoneの設定からegviewのモバイルデータ通信をOFFにしてください。アプリから自動でOFFにする機能はありません。</p>
         </section>
         <section id="howto">
           <h2>基本的な使い方</h2>
           <ol>
-            <li>初回の設定画面で「Tumblrに接続」を選び、Tumblrの公式認可画面で読み取り・リブログ・ライクに必要な権限を許可します。未接続でも同梱サンプルで操作を試せます。</li>
-            <li>ダッシュボードの画像を閲覧します。設定からライクや所有ブログに切り替え、リブログ先の所有ブログも選べます。</li>
-            <li>タップで次の投稿、左右スワイプで投稿内の画像を移動します。気に入った投稿はリブログやライクで残せます。</li>
+            <li>設定最上段の「Tumblrアカウント」から接続し、公式認可画面で読み取り・リブログ・ライク等の権限を許可します。接続と所有ブログの取得に成功すると設定を閉じます。未接続でも同梱サンプルを試せます。</li>
+            <li>ダッシュボードを閲覧します。設定からライク・所有ブログに切り替え、閲覧先／リブログ先の所有ブログも選べます。</li>
+            <li>タップで次の投稿、左右スワイプで投稿内の画像・動画へ。ダブルタップは投稿全体をキューへリブログする操作です。</li>
           </ol>
           <div class="view-table"><table>
-            <caption>閲覧画面の操作</caption>
+            <caption>通常閲覧の操作</caption>
             <thead><tr><th scope="col">操作</th><th scope="col">動作</th></tr></thead>
             <tbody>
-              <tr><th scope="row">1本指でシングルタップ</th><td>次の投稿へ。Photosetの次の1枚へ進む操作とは別です。</td></tr>
-              <tr><th scope="row">1本指でダブルタップ</th><td>現在の投稿全体をキューへリブログし、成功後に次の投稿へ進みます。</td></tr>
-              <tr><th scope="row">左から右へスワイプ</th><td>前の画像へ。1枚目なら前の投稿へ戻ります。</td></tr>
-              <tr><th scope="row">右から左へスワイプ</th><td>次の画像へ。最後の画像（単一画像を含む）なら次の投稿へ進みます。</td></tr>
-              <tr><th scope="row">ピンチ／拡大中の2本指ドラッグ</th><td>1〜5倍に拡大・縮小し、画像内を移動します。投稿・画像切替や再訪では通常サイズへ戻ります。</td></tr>
-              <tr><th scope="row">2本指でタップ</th><td>ダッシュボードへ戻って再取得します。</td></tr>
-              <tr><th scope="row">下部の「←」</th><td>Photosetの表示位置にかかわらず、前の投稿へ戻ります。</td></tr>
-              <tr><th scope="row">下部の「リブログ」</th><td>キュー追加に成功したら次の投稿へ進みます。</td></tr>
-              <tr><th scope="row">下部のハート</th><td>ライクを付与・解除し、その投稿に留まります。</td></tr>
-              <tr><th scope="row">下部の「設定」</th><td>表示先・所有ブログ・アカウント・キャッシュ・投稿URLの確認などを開きます。</td></tr>
+              <tr><th scope="row">1本指シングルタップ</th><td>次の投稿へ。Photosetの次の1枚とは別の操作です。</td></tr>
+              <tr><th scope="row">1本指ダブルタップ</th><td>触れた投稿全体をキューへリブログ。成功後に次の投稿へ進みます。</td></tr>
+              <tr><th scope="row">左から右へスワイプ</th><td>前の画像・動画へ。先頭なら前の投稿へ。Duoデュアルは直前の左右組を復元します。</td></tr>
+              <tr><th scope="row">右から左へスワイプ</th><td>次の画像・動画へ。末尾なら次の投稿へ。Duoデュアルは左右の表示組を進めます。</td></tr>
+              <tr><th scope="row">下スワイプ</th><td>ページ表記・出典・操作UIを非表示／再表示。通常閲覧では次投稿でも状態を保ちます。</td></tr>
+              <tr><th scope="row">画像を長押し</th><td>現在の1枚を保存確認へ。Photoset全体の一括保存と動画保存には対応しません。</td></tr>
+              <tr><th scope="row">ピンチ／拡大中の2本指ドラッグ</th><td>1〜5倍に拡大・縮小し、画像内を移動。投稿・画像切替や再訪では通常サイズへ戻ります。</td></tr>
+              <tr><th scope="row">2本指タップ</th><td>ダッシュボードへ戻って再取得します。</td></tr>
+              <tr><th scope="row">操作バーの「←」／再生</th><td>通常iPhoneは前投稿や取消可能な前進があれば戻る、それ以外は先頭から再生。Duoは常に現在位置から再生します。</td></tr>
+              <tr><th scope="row">リブログ／ハート</th><td>リブログ成功で次投稿、ライク付与・解除では留まります。Duoの共通バーは右側が対象です。</td></tr>
+              <tr><th scope="row">設定</th><td>表示先、所有ブログ、接続、Tumblrでの管理、キャッシュ、通信、操作案内、診断を開きます。</td></tr>
             </tbody>
           </table></div>
-          <p class="small-note">下部ボタンと出典リンクは個別の操作を優先します。画像準備中の戻る操作は、待機中の前進を取り消します。リブログの失敗・結果不明、フィード終端、指定URLの単一投稿閲覧では現在の投稿を保ちます。結果不明の書き込みは自動再送しません。VoiceOverでは下部ボタンとカスタムアクションを利用できます。</p>
+          <p class="small-note">操作ボタンと出典リンクは個別操作を優先します。UI非表示中もタップ・スワイプ・保存・ピンチを使えます。画像準備中の戻る操作は待機中の前進を取り消します。リブログの失敗・結果不明やフィード終端では現在位置を保ち、結果不明の書き込みは自動再送しません。VoiceOver向けのボタン・カスタムアクションも用意しています。</p>
+        </section>
+        <section id="duo">
+          <h2>Duoの2つの画面と操作</h2>
+          <p>アウターは単一表示。インナー横で起動すると左に操作案内、右に現在のメディアを表示し、右下のボタンで単一／デュアルを切り替えられます。縦起動後に横へ回すだけでは自動でデュアルへ変えません。</p>
+          <p>デュアルの投稿送りでは旧右ページを左へ引き継ぎ、右に次投稿の先頭を表示します。Photosetはどちらの面からスワイプしても左右組を連動して移動。共通バーのリブログ・ライク・再生は右が対象ですが、左をダブルタップしたり長押しした場合は左の投稿・画像が対象です。</p>
+          <p>単一表示への切り替えや端末を閉じる操作では、右側のページ・再生状態を採用します。インナー横の設定は右側、その他のDuo状態は全画面。設定中は両面の動画・GIFを停止します。</p>
+          <p class="small-note">端末構成と側面操作の説明は<a href="https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo" target="_blank" rel="noopener noreferrer">AppleのiPhone Duoデザインガイド ↗</a>を参照しています。現在の対応は検証したSimulator環境を基準としており、実機・将来モデル・半開き・Split Viewを含む全条件の適合確認は完了していません。</p>
+        </section>
+        <section id="slideshow">
+          <h2>自分のペースで、スライドショー。</h2>
+          <p>通常iPhoneは先頭の再生ボタンからフィード先頭の1枚目へ。Duoはいつでも現在の画像・動画から始まり、デュアルなら右を引き継いで単一表示になります。開始だけを理由に最新フィードを取り直しません。</p>
+          <p>60生投稿ずつ、最大720生投稿の範囲から表示候補を集めて周回します。自分の投稿・重複・対象外も上限に数えるため、720件すべてが表示される意味ではありません。順再生は投稿内の全メディア、シャッフルは各投稿の先頭を中心に再生。上限後もアクセス再確認・画像再取得・動画通信は続きます。</p>
+          <p>操作バーは一時停止／再開・シャッフル・時計・終了。下スワイプで表示し、UI操作から10秒で隠れます。自動送り中は手動の投稿移動・リブログ・ライク・設定を無効にし、停止中はピンチと画像保存を使えます。時計は操作UIを隠しても表示します。</p>
+          <p>一時停止は投稿の自動送りを止め、表示中のGIF・動画はループを続けます。背景から戻ると送り停止。モード中は停止中も自動ロックを抑え、終了確認後は選択フィードを再読み込みします。Duoは開始前のレイアウトへ戻ります。</p>
         </section>
         <section id="mature">
           <h2>表示範囲とコンテンツラベル</h2>
-          <p>公式APIと本人のアカウント設定で利用できる画像を対象にします。成人向けとマークされたブログについては、個別投稿と代表画像の取得を確認しています。すべての投稿の表示や、ラベル・表示設定の反映を保証する確認ではありません。</p>
+          <p>公式APIと本人のアカウント設定で利用できる画像・直接動画を対象にします。成人向けとマークされたブログについては、個別投稿と代表画像の取得を確認しています。すべての投稿の表示や、ラベル・表示設定の反映を保証する確認ではありません。</p>
           <p>リブログは標準APIで元投稿全体をキューへ追加します。egviewから追加のMatureラベルやNSFWタグを送る設定はありません。元投稿のラベルがキュー内で継承されるかは、実機で引き続き確認しています。</p>
           <p class="small-note">egviewはTumblrの非公式アプリであり、Tumblrの運営・承認を受けたものではありません。参考：<a href="https://help.tumblr.com/knowledge-base/content-labels/" target="_blank" rel="noopener noreferrer">Tumblrのコンテンツラベルの説明 ↗</a></p>
         </section>
         <section id="privacy">
           <h2>アカウントと画像の扱い</h2>
-          <p>Tumblrのパスワードはアプリ内で収集しません。公式OAuthのコード交換とトークン更新に認証サービスを使い、端末の認可情報はKeychainに保管します。画像は各端末の一時キャッシュに置き、端末間で同期しません。</p>
-          <p>設定から画像キャッシュを削除できます。ログアウトすると、この端末の認可情報と画像を削除してサンプルへ戻ります。再接続時も以前の画像を削除します。診断メモやURL照合結果の共有は、利用者が共有操作を選んだときに行います。</p>
+          <p>Tumblrのパスワードはアプリ内で収集しません。公式OAuthのコード交換・トークン更新に認証サービスを使い、端末の認可情報はKeychainへ保存します。画像キャッシュは端末内の一時領域に置き、端末間で同期しません。動画はストリーミングし、アプリは動画ファイルやオフライン用キャッシュを作りません。</p>
+          <p>設定からキャッシュを削除できます。ログアウト時は端末の認可情報と画像キャッシュを削除してサンプルへ戻り、再接続成功時も以前の画像を削除します。診断の共有は利用者が共有操作を選んだ場合だけ行います。</p>
+          <p>長押し保存では写真のフルアクセスを求め、現在の画像の圧縮データを再圧縮せずegviewアルバムへ追加します。写真へ保存した画像はキャッシュ削除・ログアウトでは消えず、iCloud写真の設定に従います。保存済みの写真は写真アプリで管理してください。</p>
           <p>接続先と保存・削除の詳細は<a href="../../privacy.html#egview">プライバシーポリシーのegview欄</a>で説明しています。</p>
         </section>
         <section id="status">
           <h2>開発状況と公開について</h2>
-          <div class="callout"><p><strong>iOSプロトタイプを開発・試用中で、一般配布していません。</strong> 画像閲覧、Photoset、GIF、ピンチ、ライク付与・解除、キューリブログを実装しています。実機でキュー追加と1,500件の生投稿取得を確認した報告があり、左右スワイプの復旧・容量整理中の速度・長時間負荷・ラベル継承を引き続き確認します。</p></div>
-          <p>現在の対象はiOS 18以上のiPhoneです。iPadOS・macOS版は今後の予定で、macOS版は公証取得を予定しています。完成時期、一般向けの配布方法、価格は未定です。App Storeでの公開は将来検討します。</p>
-          <p class="small-note">掲載内容は<time datetime="2026-10-12">2026年10月12日</time>時点のiOSプロトタイプ0.1.10に基づきます。機能・操作・対応範囲は開発と検証を通じて変更される場合があります。掲載の画面例は第三者の投稿写真を使わず、生成した風景へ差し替えたものです。</p>
+          <div class="callout"><p><strong>iOSプロトタイプ0.1.27 (28)を開発・試用中で、一般配布していません。</strong> 画像・GIF・無音動画、Photoset、ピンチ、ライク、キューリブログ、UI非表示、画像保存、スライドショーとDuo表示を実装しています。</p></div>
+          <p>画像閲覧・キュー追加・動画切り替え等には本人の確認報告があり、実APIでは1,500生投稿の取得報告があります。0.1.27の既存記録は自動検証559項目と署名なし3ビルドの成功です。合成データの検証、Simulator画面、実機の結果は区別しており、長時間の総メモリ・発熱・通信量、実APIでの10,000件規模、写真権限・元ラベル継承等の個別条件は確認を残しています。</p>
+          <p>現在の対象はiOS 18以上の通常iPhoneとiPhone Duo。iPadOS・macOS版は今後の予定で、macOS版は公証取得を予定しています。完成時期、一般向け配布方法、価格は未定です。App Store公開は将来検討します。</p>
+          <p class="small-note">掲載内容は<time datetime="2026-10-16">2026年10月16日</time>に、0.1.27 (28)／仕様v0.33と照合しました。今回の更新は紹介文と画像の整合で、新しい実機性能測定は行っていません。画面例の撮影元は同日提供のiPhone Duo Simulatorです。提供画像のビルド番号は未確認です。</p>
         </section>
       </article>
       <aside class="side-panel" aria-label="ページ案内">
-        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screen">画面の見方</a><a href="#features">主な機能</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screen">画面の見方</a><a href="#features">主な機能</a><a href="#duo">Duoの画面と操作</a><a href="#slideshow">スライドショー</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
         <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
         <a class="share-link" data-share="egview" href="https://x.com/intent/tweet?text=%23egview%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegview%2F" target="_blank" rel="noopener noreferrer">#egview で X に共有 ↗</a>
       </aside>
