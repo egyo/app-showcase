@@ -1,0 +1,30 @@
+/* egpamph: teal and paper accents, within the shared showcase layout. */
+.pamph-page { --green: #164e50; --green-soft: #e5efeb; }
+.pamph-hero { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 36px; }
+.pamph-identity { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.pamph-identity .eyebrow { margin: 0; }
+.pamph-tagline { margin: 18px 0 0; color: #164e50; font-size: clamp(1.4rem, 2.7vw, 2rem); font-weight: 700; line-height: 1.55; letter-spacing: -.025em; }
+.pamph-hero-image { min-width: 0; margin: 0; padding: 15px; border: 1px solid #d1dfd9; border-radius: 22px; background: #e5ece6; }
+.pamph-hero-image a { display: block; overflow: hidden; border-radius: 10px; background: #103b3e; }
+.pamph-hero-image img { width: 100%; height: auto; }
+.pamph-hero-image figcaption { margin-top: 12px; color: #3c5c54; font-size: .8rem; line-height: 1.7; }
+.pamph-screens { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.pamph-screens figcaption { padding: 12px 5px 6px; font-size: .82rem; }
+.pamph-screens figcaption strong { color: #164e50; }
+.pamph-table { margin: 20px 0 16px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: white; }
+.pamph-table table { width: 100%; border-collapse: collapse; text-align: left; font-size: .88rem; overflow-wrap: anywhere; }
+.pamph-table th, .pamph-table td { padding: 13px 16px; vertical-align: top; }
+.pamph-table thead { background: #e5efeb; }
+.pamph-table th[scope="row"] { width: 30%; color: #164e50; }
+.pamph-table tr + tr, .pamph-table tbody { border-top: 1px solid var(--line); }
+.article .pamph-status-copy { margin-top: 18px; }
+@media (max-width: 760px) {
+  .pamph-hero { grid-template-columns: 1fr; gap: 26px; }
+  .pamph-hero-image { max-width: 640px; }
+}
+@media (max-width: 480px) {
+  .pamph-screens { grid-template-columns: 1fr; }
+  .pamph-screens figure { width: 100%; max-width: 340px; margin-inline: auto; }
+  .pamph-table th, .pamph-table td { padding: 11px 12px; }
+  .pamph-table th[scope="row"] { width: 35%; }
+}

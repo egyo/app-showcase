@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="egpamph は旅行のしおりやパンフレットを読むための iPad 専用 PDF リーダー。単独・2ページ表示、ページ一覧、履歴、Webリンク・QR認識と使い方を紹介します。現在は開発中・非公開です。">
+  <title>egpamph | egyo apps</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="egpamph.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body class="pamph-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ipados">iPadOS アプリ</a><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iPadOS<span>/</span>egpamph</nav>
+    <section class="app-hero pamph-hero" aria-labelledby="app-title">
+      <div>
+        <div class="pamph-identity"><img class="app-icon" src="../../assets/egpamph-icon.png" alt="旅のパンフレットに小文字のegを描いたアプリアイコン" width="72" height="72"><p class="eyebrow">iPadOS / PDF Reader</p></div>
+        <h1 id="app-title" class="page-title">egpamph</h1>
+        <p class="pamph-tagline">旅のしおりを、<br>気持ちよく読み進める。</p>
+        <p class="lead">旅行のしおりやパンフレットを、iPad の大きな画面で。PDF の紙面をそのまま眺め、必要なページへすぐ移動できる、閲覧に集中するためのリーダーです。</p>
+        <div class="hero-meta"><span class="chip">iPad 専用</span><span class="chip">iPadOS 27.0 以降</span><span class="status">開発中・非公開</span></div>
+      </div>
+      <figure class="pamph-hero-image"><a href="reader-dual-landscape.jpg" aria-label="横持ちの2ページ表示を大きく見る"><img src="reader-dual-landscape.jpg" alt="egpamphの横持ち画面。PDFの6・7ページを左右に並べ、下部にページ一覧・履歴・切り替え・設定を表示" width="2000" height="1313" fetchpriority="high"></a><figcaption>横持ちでは、連続する2ページを並べて。<br>画面写真はタップすると大きく表示できます。</figcaption></figure>
+    </section>
+    <div class="notice">アプリ本体とソースコードは非公開で、現在は一般向けに公開・配布していません。このページでは開発中の機能と画面を紹介しています。</div>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about"><h2>どんなアプリ？</h2><p>外出先でしおりを確認したり、家で旅先のパンフレットをゆっくり眺めたり。egpamph は、手元の PDF を開き、紙面のレイアウトを保ったまま読むためのアプリです。</p><p>縦持ちでは1ページ、横持ちでは1ページまたは2ページを表示。拡大して細部を確認し、一覧で目当てのページへ移動できます。文書ごとに読んでいた位置を記憶するので、開き直したときも続きから読めます。</p><p class="small-note">パンフレットを制作・編集する機能はありません。掲載画面の冊子は閲覧例で、アプリに同梱するコンテンツや配布物ではありません。</p></section>
+        <section id="screens"><h2>画面で見る egpamph</h2><div class="screenshot-grid pamph-screens">
+          <figure><a href="start-portrait.png" aria-label="開始画面を大きく見る"><img src="start-portrait.png" alt="青緑の開始画面。中央にegpamphのアイコンと、PDFファイルを開く・最近使った項目のボタン" width="1488" height="2266" loading="lazy" decoding="async"></a><figcaption><strong>01 / PDF を開く</strong><br>ファイルを選ぶか、最近使った PDF を開いて読み始めます。</figcaption></figure>
+          <figure><a href="page-list-portrait.jpg" aria-label="ページ一覧の画面を大きく見る"><img src="page-list-portrait.jpg" alt="写真散歩のパンフレットを縦持ちで表示。画面下の横一列のサムネイルからページを選択" width="1182" height="1800" loading="lazy" decoding="async"></a><figcaption><strong>02 / ページを選ぶ</strong><br>下部のサムネイルで全体を見渡し、読みたいページへジャンプ。</figcaption></figure>
+        </div><p class="small-note">3枚の画面写真は2026年10月16日に提供されたものです。撮影時のビルド番号は未確認で、掲載時点の実装と細部が異なる場合があります。</p></section>
+        <section id="features"><h2>主な機能</h2>
+          <h3>1ページでも、2ページでも</h3><p>横持ちの「切り替え」でシングル／デュアル表示を選べます。デュアル表示も1ページずつ進むため、たとえば「1・2 → 2・3 → 3・4」のように、隣り合うページを見比べられます。偶数・奇数で固定した見開きではありません。</p>
+          <h3>紙面を大きく、すっきりと</h3><p>ピンチで最大5倍まで拡大し、2本指で表示位置を移動。下向きスワイプで操作バー・ページ番号・矢印を隠せます。UI を隠しても、左右スワイプと画面端のタップで読み進められます。</p>
+          <h3>一覧と履歴で、続きへ戻る</h3><p>横一列のページ一覧から直接ジャンプ。直近10件の PDF を履歴から開けます。現在ページと横持ちの表示モードは文書ごとに保存し、アプリを終了してから開き直しても復元します。</p>
+          <h3>紙面の Web リンクを開く</h3><p>埋め込みの Web リンクに加え、印字された URL や Web URL を含む QR コードを端末内で認識します。認識後は該当箇所をタップして外部へ開けます。QR には控えめな枠を表示します。</p><p class="small-note">認識精度は紙面や画質に依存します。外部への遷移は OS の設定に従い、リンクによっては関連アプリが開く場合があります。</p>
+        </section>
+        <section id="howto"><h2>基本の使い方</h2><ol>
+          <li><strong>PDF を選ぶ。</strong>開始画面の「PDFファイルを開く」から、iPad 内や iCloud Drive などにある PDF を選びます。「最近使った項目」から以前の文書も開けます。</li>
+          <li><strong>左右に送って読む。</strong>左右スワイプ、または画面左右端のタップで1ページずつ移動します。初期設定では左向きのスワイプで次へ進みます。ページの並び順は設定で変更できます。</li>
+          <li><strong>一覧から探す。</strong>「ページ一覧」をタップし、サムネイルを選びます。選択後も一覧は残るので続けて選べます。もう一度アイコンを押すか、一覧の外をタップすると閉じます。</li>
+          <li><strong>横持ちで見比べる。</strong>iPad を横にし、「切り替え」で2ページ表示へ。縦持ちに戻すと1ページ表示になり、再び横にすると文書ごとの表示モードへ戻ります。</li>
+          <li><strong>別の PDF へ移る。</strong>「履歴」で最近の文書を選ぶか、「設定」内の「PDFファイルを開く」を使います。「PDFを閉じる」も設定内にあります。</li>
+        </ol></section>
+        <section id="controls"><h2>操作の早見表</h2><div class="pamph-table"><table><thead><tr><th scope="col">したいこと</th><th scope="col">操作</th></tr></thead><tbody>
+          <tr><th scope="row">前後のページへ</th><td>左右スワイプ、または左右端をタップ。端タップは連続入力にも対応します。</td></tr>
+          <tr><th scope="row">拡大・移動</th><td>ピンチで1〜5倍に拡大し、2本指で移動。拡大中も1本指の左右スワイプはページ送りです。</td></tr>
+          <tr><th scope="row">操作 UI の表示切替</th><td>1本指で下にスワイプ。もう一度下スワイプで再表示します。</td></tr>
+          <tr><th scope="row">ページへ直接移動</th><td>「ページ一覧」のサムネイルをタップ。</td></tr>
+          <tr><th scope="row">シングル／デュアル</th><td>横持ちで「切り替え」。縦持ちでは切り替えできません。</td></tr>
+          <tr><th scope="row">リンクを開く</th><td>認識された Web リンク・印字 URL・QR をタップ。左右端ではページ送りが優先されます。</td></tr>
+        </tbody></table></div><p class="small-note">ページ移動・画面回転・表示モード変更では、拡大倍率と表示位置が元に戻ります。一覧が出ているときの紙面タップは、一覧を閉じる操作になります。</p></section>
+        <section id="notes"><h2>利用前に知っておきたいこと</h2><ul>
+          <li><strong>iPad 専用・iPadOS 27.0 以降。</strong>現在のプロトタイプに iPhone 版・Mac 版はありません。</li>
+          <li><strong>閲覧専用です。</strong>注釈、PDF 編集、本文検索、全文 OCR、複数文書の同時表示は対象外です。</li>
+          <li><strong>パスワード入力が必要な PDF は非対応。</strong>暗号化されていても入力なしで開ける PDF は閲覧できます。</li>
+          <li><strong>リンクは Web URL が対象。</strong>PDF 内のページ移動、メール・電話、Web URL 以外の QR などは非対応です。</li>
+          <li><strong>クラウドの PDF は取得通信が必要な場合があります。</strong>履歴は元ファイルへの参照で、独立した保存済みライブラリではありません。元ファイルを移動・削除した場合やアクセス権が変わった場合は、選び直しが必要になることがあります。</li>
+        </ul></section>
+        <section id="privacy"><h2>PDF と閲覧記録の扱い</h2><p>元の PDF を上書きせず、閲覧中は端末内の一時コピーを使用します。URL・QR の認識も端末内で行い、PDF の内容や閲覧記録を開発者のサーバーへ自動送信しません。</p><p>文書名・最近開いた日時・再アクセス用の参照、ページ位置・横持ちモード・送り方向を端末内に保存します。「設定 → 閲覧記録をリセット」で履歴と全 PDF のページ位置・横持ちモードを消去できます。元の PDF と送り方向の設定は残ります。</p><p>クラウド上のファイル取得や、タップしたリンク先へのアクセスには外部通信が伴います。詳しくは<a href="../../privacy.html#egpamph">プライバシーポリシーの egpamph 節</a>をご覧ください。</p></section>
+        <section id="status"><h2>開発状況・入手について</h2><div class="callout"><p><strong>現在は開発中・非公開です。アプリ本体とソースコードは一般公開・配布していません。</strong>公開時期・価格は未定です。機能や画面は今後変更される場合があります。</p></div><p class="pamph-status-copy">掲載内容は <time datetime="2026-10-16">2026年10月16日</time>時点のプロトタイプ 0.1.5 の実装・仕様に基づきます。自動テストとビルドを確認しながら、実機での動作検証を続けています。大きな PDF の性能、ファイル提供サービスごとの動作、リンク・QR の認識精度は継続確認中です。</p></section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screens">画面写真</a><a href="#features">主な機能</a><a href="#howto">基本の使い方</a><a href="#controls">操作の早見表</a><a href="#notes">利用前の確認</a><a href="#privacy">PDF と閲覧記録</a><a href="#status">開発状況・入手</a><p>手元の PDF を、紙面のまま読み進める iPad 専用リーダーです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="egpamph" href="https://x.com/intent/tweet?text=%23egpamph%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegpamph%2F" target="_blank" rel="noopener noreferrer">#egpamph で X に共有 ↗</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#egpamph">プライバシーポリシー</a><a href="../../#ipados">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>
