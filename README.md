@@ -1,6 +1,6 @@
 # egyo apps
 
-egcamera、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
+egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
 
 ## 更新方法
 
@@ -131,3 +131,15 @@ Apple がいう「収集」と、端末内の読み取り・処理は同じ意�
 開始画面は提供PNGをそのまま収録。他2枚は紙面とUIを変更せず、サイトの読込量を抑えるためそれぞれ長辺1800px／2000pxのJPEGへ縮小・再圧縮し、付随メタデータを除去しました。画像生成・内容の合成や切り抜きは行っていません。写真内の冊子はPDF閲覧例で、アプリ同梱物ではありません。撮影ビルド番号は未確認のため0.1.5の実画面とは断定しません。
 
 閲覧専用、パスワード入力が必要なPDF非対応、Web以外のリンク非対応、クラウド取得には通信が必要なことを説明。端末内の一時コピー、履歴と位置の分離、閲覧記録のリセットと元PDFの管理、外部リンクへのアクセスをプライバシー欄と同期しました。重いPDFの性能、File Provider経路、認識精度・ブラウザ遷移は継続検証として扱います。更新時は機能・操作・画像の提供日と撮影版・対応OS・配布状態・プライバシーを照合してください。
+
+
+## eglut の掲載内容と画像
+
+- 紹介ページ：`apps/eglut/index.html`、個別CSS：`apps/eglut/eglut.css`
+- アプリアイコン：`assets/eglut-icon.png`。採用アイコンを256pxに縮小。
+- 一覧：`index.html#ios`、データの扱い：`privacy.html#eglut`。
+- 2026年10月17日、プロトタイプ0.1.6（7）・現行仕様v0.13と照合。RAW写真から色をつくってDisplay P3の3D LUTへ出力する目的、11基本調整、5スタイル、3比較枠、長押し比較、操作と自動保存を紹介。アプリ本体・ソースコードは非公開、一般未配布、公開時期・価格未定。
+- 実機画像4枚は同日提供。`start-portrait.png`（IMG_0891.PNG）、`style-landscape.jpg`（IMG_0892.jpg）、`export-portrait.png`（IMG_0895.PNG）は元ファイルをそのまま保存。`edit-portrait.jpg`（IMG_0894.PNG）は長辺1800pxへ縮小しJPEG圧縮。色プロファイルを維持し、UI・写真内容は変更していない。画像生成は使用していない。撮影時ビルド番号は未確認。
+- 露出はプレビュー・比較枠に保持するが、.cubeと保存最終プレビューは0.0 EV。Display P3→Display P3、SDR／sRGB伝達関数／full range、33³互換初期選択・65³標準を明記。sRGB・Logへ指定し直して利用しない。
+- egcameraのP3対応版を主用途として案内するが、共有から実際の読み込みまでの実機受入は未確認。回転ロック連動、大きなRAWの性能、iCloud／プロバイダーごとの動作、AI品質も継続確認中。
+- Privateリポジトリへのリンク、ソースコード、内部仕様文書全文は公開しない。更新時は機能・操作・色契約・データの扱い・画像提供日を合わせる。

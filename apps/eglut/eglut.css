@@ -1,0 +1,37 @@
+/* eglut: warm paper and the cool/warm palette of the app icon. */
+.lut-page { --green: #385c78; --green-soft: #e8eef4; }
+.lut-hero { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: 34px; }
+.lut-identity { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.lut-identity .eyebrow { margin: 0; }
+.lut-tagline { margin: 18px 0 0; color: #385c78; font-size: clamp(1.35rem, 2.7vw, 2rem); font-weight: 700; line-height: 1.55; letter-spacing: -.025em; }
+.lut-hero-image { min-width: 0; margin: 0; padding: 13px; border: 1px solid #dcd8d2; border-radius: 22px; background: #eae5dd; }
+.lut-hero-image a { display: block; overflow: hidden; border-radius: 10px; background: #000; }
+.lut-hero-image img { width: 100%; height: auto; }
+.lut-hero-image figcaption { margin-top: 12px; color: #56564f; font-size: .8rem; line-height: 1.7; }
+.lut-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 32px 0 0; padding: 23px 0; border-block: 1px solid var(--line); list-style: none; }
+.lut-flow li { display: flex; flex-direction: column; gap: 3px; }
+.lut-flow span { color: #385c78; font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+.lut-flow strong { font-size: 1.03rem; }
+.lut-screens { gap: 13px; }
+.lut-screens figcaption { padding: 12px 3px 5px; font-size: .8rem; }
+.lut-screens figcaption strong { color: #385c78; }
+.lut-table { margin: 20px 0 16px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: white; }
+.lut-table table { width: 100%; border-collapse: collapse; text-align: left; font-size: .88rem; overflow-wrap: anywhere; }
+.lut-table th, .lut-table td { padding: 13px 16px; vertical-align: top; }
+.lut-table thead { background: #e8eef4; }
+.lut-table th[scope="row"] { width: 31%; color: #385c78; }
+.lut-table tr + tr, .lut-table thead + tbody { border-top: 1px solid var(--line); }
+.article .lut-status-copy { margin-top: 18px; }
+.lut-page code { padding: 2px 5px; border-radius: 4px; background: #e8eef4; font-size: .9em; }
+@media (max-width: 760px) {
+  .lut-hero { grid-template-columns: 1fr; gap: 26px; }
+  .lut-hero-image { max-width: 640px; }
+}
+@media (max-width: 560px) {
+  .lut-screens { grid-template-columns: 1fr; gap: 20px; }
+  .lut-screens figure { width: 100%; max-width: 320px; margin-inline: auto; }
+  .lut-flow { gap: 12px; }
+  .lut-flow strong { font-size: .86rem; }
+  .lut-flow span { font-size: .65rem; }
+  .lut-table th, .lut-table td { padding: 11px 12px; }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="eglut は RAW 写真で色と階調をつくり、Display P3 の 3D LUT（.cube）として保存する iPhone アプリ。実機画面で機能と使い方を紹介します。現在は開発中・非公開です。">
+  <title>eglut | egyo apps</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="eglut.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body class="lut-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>eglut</nav>
+    <section class="app-hero lut-hero" aria-labelledby="app-title">
+      <div>
+        <div class="lut-identity"><img class="app-icon" src="../../assets/eglut-icon.png" alt="青とオレンジの光に eg を描いたアプリアイコン" width="72" height="72"><p class="eyebrow">iOS / LUT Creator</p></div>
+        <h1 id="app-title" class="page-title">eglut</h1>
+        <p class="lut-tagline">RAW 写真から、色をつくる。<br>その色を、次の一枚へ。</p>
+        <p class="lead">手元の RAW 写真で色と階調を調整し、好みの仕上がりを 3D LUT として保存する iPhone アプリ。写真からつくった色を、対応するカメラや編集アプリへ持ち出せます。</p>
+        <div class="hero-meta"><span class="chip">iPhone 向け</span><span class="chip">iOS 26 以降</span><span class="status">開発中・非公開</span></div>
+      </div>
+      <figure class="lut-hero-image"><a href="style-landscape.jpg" aria-label="横持ちのスタイル調整画面を大きく見る"><img src="style-landscape.jpg" alt="ピンクの花を見ながら Warm スタイルを調整する横持ち画面。右側にトーンとカラーのグラフ、パレットの目盛りを表示" width="2622" height="1206" fetchpriority="high"></a><figcaption>写真を見ながら、トーンとカラーを一緒に調整。<br>掲載の実機画面は、タップすると大きく表示できます。</figcaption></figure>
+    </section>
+    <div class="notice">アプリ本体とソースコードは非公開で、現在は一般向けに公開・配布していません。このページでは開発中の機能と画面を紹介しています。</div>
+    <ol class="lut-flow" aria-label="色づくりの流れ"><li><span>01 / RAW</span><strong>写真を開く</strong></li><li><span>02 / LOOK</span><strong>色と階調をつくる</strong></li><li><span>03 / LUT</span><strong>.cube で持ち出す</strong></li></ol>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about"><h2>写真の仕上がりを、使い回せる「色」に。</h2><p>撮影した RAW を見ながら、落ち着いた緑、暖かい光、やわらかな階調など、自分の好みを探す。その調整を別の写真や撮影でも使えるようにするのが eglut の目的です。</p><p>3D LUT は、入力された色を別の色へ変換するための表です。eglut は補正した写真を保存する代わりに、その色の変換を <code>.cube</code> ファイルにまとめます。写真ライブラリの原本や既存の編集は変更しません。</p><p class="small-note">LUT は RAW の現像設定や編集手順を復元するファイルではありません。同じ LUT でも、写真や光、利用先の色処理によって仕上がりは変わります。</p></section>
+        <section id="screens"><h2>画面でたどる、色づくりの流れ</h2><div class="screenshot-grid lut-screens">
+          <figure><a href="start-portrait.png" aria-label="開始画面を大きく見る"><img src="start-portrait.png" alt="黒い開始画面に eglut のアイコン、RAW写真から、色をつくる。の言葉と RAW写真を開く ボタンを表示" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption><strong>01 / RAW 写真を開く</strong><br>写真ライブラリから RAW を選んで、色づくりを始めます。</figcaption></figure>
+          <figure><a href="edit-portrait.jpg" aria-label="彩度の調整画面を大きく見る"><img src="edit-portrait.jpg" alt="緑の葉を表示した縦持ちの編集画面。上部に比較用の3枠、下部に彩度12の目盛りと調整ツールを配置" width="828" height="1800" loading="lazy" decoding="async"></a><figcaption><strong>02 / 色を見て、調整する</strong><br>彩度や暖かみなどを目盛りで調整。3つの枠に好みの設定を保存できます。</figcaption></figure>
+          <figure><a href="export-portrait.png" aria-label="LUT の保存画面を大きく見る"><img src="export-portrait.png" alt="Display P3 の LUT 保存画面。33³互換と65³標準の選択、再読込プレビュー、候補名、ファイルへ保存 ボタンを表示" width="1206" height="2622" loading="lazy" decoding="async"></a><figcaption><strong>03 / LUT を保存する</strong><br>格子数と名前を決め、保存する LUT のプレビューを確認して「ファイル」へ。</figcaption></figure>
+        </div><p class="small-note">4枚の実機スクリーンショットは2026年10月17日提供。撮影時のビルド番号は未確認で、画面や候補名は一例です。横持ち画面はページ上部に掲載しています。</p></section>
+        <section id="features"><h2>色をつくるための機能</h2>
+          <h3>明るさから色味まで、11の基本調整</h3><p>露出、ブリリアンス、ハイライト、シャドウ、コントラスト、明るさ、ブラックポイント、彩度、自然な彩度、暖かみ、色合いを調整できます。目盛りを動かしながらプレビューを確認し、矢印やダブルタップで項目ごとに初期値へ戻せます。</p>
+          <h3>5つのスタイルから、好みを探す</h3><p>Neutral・Warm・Cool・Earthy・Muted を用意。トーンとカラーを正方形のグラフで同時に調整し、パレットの量でスタイル固有の色味を加減できます。基本調整と組み合わせて仕上げます。</p>
+          <h3>拡大・オリジナル比較・3つのプリセット</h3><p>ピンチで拡大し、ドラッグで細部を確認。写真を長押ししている間は補正前の基準画像に切り替わります。3枠の比較プリセットは別の RAW にも適用でき、アプリを開き直しても保持します。</p>
+          <h3>保存する LUT を、読み直して確認</h3><p>33³互換／65³標準を選択でき、初期選択は33³です。生成した LUT を再読込したプレビューが準備できてから保存します。名前は自分で入力するほか、写真と補正に基づく候補も使えます。対応環境では端末内 AI が候補を生成し、利用できない場合も規則に基づく候補を表示します。</p>
+          <h3>前回の編集から、続ける</h3><p>RAW の参照と補正を端末内に自動保存し、正常な保存状態があれば再起動後に復帰します。最近使った RAW は直近10件から選べます。</p>
+        </section>
+        <section id="howto"><h2>基本の使い方</h2><ol>
+          <li><strong>RAW を選ぶ。</strong>「RAW写真を開く」から写真へのアクセスを許可し、アプリ内の RAW 一覧で1枚を選びます。iCloud 上の原本は取得に通信が必要な場合があります。</li>
+          <li><strong>色と階調を整える。</strong>下部のツールを選び、目盛りを動かして調整します。スタイルでは種類を選び、グラフとパレットで色をつくります。横持ちでは操作部の配置も切り替わります。</li>
+          <li><strong>仕上がりを見比べる。</strong>写真の長押しでオリジナルと比較。残したい補正は空の比較枠を1回タップして保存し、保存済みの枠をダブルタップして呼び出します。</li>
+          <li><strong>LUT を書き出す。</strong>チェックマークを押し、33³／65³を選択。露出0.0 EVの保存プレビューを確認し、半角英数字1〜64文字で名前を決めて「ファイルへ保存」を押します。</li>
+          <li><strong>対応アプリへ渡す。</strong>保存後に「保存先を開く」から .cube を選び、システムの共有メニューで対応アプリへ渡せます。利用先では Display P3 用の入力設定を確認してください。</li>
+        </ol></section>
+        <section id="controls"><h2>操作の早見表</h2><div class="lut-table"><table><thead><tr><th scope="col">したいこと</th><th scope="col">操作</th></tr></thead><tbody>
+          <tr><th scope="row">補正の値を増やす</th><td>縦持ちの横目盛りは右から左へ動かします。横持ちの通常の縦目盛りは下へ動かすとプラスです。</td></tr>
+          <tr><th scope="row">項目を初期値へ戻す</th><td>矢印をタップ、または目盛りをダブルタップ。スタイルの矢印はトーン・カラー・パレットの3値を戻します。</td></tr>
+          <tr><th scope="row">オリジナルを見る</th><td>写真を長押し。指を離すと補正後へ戻ります。</td></tr>
+          <tr><th scope="row">比較枠を使う</th><td>空の枠を1回タップで保存。保存済み枠をダブルタップで適用、長押しして確認後に消去します。</td></tr>
+          <tr><th scope="row">編集を続ける</th><td>保存画面上部の「閉じる」で編集へ戻ります。</td></tr>
+          <tr><th scope="row">編集を終える</th><td>「補正を閉じる」を選び、確認して終了。現在の RAW 参照・補正・最近の履歴を消去します。比較3枠と保存済み LUT は残ります。</td></tr>
+        </tbody></table></div><p class="small-note">Undo／Redo はありません。同じ RAW でも、一覧や履歴から選び直すと補正0・Neutralで始まります。未書き出しの変更があるときは、切り替え前に確認が表示されます。</p></section>
+        <section id="export"><h2>持ち出す色の仕様</h2><div class="callout"><p><strong>露出の調整は LUT に含めません。</strong>編集時や比較プリセットには露出を保持しますが、書き出す LUT と保存画面の最終プレビューでは0.0 EVとして扱います。その他の色・階調の補正は反映します。</p></div><div class="lut-table"><table><tbody>
+          <tr><th scope="row">ファイル形式</th><td>3D LUT（.cube）、33³互換／65³標準</td></tr>
+          <tr><th scope="row">入力 → 出力</th><td>Display P3 → Display P3</td></tr>
+          <tr><th scope="row">色の条件</th><td>SDR / sRGB 伝達関数 / full range（0〜1）</td></tr>
+          <tr><th scope="row">含まれないもの</th><td>写真そのもの、RAW 現像設定、向き・ズーム、ICC プロファイル、HDR ゲインマップ</td></tr>
+        </tbody></table></div><p>主な利用先として、P3 対応版の <a href="../egcamera/">egcamera</a> を想定しています。sRGB や Log 用に指定し直して使うと色が一致しません。利用先の対応形式・格子数・入力設定の確認が必要です。</p><p class="small-note">egcamera への共有から実際の読み込みまでの実機確認は継続中です。すべての LUT 対応アプリとの互換性を保証するものではありません。</p></section>
+        <section id="notes"><h2>利用前に知っておきたいこと</h2><ul>
+          <li><strong>iPhone・iOS 26 以降が対象。</strong>RAW は写真ライブラリから選びます。JPEG／HEIF 単独の写真は対象外で、RAW の対応範囲は OS のデコーダーに依存します。</li>
+          <li><strong>色づくりと LUT の出力に集中。</strong>補正写真の保存、RAW 撮影、動画、部分補正、HDR／Log LUT、iPad 専用 UI は現在の対象外です。</li>
+          <li><strong>プレビューには解像度の上限があります。</strong>写真表示は長辺3072px以下で、拡大は全解像度の細部表示を保証しません。RAW 原本を縮小保存する処理ではありません。</li>
+          <li><strong>自動保存と LUT 保存は別です。</strong>補正を別アプリで使うには .cube の書き出しが必要です。自動保存の完了前の中断では、直近の操作が失われる場合があります。</li>
+        </ul></section>
+        <section id="privacy"><h2>写真と補正データの扱い</h2><p>RAW の読取・色の調整・LUT の生成・名前候補のための解析は端末内で行います。写真、RAW、GPS、EXIF を外部 AI へ送信しません。元の写真は変更せず、RAW への参照、補正、最近の履歴、比較プリセットを端末内に保存します。</p><p>iCloud 上の原本取得、クラウドへのファイル保存、利用者が選んだ共有には外部通信が伴う場合があります。データの保存・削除の範囲は <a href="../../privacy.html#eglut">プライバシーポリシーの eglut 節</a>をご覧ください。</p></section>
+        <section id="status"><h2>開発状況・入手について</h2><div class="callout"><p><strong>現在は開発中・非公開です。アプリ本体とソースコードは一般公開・配布していません。</strong>公開時期・価格は未定です。機能や画面は今後変更される場合があります。</p></div><p class="lut-status-copy">掲載内容は <time datetime="2026-10-17">2026年10月17日</time>時点のプロトタイプ0.1.6（7）の実装・仕様に基づきます。回転ロックとの連動、大きな RAW の性能、iCloud・ファイル提供サービスごとの動作、AI 候補の品質、egcamera への受け渡しなど、実機での確認を続けています。</p></section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screens">画面写真</a><a href="#features">主な機能</a><a href="#howto">基本の使い方</a><a href="#controls">操作の早見表</a><a href="#export">LUT の仕様</a><a href="#notes">利用前の確認</a><a href="#privacy">写真と補正データ</a><a href="#status">開発状況・入手</a><p>RAW 写真からつくった色を、Display P3 の LUT として持ち出すアプリです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="eglut" href="https://x.com/intent/tweet?text=%23eglut%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Feglut%2F" target="_blank" rel="noopener noreferrer">#eglut で X に共有 ↗</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#eglut">プライバシーポリシー</a><a href="../../#ios">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>
