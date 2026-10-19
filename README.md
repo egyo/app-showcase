@@ -15,6 +15,8 @@ egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack�
 
 ## egcamera の掲載内容と更新
 
+2026年10月19日、採用済みの新アイコンへ一覧・個別ページを更新しました。`assets/egcamera-icon.png`は標準／ライトのシルバー、`assets/egcamera-icon-dark.png`はダークのチャコール。正式AppIconの2外観から512pxへ縮小した不透明sRGB PNGで、`picture`の`prefers-color-scheme`によりブラウザの明暗に合わせます。既存のスクリーンショット・紹介ビジュアル・操作説明図は撮影／作成当時のままです。この更新の範囲はアイコンで、本文・画面の機能説明の照合日は下記の記録を維持しています。
+
 - 紹介ページ：`apps/egcamera/index.html`
 - 画面写真：`apps/egcamera/camera-portrait.png`（IMG_0097.PNG）、`lut-settings.png`（IMG_9823.PNG）、`camera-landscape.jpeg`（IMG_9866.jpg）。2026年10月12日提供の現行ビルドの実画面
 - 比較作例：`apps/egcamera/sample-*.jpeg`、2026年9月30日提供の旧版資料
