@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PairFinder は実際の Finder ウィンドウ2枚を上下に並べ、移動・リサイズ・最小化・復元・閉じるを連動する Mac アプリ。機能、設定画面、使い方を紹介します。開発中・非公開、一般未配布です。">
+  <title>PairFinder | egyo apps</title>
+  <link rel="canonical" href="https://egyo.github.io/app-showcase/apps/pairfinder/">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="pairfinder.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body class="pair-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>macOS<span>/</span>PairFinder</nav>
+    <section class="app-hero pair-hero" aria-labelledby="app-title">
+      <div>
+        <div class="pair-identity"><img class="app-icon" src="../../assets/pairfinder-icon.png" alt="上下2枚のウィンドウを描いた PairFinder のアプリアイコン" width="72" height="72"><p class="eyebrow">macOS / Finder Utility</p></div>
+        <h1 id="app-title" class="page-title">PairFinder</h1>
+        <p class="pair-tagline">いつもの Finder を、<br>上下ひと組に。</p>
+        <p class="lead">2つのフォルダを見ながら作業するとき、ウィンドウの置き直しを少なく。実際の Finder 2枚を上下に揃え、移動も、大きさの変更も、一組で扱うための Mac アプリです。</p>
+        <div class="hero-meta"><span class="chip">上下 50:50</span><span class="chip">管理は1組</span><span class="status">開発中・非公開</span></div>
+        <a class="pair-jump" href="#howto">使い方を見る ↓</a>
+      </div>
+      <figure class="pair-diagram">
+        <div class="pair-diagram-label">TWO WINDOWS · ONE PAIR</div>
+        <div class="pair-outline">
+          <div class="pair-window"><div class="pair-window-bar"><span class="pair-dots" aria-hidden="true">● ● ●</span><strong>上のフォルダ</strong></div><div class="pair-window-body"><span class="pair-sidebar" aria-hidden="true"></span><div class="pair-files"><span>📁 作業中の資料</span><span>📁 写真</span><span>📁 下書き</span></div></div></div>
+          <div class="pair-gap" aria-hidden="true"></div>
+          <div class="pair-window"><div class="pair-window-bar"><span class="pair-dots" aria-hidden="true">● ● ●</span><strong>下のフォルダ</strong></div><div class="pair-window-body"><span class="pair-sidebar" aria-hidden="true"></span><div class="pair-files"><span>📁 整理先</span><span>📁 完成した資料</span><span>📁 保管用</span></div></div></div>
+        </div>
+        <div class="pair-diagram-key"><span>↕ 一緒に移動</span><span>↗ 外周でリサイズ</span></div>
+        <figcaption>配置と連動の模式図です。実際の画面写真ではありません。<br>上下の高さは同じ。間の隙間は設定で調整できます。</figcaption>
+      </figure>
+    </section>
+    <div class="notice">アプリ本体・ソースコードは非公開で、一般向けの配布は行っていません。このページは開発中の機能を紹介するものです。</div>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about"><h2>Finder を、そのまま使うために</h2><p>資料を整理する場所と、取り出す場所。作業中と、保管先。2つの場所を上下に開いたまま、いつもの Finder でファイルを扱いたい場面に向けて作っています。</p><p>独自のファイル一覧へ置き換えるのではなく、Finder のウィンドウ2枚を外側から連動します。新しく作成した一組だけを管理し、すでに開いている別の Finder は管理対象にしません。</p></section>
+        <section id="features"><h2>2枚を揃える手間を、少なく</h2>
+          <h3>移動も、大きさの変更も一緒に</h3><p>どちらかのタイトルバーをドラッグすると、相手も追従します。一組の外周の端・角をドラッグすれば、幅と高さを揃えたまま全体をリサイズ。外周にポインタを合わせると、操作する方向のマークが出ます。</p><p class="small-note">方向マークはウィンドウの外周に表示します。Finder が前面の間、システムカーソル自体は変わらない場合があります。中央の境界で上下の比率を変える機能はありません。</p>
+          <h3>それぞれの開始位置と、好みの隙間</h3><p>上下別々にフォルダまたは「コンピュータ」を指定できます。新しく開くときは、その場所をリスト表示で開きます。閲覧中は表示方法も移動先も自由に変更できます。</p><p>間の隙間は0〜80pt・2pt刻みで調整。表示中の一組にも反映し、隙間を除く高さを上下で半分ずつにします。前回の位置・全体の大きさも保存します。</p>
+          <h3>隠す、戻す、閉じるを一組で</h3><p>片方の黄色いボタンで2枚を最小化し、復元も連動します。PairFinder の Dock アイコンを再クリックすれば、見ていた場所を維持して前面へ。片方を閉じると相手も閉じます。メニューバーの専用メニューからも操作できます。</p>
+        </section>
+        <section id="screens"><h2>実際の設定画面</h2><figure class="pair-settings"><a href="settings.png" aria-label="PairFinder の設定画面を大きく見る"><img src="settings.png" alt="PairFinder 設定。上下の開始位置は両方コンピュータ、隙間は40pt。アクセシビリティの許可状態とオートメーションの説明、下部に一組を開くボタン" width="1120" height="1376" loading="lazy" decoding="async"></a><figcaption>2026年10月20日、0.1.4 の自動 UI 検証中に取得した実画面です。コンピュータの選択と隙間40ptの設定例で、初期値は隙間0ptです。状態メッセージは検証時の表示です。0.1.5 でも設定 UI の機能構成は同じです。タップすると原寸で確認できます。</figcaption></figure></section>
+        <section id="howto"><h2>基本の使い方</h2><p class="small-note">以下はアクセス権のある試用者向けの手順です。一般向けのダウンロードは用意していません。</p><ol class="pair-steps">
+          <li><strong>上下の開始位置を選ぶ。</strong>初回起動時の設定画面で「上」「下」の「選択…」から、それぞれフォルダまたは「コンピュータ」を指定します。</li>
+          <li><strong>Finder を操作する許可を与える。</strong>「アクセシビリティ設定を開く」から PairFinder を許可します。最初の Finder 操作時に表示されるオートメーション確認でも許可してください。</li>
+          <li><strong>「一組を開く」で使い始める。</strong>新しい Finder 2枚が上下に開きます。移動はタイトルバー、リサイズは一組の外周から行います。</li>
+          <li><strong>必要なら隙間を調整する。</strong>メニューバーの PairFinder メニュー →「設定…」を開き、スライダーを動かします。最小化中の変更は復元時に反映します。</li>
+          <li><strong>作業に合わせて閉じる・解除する。</strong>2枚を閉じるなら赤いボタンや「一組を閉じる」。Finder を残すなら「連動を解除」、または「PairFinderを終了」を選びます。</li>
+        </ol><div class="callout"><p><strong>開始位置の変更と、再表示は別の動作です。</strong>開始位置を変えた後は、現在の一組を閉じてから開き直すと反映します。開いている一組を Dock アイコンで呼び出すだけなら、現在の閲覧先を維持します。</p></div></section>
+        <section id="controls"><h2>操作の早見表</h2><div class="pair-table"><table><thead><tr><th scope="col">したいこと</th><th scope="col">操作と結果</th></tr></thead><tbody>
+          <tr><th scope="row">まとめて移動</th><td>上下どちらかのタイトルバーをドラッグ。</td></tr>
+          <tr><th scope="row">全体をリサイズ</th><td>一組の外周の端・角をドラッグ。上下は同じ幅・高さを維持。</td></tr>
+          <tr><th scope="row">最小化・復元</th><td>片方の黄色いボタンで2枚を最小化。PairFinder の Dock アイコンで復元・前面表示。</td></tr>
+          <tr><th scope="row">一組を閉じる</th><td>片方の赤いボタンや Finder の Command-W、または専用メニューの「一組を閉じる」。</td></tr>
+          <tr><th scope="row">Finder を残す</th><td>「連動を解除」または「PairFinderを終了」。2枚は通常の Finder として残る。</td></tr>
+          <tr><th scope="row">新しく開き直す</th><td>一組を閉じた後にアイコンをクリック。指定した開始位置から新しい一組を作成。</td></tr>
+        </tbody></table></div><p class="small-note">連動を解除した2枚は再採用しません。解除後に「一組を開く／前面へ」を選ぶと、残った Finder とは別に新しい一組を作ります。</p></section>
+        <section id="permissions"><h2>必要な許可と、情報の扱い</h2><p><strong>アクセシビリティ</strong>は位置・大きさ・最小化・前面表示の連動に、<strong>オートメーション → Finder</strong>はウィンドウの作成・識別・閉じる操作に使います。システム設定の「プライバシーとセキュリティ」で変更できます。フルディスクアクセスや入力監視は要求しません。</p><p>上下の開始位置、隙間、一組の位置・大きさは Mac 内に保存します。ファイルの内容や利用情報を開発者のサーバーへ自動送信する機能はありません。共有やクラウド上の場所を開く場合、Finder や OS 側で通信が発生することがあります。</p><p>エラーや操作の診断情報は macOS のログに出力します。画面・ログを共有するときは、不要な名前やパスを確認してください。詳しくは<a href="../../privacy.html#pairfinder">プライバシーポリシーの PairFinder 節</a>へ。</p></section>
+        <section id="notes"><h2>利用前に知っておきたいこと</h2><ul>
+          <li><strong>上下1組・常に等分。</strong>左右配置、複数組、中央境界での比率調整はありません。</li>
+          <li><strong>対象を確認できない場合は連動を解除。</strong>タブの追加・結合、フルスクリーン、Finder 再起動、画面構成の変更などではウィンドウを残して停止します。設定画面の案内を確認し、必要なら改めて一組を開いてください。</li>
+          <li><strong>すべてのウィンドウ管理環境には未対応。</strong>緑のボタン、タイル、Spaces、Stage Manager、ディスプレイをまたぐ操作の全面対応は保証していません。</li>
+          <li><strong>2枚は独立した Finder です。</strong>応答速度や最小化アニメーションの影響を受けます。長時間・高負荷や Finder の表示設定の違いは継続検証中です。</li>
+        </ul></section>
+        <section id="status"><h2>開発状況・入手について</h2><div class="callout"><p><strong>開発中・非公開です。アプリ本体とソースコードの一般公開・一般配布は行っていません。</strong>公開時期・価格は未定で、機能や画面は変更される場合があります。</p></div><p>掲載内容は <time datetime="2026-10-20">2026年10月20日</time>時点の 0.1.5（6）の実装・仕様・検証記録に基づきます。アクセス権のある利用者向けには、Private リポジトリの Releases で Developer ID 署名・Apple 公証済みの Universal ZIP を提供しています。</p><p>対応下限は暫定 macOS 14。Apple Silicon / Intel 向けにビルドしていますが、実行確認は macOS 27.0.1 / Apple Silicon で行っています。macOS 14〜26 と Intel Mac での実行は未確認です。Mac App Store 対応は未実施です。</p><p class="small-note">単体15件と、公証済み配布版の設定・実 Finder 連動・既存 Finder を変更しない検証の成功を記録しています。0.1.4 には本人の動作問題なしの報告がありますが、全方向の物理ドラッグや長時間利用など、すべての条件を検証し終えた意味ではありません。</p></section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#screens">設定画面</a><a href="#howto">基本の使い方</a><a href="#controls">操作の早見表</a><a href="#permissions">許可と情報の扱い</a><a href="#notes">利用前の確認</a><a href="#status">開発状況・入手</a><p>実際の Finder 2枚を、上下に揃えて一組に。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="PairFinder" href="https://x.com/intent/tweet?text=%23PairFinder%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fpairfinder%2F" target="_blank" rel="noopener noreferrer">#PairFinder で X に共有 ↗</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#pairfinder">プライバシーポリシー</a><a href="../../#macos">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>

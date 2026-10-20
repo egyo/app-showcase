@@ -1,6 +1,6 @@
 # egyo apps
 
-egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
+egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
 
 ## 更新方法
 
@@ -145,3 +145,17 @@ Apple がいう「収集」と、端末内の読み取り・処理は同じ意�
 - 露出はプレビュー・比較枠に保持するが、.cubeと保存最終プレビューは0.0 EV。Display P3→Display P3、SDR／sRGB伝達関数／full range、33³互換初期選択・65³標準を明記。sRGB・Logへ指定し直して利用しない。
 - egcameraのP3対応版を主用途として案内するが、共有から実際の読み込みまでの実機受入は未確認。回転ロック連動、大きなRAWの性能、iCloud／プロバイダーごとの動作、AI品質も継続確認中。
 - Privateリポジトリへのリンク、ソースコード、内部仕様文書全文は公開しない。更新時は機能・操作・色契約・データの扱い・画像提供日を合わせる。
+
+## PairFinder の掲載内容と画像
+
+- 紹介ページ：`apps/pairfinder/index.html`、個別CSS：`apps/pairfinder/pairfinder.css`
+- 採用AppIcon：`assets/pairfinder-icon.png`（256px）。実設定画面：`apps/pairfinder/settings.png`。
+- 画像の由来・撮影版・模式図との区別：`apps/pairfinder/assets.md`。
+- 一覧：`index.html#macos`（3アプリ）。情報の扱い：`privacy.html#pairfinder`。
+- 公開URL：https://egyo.github.io/app-showcase/apps/pairfinder/
+
+2026年10月20日、0.1.5 (6)の実装・仕様・検証記録を照合。上下等分の1組、新規Finderだけの管理、移動・外周リサイズ・方向マーク、上下別のフォルダ／コンピュータ、隙間0〜80pt、最小化・復元・閉じる、再表示と新規作成の違い、解除・終了でFinderを残す動作を紹介しています。設定画面は同日の0.1.4 UI検証で取得した実画面を加工せず使用し、状態メッセージは検証中の表示であること、隙間40ptは例で初期0ptであることを説明しました。0.1.5の新規撮影や全機能の検証画像とは扱いません。ヒーローはHTML/CSSの模式図で、実画面と明示的に区別しています。
+
+開発中・非公開・一般未配布と、アクセス権のある利用者へのPrivate Releases限定配布を区別。Developer ID署名・Apple公証済みUniversal ZIPの存在を説明しますが、公開サイトには配布ZIP・私有ソース・仕様全文を含めず、権限のない読者にPrivateリンクをダウンロード導線として示しません。macOS 14は暫定下限、実行検証はmacOS 27.0.1／Apple Silicon、Intelと下限OSは未確認。単体15件・配布版検証の既存記録と、今回の文書／Web表示確認を区別します。
+
+権限、端末内の開始位置・隙間・位置／寸法、OS診断ログ、Finder／OS側の通信、停止と設定・元ファイル削除の違いをプライバシー節へ同期。更新時も撮影版、現在の実装、一般配布の有無、検証範囲、公開画像に名前・パスが含まれないことを確認してください。
