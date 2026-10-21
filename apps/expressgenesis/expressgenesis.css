@@ -1,0 +1,29 @@
+.genesis-page { --green: #266f70; --green-soft: #e5f1ef; }
+.genesis-hero { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 30px; }
+.genesis-identity { display: flex; align-items: center; gap: 15px; margin-bottom: 24px; }
+.genesis-identity .eyebrow { margin: 0; letter-spacing: .09em; }
+.genesis-hero .page-title { font-size: clamp(1.9rem, 3.6vw, 2.9rem); letter-spacing: -.045em; overflow-wrap: anywhere; }
+.genesis-tagline { margin: 23px 0 0; font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 750; line-height: 1.6; letter-spacing: -.045em; }
+.genesis-hero .lead { font-size: 1rem; }
+.genesis-jump { display: inline-block; margin-top: 22px; color: var(--green); font-weight: 750; }
+.genesis-hero-image { margin: 0; padding: 16px; border: 1px solid #c8ddda; border-radius: 22px; background: #e0eeeb; }
+.genesis-hero-image a, .genesis-screen a { display: block; border-radius: 10px; overflow: hidden; background: #292827; }
+.genesis-hero-image img, .genesis-screen img { width: 100%; height: auto; }
+.genesis-hero-image figcaption { margin: 12px 3px 0; font-size: .76rem; color: #3b5c5b; }
+.genesis-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 28px 0 0; padding: 0; list-style: none; }
+.genesis-flow li { display: flex; flex-direction: column; gap: 5px; padding: 20px; border-top: 2px solid #6a9f99; background: #edf3ef; border-radius: 0 0 12px 12px; }
+.genesis-flow span { color: var(--green); font-size: .7rem; font-weight: 800; letter-spacing: .08em; }
+.genesis-flow strong { font-size: 1rem; }
+.genesis-flow small { color: var(--muted); font-size: .8rem; }
+.genesis-screen { margin: 23px 0; padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: white; }
+.genesis-screen figcaption { padding: 13px 5px 4px; font-size: .85rem; color: var(--muted); }
+.genesis-page .article kbd { display: inline-block; padding: 0 5px; border: 1px solid #cbd6d0; border-radius: 4px; background: white; font: inherit; font-size: .85em; }
+.genesis-steps li { padding-bottom: 8px; }
+.genesis-example { padding: 23px; border: 1px solid #c8ddda; border-radius: 18px; background: #edf5f1; }
+.genesis-example dl { margin: 0 0 20px; }
+.genesis-example dl div { padding: 12px 0; border-bottom: 1px solid #d1dfd7; }
+.genesis-example dt { margin-bottom: 5px; color: var(--green); font-size: .8rem; font-weight: 750; }
+.genesis-example dd { margin: 0; }
+.genesis-example p:last-child { margin: 0; }
+@media (max-width: 850px) { .genesis-hero { grid-template-columns: 1fr; } .genesis-hero .page-title { font-size: clamp(1.9rem, 6vw, 3.1rem); } .genesis-hero-image { max-width: 700px; } }
+@media (max-width: 560px) { .genesis-flow { grid-template-columns: 1fr; gap: 10px; } .genesis-flow li { padding: 14px 18px; } .genesis-hero-image { padding: 9px; } .genesis-screen { padding: 8px; } .genesis-identity { gap: 12px; } .genesis-identity .eyebrow { font-size: .65rem; } }

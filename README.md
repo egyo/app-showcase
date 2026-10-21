@@ -1,6 +1,6 @@
 # egyo apps
 
-egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
+egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder、ExpressGenesis を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
 
 ## 更新方法
 
@@ -159,3 +159,19 @@ Apple がいう「収集」と、端末内の読み取り・処理は同じ意�
 開発中・非公開・一般未配布と、アクセス権のある利用者へのPrivate Releases限定配布を区別。Developer ID署名・Apple公証済みUniversal ZIPの存在を説明しますが、公開サイトには配布ZIP・私有ソース・仕様全文を含めず、権限のない読者にPrivateリンクをダウンロード導線として示しません。macOS 14は暫定下限、実行検証はmacOS 27.0.1／Apple Silicon、Intelと下限OSは未確認。単体15件・配布版検証の既存記録と、今回の文書／Web表示確認を区別します。
 
 権限、端末内の開始位置・隙間・位置／寸法、OS診断ログ、Finder／OS側の通信、停止と設定・元ファイル削除の違いをプライバシー節へ同期。更新時も撮影版、現在の実装、一般配布の有無、検証範囲、公開画像に名前・パスが含まれないことを確認してください。
+
+## ExpressGenesis の掲載内容と画像
+
+- 紹介ページ：`apps/expressgenesis/index.html`、個別CSS：`apps/expressgenesis/expressgenesis.css`
+- 紹介用アイコン：`assets/expressgenesis-icon.svg`。本体の採用アイコンとは区別。
+- 実画面3枚と撮影版・切出し方法：`apps/expressgenesis/assets.md`
+- 一覧：`index.html#macos`（4アプリ）。情報の扱い：`privacy.html#expressgenesis`。
+- 公開URL：https://egyo.github.io/app-showcase/apps/expressgenesis/
+
+2026年10月21日、0.1.3（4）の実装・README・決定事項・検証記録と照合。目的、13項目497候補、候補挿入・選択置換・欄別消去、参考資料の役割、希望完成サイズ、初期選択、文章生成・コピー、ChatGPTへの手動貼付と別途添付を説明しています。入力例は架空の制作条件で、生成画像の作例ではありません。希望サイズ・拡大・ZIP納品の指示と、実際の画像処理・納品を明確に区別します。
+
+開発中・非公開・一般未配布、macOS 26以降・Apple Silicon専用を明記。Private Releasesでの限定配布と一般公開を区別し、公開サイトへアプリ本体・ソースコード・私有文書全文・配布ZIP・参考資料・認証情報を含めません。権限のない読者向けにPrivateリポジトリへのダウンロードリンクを置きません。入力の非保存、終了時の破棄、クリップボードは別管理である点をプライバシー節にも同期。既存のアプリ検証記録と今回のWeb表示確認を区別し、下限OS・ChatGPT側の実画像生成と納品の未検証範囲を維持します。
+
+更新時は現在の機能と初期選択、撮影版、一般配布の状態、対応環境、保存・送信の扱いを合わせて確認してください。
+
+追加時のWeb検証：Google Chromeで幅320・390・768・1024・1440pxの横はみ出しなし、全画像表示、内部リンク17件、一覧カードとプライバシー節への遷移、X共有URLを確認。公開画像3枚のウィンドウ外除外を目視確認しました。

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ExpressGenesis は画像生成の希望を整理し、ChatGPT に貼り付ける日本語プロンプトを作る Mac アプリ。機能・実画面・使い方を紹介します。macOS 26以降・Apple Silicon専用。開発中・非公開です。">
+  <title>ExpressGenesis | egyo apps</title>
+  <link rel="canonical" href="https://egyo.github.io/app-showcase/apps/expressgenesis/">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="expressgenesis.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body class="genesis-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>macOS<span>/</span>ExpressGenesis</nav>
+    <section class="app-hero genesis-hero" aria-labelledby="app-title">
+      <div class="genesis-intro">
+        <div class="genesis-identity"><img class="app-icon" src="../../assets/expressgenesis-icon.svg" alt="文章と光を描いた ExpressGenesis の紹介用アイコン" width="72" height="72"><p class="eyebrow">macOS / Prompt Composer</p></div>
+        <h1 id="app-title" class="page-title">ExpressGenesis</h1>
+        <p class="genesis-tagline">描きたいイメージを、<br>伝わる言葉へ。</p>
+        <p class="lead">被写体も、画風も、仕上がりのサイズも。画像生成の希望をフォームにまとめ、ChatGPT に貼り付ける日本語プロンプトを作る Mac アプリです。</p>
+        <div class="hero-meta"><span class="chip">macOS 26 以降</span><span class="chip">Apple Silicon 専用</span><span class="status">開発中・非公開</span></div>
+        <a class="genesis-jump" href="#howto">使い方を見る ↓</a>
+      </div>
+      <figure class="genesis-hero-image"><a href="creation-candidates.png" aria-label="創作内容と候補一覧の画面を大きく見る"><img src="creation-candidates.png" alt="ExpressGenesis の創作内容画面。用途の候補一覧を開き、壁紙・背景画像の説明ツールチップを表示" width="2070" height="1630" fetchpriority="high"></a><figcaption>候補を選びながら、希望を言葉に。<br>0.1.1 の実画面・テスト入力例です。画像をタップすると拡大できます。</figcaption></figure>
+    </section>
+    <div class="notice">アプリ本体・ソースコードは開発中・非公開で、一般向けの公開・配布は行っていません。このページでは開発中の機能と操作を紹介しています。</div>
+    <ol class="genesis-flow" aria-label="プロンプト作成の流れ"><li><span>01 / COMPOSE</span><strong>希望を整理する</strong><small>自由文と候補語で入力</small></li><li><span>02 / COPY</span><strong>プロンプトを作る</strong><small>文章を生成・自動コピー</small></li><li><span>03 / CREATE</span><strong>ChatGPT へ貼り付ける</strong><small>参考資料は別途添付</small></li></ol>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about"><h2>思い描くことと、仕上げたい形を一緒に</h2><p>描いてほしい主役、参考画像から取り入れたい雰囲気、壁紙に使う完成サイズ。条件が増えるほど、依頼の文章を整えるのにも手間がかかります。ExpressGenesis は、その希望を項目ごとに整理して、一つの指示文にまとめるために作っています。</p><p>アプリ内で行うのは、入力内容の検証・文章の組み立て・コピーです。画像の生成・拡大・ZIP 作成は ChatGPT 側へ依頼します。画像や ZIP の読み込み・内容確認、自動添付、自動送信は行いません。</p></section>
+        <section id="features"><h2>言葉を選ぶところから、コピーまで</h2>
+          <h3>13項目で、描きたいことを具体的に</h3><p>用途、被写体・モチーフ、シーン、表情・動作、画風・質感、構図、光、色、ディテール・別案、守る条件、避けたいこと、任せる範囲、画像内の文字・配置を入力できます。すべてを埋める必要はありません。</p>
+          <h3>説明付きの候補から、表現を探す</h3><p>創作内容の13項目に497の候補を収録。「候補一覧」を開き、ボタンにマウスを合わせると説明を表示します。候補は入力欄の末尾へ追加し、文字を選択しているときはその部分を置き換えます。手入力での編集や、欄ごとの消去もできます。</p>
+          <h3>参考資料の役割を、混ぜずに伝える</h3><p>参考画像・画像入り ZIP のファイル名と、参考にする点・維持する点・変更してよい点を記入。「各画像から個別に制作」「組合せ」「役割別の参照」を選べます。主役のモチーフと、構図や雰囲気の参考を分けて指定できます。</p>
+          <h3>サイズと仕上げの希望も、同じ文章へ</h3><p>iPhone・iPad・Mac 用の希望完成サイズや独自サイズを追加し、複数の出力先を指定できます。PNG／JPEG、縦横比の調整、拡大方針、原本を含めるかも選択。ZIP にまとめて納品する依頼を、文章の末尾に添えます。</p>
+          <h3>生成結果を確認して、すぐに渡す</h3><p>「プロンプト生成」または <kbd>⌘</kbd>＋<kbd>Return</kbd> で文章を生成し、自動コピー。「生成結果」で内容を確認できます。入力を変えると再生成を案内し、入力不備があるときはクリップボードを書き換えません。</p>
+        </section>
+        <section id="screens"><h2>出力と仕上げを、画面で確認</h2>
+          <figure class="genesis-screen"><a href="output-sizes.png" aria-label="希望完成サイズの設定画面を大きく見る"><img src="output-sizes.png" alt="PNGを選択し、iPhone 16 Pro・iPad mini・Mac用の3つの希望完成サイズを追加した画面。Macは横3840・縦2160 px" width="2070" height="1630" loading="lazy" decoding="async"></a><figcaption><strong>使いたいサイズを追加する。</strong>iPhone・iPad・Mac を併用した例です。出力先は自動選択されず、必要なものをボタンで追加します。</figcaption></figure>
+          <figure class="genesis-screen"><a href="finishing-defaults.png" aria-label="構図・拡大・納品の初期選択を大きく見る"><img src="finishing-defaults.png" alt="出力・仕上げ画面。PNG、主役を保持して背景を拡張、構図・色調を保つ拡大、完成画像のみを初期選択。出力先は未追加" width="2070" height="1630" loading="lazy" decoding="async"></a><figcaption><strong>仕上げ方まで、依頼に含める。</strong>初期選択は PNG・背景拡張・構図と色調を保つ拡大・完成画像のみ。必要に応じて変更できます。</figcaption></figure>
+          <p class="small-note">上の2枚は2026年10月21日、0.1.3（4）の UI 検証で取得。ページ上部の候補一覧は2026年10月20日、0.1.1（2）の UI 検証画像です。「古い用途」は選択置換のテスト用入力です。いずれも周囲のデスクトップを除き、アプリのウィンドウ部分だけを切り出しています。本文は0.1.3の実装と照合しています。</p>
+        </section>
+        <section id="howto"><h2>基本の使い方</h2><p class="small-note">アクセス権のある試用者向けの操作です。一般向けのダウンロードは用意していません。</p><ol class="genesis-steps">
+          <li><strong>「創作内容」を入力する。</strong>被写体・シーン・参考資料のいずれかで、何を作るかを指定します。自由文と候補語を組み合わせ、必要な欄だけ記入してください。</li>
+          <li><strong>必要なら「参考資料」を追加する。</strong>実際に添付するファイル名と役割を入力し、資料の扱い方を選びます。画像入り ZIP の枚数は任意の手入力で、アプリが中身を数えるものではありません。</li>
+          <li><strong>「出力・仕上げ」を選ぶ。</strong>作品数、希望完成サイズ、形式、縦横比と拡大の方針を指定します。Mac の壁紙なら「Mac用を追加」で横3,840×縦2,160 px を追加できます。</li>
+          <li><strong>「プロンプト生成」で文章をコピーする。</strong>生成結果を読み、コピーの成功表示を確認します。コピーできない場合は、生成結果の文章を選択して手動でコピーできます。</li>
+          <li><strong>ChatGPT へ貼り付ける。</strong>参考資料を使う場合は、文章に記載した名前と一致する実ファイルを ChatGPT 側で添付して送信します。入力を修正したら、再生成・再コピーしてください。</li>
+        </ol></section>
+        <section id="example"><h2>たとえば、Mac の壁紙を依頼するなら</h2><div class="genesis-example"><p class="eyebrow">入力例 / 架空の制作条件</p><dl><div><dt>用途・主役</dt><dd>Mac の壁紙。月明かりの庭にいる白い猫。</dd></div><div><dt>画風・構図</dt><dd>水彩風。主役は右寄せ、左側に余白を残す。</dd></div><div><dt>出力・仕上げ</dt><dd>1作品、Mac 用 3,840×2,160 px、PNG。背景拡張と構図・色調を保つ拡大。</dd></div></dl><p>この条件を入力して生成すると、創作内容と仕上げの希望、実寸法・形式の確認、ZIP 納品の依頼をまとめた文章になります。</p></div><p class="small-note">入力例は使い方を示すもので、生成画像や納品結果の作例ではありません。</p></section>
+        <section id="notes"><h2>利用前に知っておきたいこと</h2><ul>
+          <li><strong>希望サイズと実際の納品サイズを区別します。</strong>プリセットは希望する完成ピクセル寸法です。端末の物理解像度や、壁紙の空間シーン機能の動作を保証するものではありません。</li>
+          <li><strong>必要な未指定事項は、制作前の確認を依頼します。</strong>空の任意見出しは省略し、作品数やサイズなどが未指定なら、生成文で受け手に確認を求めます。自由文の意味の矛盾や参考画像の中身を自動判定する機能はありません。</li>
+          <li><strong>画像の完成には、ChatGPT 側での操作が必要です。</strong>文章のコピー成功は、画像生成・拡大・ZIP 納品の完了を意味しません。生成後の画質・形式・実寸法・ZIP 内容は、受け取ったファイルで確認してください。</li>
+        </ul></section>
+        <section id="privacy"><h2>入力とクリップボードの扱い</h2><p>創作内容・参考資料の指定・生成文はアプリのメモリ内で保持し、入力の復元や履歴保存は行いません。終了すると失われるため、残したい文章は終了前に別途保存してください。アプリから外部サービスへ自動送信する機能はありません。</p><p>生成した文章は macOS の一般クリップボードへ書き込みます。アプリを終了してもコピー済みの文章まで消去する機能はありません。履歴を保持するクリップボード管理アプリなどの扱いにもご注意ください。</p><p>ChatGPT に貼り付けて送信した文章と添付資料は、送信先のサービスや利用者の設定に従って扱われます。詳しくは<a href="../../privacy.html#expressgenesis">プライバシーポリシーの ExpressGenesis 節</a>へ。</p></section>
+        <section id="status"><h2>開発状況・入手について</h2><div class="callout"><p><strong>開発中・非公開です。アプリ本体とソースコードの一般公開・一般配布は行っていません。</strong>一般公開の時期・価格は未定です。機能や画面は変更される場合があります。</p></div><p>掲載内容は <time datetime="2026-10-21">2026年10月21日</time>時点の 0.1.3（4）に基づきます。macOS 26 以降・Apple Silicon 専用です。アクセス権のある利用者向けには、Private リポジトリの Releases で Developer ID 署名・Apple 公証済みの ZIP を提供しています。</p><p class="small-note">開発 Mac（macOS 27.0.1・Apple Silicon）で文章組立や UI の検証記録があります。macOS 26 実機での動作と、ChatGPT 側での画像生成・拡大品質・完成寸法・ZIP 納品は継続確認の対象です。</p></section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#screens">実際の画面</a><a href="#howto">基本の使い方</a><a href="#example">入力例</a><a href="#notes">利用前の確認</a><a href="#privacy">情報の扱い</a><a href="#status">開発状況・入手</a><p>希望を整理して、ChatGPT へ渡す文章をつくる。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="ExpressGenesis" href="https://x.com/intent/tweet?text=%23ExpressGenesis%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fexpressgenesis%2F" target="_blank" rel="noopener noreferrer">X でこのページを共有 ↗</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#expressgenesis">プライバシーポリシー</a><a href="../../#macos">アプリ一覧に戻る</a></div></footer>
+</body>
+</html>
