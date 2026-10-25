@@ -6,7 +6,7 @@
   <meta name="description" content="egviewは、Tumblrの画像・無音動画を黒背景の全画面で眺める個人用ビューア。iPhone・iPadの4方向表示、Duo／iPadのデュアル表示、サムネイルバー、スライドショーに対応。英語・日本語対応。TestFlightでテスト中・一般未配布。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="egview | egyo apps">
-  <meta property="og:description" content="好きな写真を、自分のペースで。Tumblrの画像・無音動画を眺める個人用ビューア。iPhone・iPad・Duoでの使い方と、Duo Simulatorをもとにした画面例を紹介します。">
+  <meta property="og:description" content="好きな写真を、自分のペースで。Tumblrの画像・無音動画を眺める個人用ビューア。iPhone・iPad・Duoでの使い方と、通常iPhoneとDuoの提供画面をもとにした掲載用の画面例を紹介します。">
   <meta property="og:url" content="https://egyo.github.io/app-showcase/apps/egview/">
   <meta property="og:image" content="https://egyo.github.io/app-showcase/assets/egview-icon.png">
   <meta property="og:image:alt" content="モノトーンの写真コラージュに小文字のegを重ねたegviewアイコン">
@@ -51,6 +51,25 @@
           <p lang="en">egview supports English and Japanese on iPhone, iPad, and iPhone Duo. Choose your preferred app language in the device settings, then relaunch egview. Blog names and post content stay as provided by Tumblr. The app is in development and being tested through TestFlight; public distribution and tester recruitment have not started.</p>
         </section>
         <section id="screen">
+          <h2>iPhoneで、写真を眺める。</h2>
+          <p>通常iPhoneの縦画面です。2026年10月25日に提供されたスクリーンショットをもとに、メイン写真とすべてのサムネイルを新しい生成風景へ、ブログ名を架空の「sample」へ差し替えた掲載用の画面例です。</p>
+          <div class="iphone-screen-layout">
+            <figure class="iphone-example">
+              <a class="iphone-screen" href="iphone-portrait-sample.jpg" aria-label="通常iPhoneの掲載用画面例を拡大">
+                <img src="iphone-portrait-sample.jpg" alt="生成した森の小川を表示するegviewの通常iPhone縦画面例。黒い余白、下部の小さな出典、横一列の風景サムネイル、再生・リブログ・ライク・設定の操作バー" width="851" height="1848" loading="lazy" decoding="async">
+              </a>
+              <figcaption>通常iPhone・縦／2026年10月25日提供<br>写真・サムネイル・ブログ名を差し替えた画面例</figcaption>
+            </figure>
+            <div class="view-screen-notes">
+              <h3>サムネイルから、次の投稿へ。</h3>
+              <p>画像全体をフィットさせ、縦横比の違いは黒い余白で受け止めます。出典ラベルの下には小画像が横一列に並び、タップや横スワイプで投稿を選べます。中央のサムネイルと本画面が連動します。</p>
+              <p>下部の操作バーには、再生・リブログ・ライク・設定。通常iPhoneでも、今見ている画像・動画からスライドショーを始められます。</p>
+              <p class="small-note">通常シングル閲覧のサムネイルを示す日本語UIの例です。対応機器ではスワイプによる表示切替時に軽く振動し、タップでは振動しません。下スワイプで出典・サムネイル・操作バーをまとめて隠せます。</p>
+            </div>
+          </div>
+          <p class="small-note duo-disclosure">この掲載画像は、提供画面の写真領域とすべての小画像を新しく生成した風景に置き換え、元のブログ名も匿名化しています。元の投稿画像は掲載していません。UIの配置と操作は提供画面を参考にしていますが、画像生成による再構成のため細部が実際の表示と異なる場合があります。無加工のスクリーンショットや実投稿の取得例ではありません。</p>
+        </section>
+        <section id="duo-screen">
           <h2>iPhone Duoで、閉じても、開いても。</h2>
           <p>iPhone Duoのシミュレータで撮影された2点のスクリーンショットをもとにした掲載用の画面例です。写真は新しく生成した風景に、ブログ名は架空の「sample」に差し替えています。</p>
           <div class="duo-outer-layout">
@@ -76,7 +95,7 @@
             </a>
             <figcaption>インナーディスプレイのデュアル表示。共通のリブログ・ライク・再生は右側が対象です。<br>iPhone Duo Simulator／2026年10月16日提供</figcaption>
           </figure>
-          <p class="small-note duo-disclosure">掲載画像は、シミュレータの実画面を参考に写真とUIを画像生成で再構成したものです。無加工のスクリーンショットではなく、2026年10月16日の表示をもとにしており、後から追加したサムネイルバーや英語UIは示していません。UIの細部は実際の表示と異なる場合があります。端末枠は説明用の模式図です。Apple公式の製品画像・正確な筐体寸法を示すものではありません。</p>
+          <p class="small-note duo-disclosure">上のDuo画面2点は、シミュレータの実画面を参考に写真とUIを画像生成で再構成したものです。無加工のスクリーンショットではなく、2026年10月16日の表示をもとにしており、後から追加したサムネイルバーや英語UIは示していません。UIの細部は実際の表示と異なる場合があります。端末枠は説明用の模式図です。Apple公式の製品画像・正確な筐体寸法を示すものではありません。</p>
         </section>
         <section id="features">
           <h2>主な機能</h2>
@@ -166,11 +185,11 @@
           <div class="callout"><p><strong>iOS／iPadOSプロトタイプ0.1.45をTestFlightでテスト中です。一般配布・試用募集は行っていません。</strong> 画像・GIF・無音動画、Photoset、ピンチ、ライク、キューリブログ、UI非表示、画像保存、スライドショー、Duo／iPad表示、通常シングルのサムネイルバーを実装しています。</p></div>
           <p>画像閲覧・キュー追加・動画切り替え等には開発者の確認報告があり、実APIでは1,500生投稿の取得報告があります。0.1.38のiPad認証・縦横閲覧・デュアル・スライドショーは開発者が確認済みです。0.1.45の今回改良は、開発者が新ビルドを試して想定どおりの動作と確認しました。TestFlightでの配信・テスト可能も別途確認済みです。開発記録には自動回帰2,226項目、3機種のSimulator各8ケース、署名なしDebug／Releaseの成功があります。合成データの検証、Simulator画面、実機の結果は区別しており、長時間の総メモリ・発熱・通信量、実APIでの10,000件規模、写真権限・元ラベル継承等の個別条件は確認を残しています。</p>
           <p>現在の対象はiOS／iPadOS 18以上の通常iPhone、iPhone Duo、iPadです。macOS版は今後の予定で、公証取得を予定しています。完成時期、一般向け配布方法、価格は未定です。App Store公開は将来検討します。</p>
-          <p class="small-note">掲載内容は<time datetime="2026-10-25">2026年10月25日</time>に、0.1.45／仕様v0.52／認証サービス0.6.1と照合しました。今回の更新は紹介文の整合で、新しい実機性能測定は行っていません。画面例の撮影元は2026年10月16日提供のiPhone Duo Simulatorです。提供画像のビルド番号は未確認です。</p>
+          <p class="small-note">掲載内容は<time datetime="2026-10-25">2026年10月25日</time>に、0.1.45／仕様v0.52／認証サービス0.6.1と照合しました。今回の更新は紹介文の整合で、新しい実機性能測定は行っていません。画面例は通常iPhoneが2026年10月25日提供、Duoが10月16日提供のSimulator画面を参考にしています。提供画像のビルド番号は未確認です。</p>
         </section>
       </article>
       <aside class="side-panel" aria-label="ページ案内">
-        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#language">Englishと日本語</a><a href="#screen">画面の見方</a><a href="#features">主な機能</a><a href="#ipad">iPadの画面と操作</a><a href="#duo">Duoの画面と操作</a><a href="#slideshow">スライドショー</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#language">Englishと日本語</a><a href="#screen">通常iPhoneの画面</a><a href="#duo-screen">Duoの画面例</a><a href="#features">主な機能</a><a href="#ipad">iPadの画面と操作</a><a href="#duo">Duoの画面と操作</a><a href="#slideshow">スライドショー</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
         <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
         <a class="share-link" data-share="egview" href="https://x.com/intent/tweet?text=%23egview%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegview%2F" target="_blank" rel="noopener noreferrer">#egview で X に共有 ↗</a>
       </aside>
