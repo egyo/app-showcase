@@ -1,0 +1,27 @@
+.cuelet-hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+.cuelet-identity { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; color: var(--muted); }
+.cuelet-tagline { margin: 24px 0 0; font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 600; line-height: 1.5; text-wrap: balance; }
+.cuelet-jump { display: inline-block; margin-top: 24px; padding-block: 8px; color: var(--green); font-weight: 600; }
+.cuelet-timeline { margin: 0; padding: 32px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.cuelet-timeline > p { margin: 0 0 32px; font-weight: 600; }
+.cuelet-time-labels { position: relative; display: grid; grid-template-columns: 2fr 1fr; margin-bottom: 8px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.cuelet-time-labels span:last-child { position: absolute; right: 0; }
+.cuelet-time-track { display: grid; grid-template-columns: 2fr 1fr; min-height: 80px; background: var(--green-soft); }
+.cuelet-time-track strong { display: grid; place-items: center; padding: 12px; background: var(--green); color: white; font-weight: 600; text-align: center; }
+.cuelet-next { margin-top: 24px; color: var(--green); font-weight: 600; }
+.cuelet-timeline figcaption { margin-top: 16px; color: var(--muted); font-size: .84rem; }
+.cuelet-screenshot { margin: 24px 0; }
+.cuelet-screenshot a { display: block; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #000; }
+.cuelet-screenshot img { width: 100%; height: auto; }
+.cuelet-screenshot figcaption { margin-top: 12px; color: var(--muted); font-size: .84rem; line-height: 1.75; }
+.cuelet-overview { margin-top: 40px; }
+.cuelet-page .article kbd { padding: 4px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); font: inherit; }
+.cuelet-page .page-title { font-weight: 600; }
+@media (max-width: 760px) {
+  .cuelet-hero { grid-template-columns: 1fr; gap: 32px; }
+  .cuelet-timeline { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cuelet-page .app-card { transition: none; }
+}

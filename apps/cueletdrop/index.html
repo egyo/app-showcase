@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CueletDrop は YouTube の各曲の1:00〜1:30を映像付きでつなぐ Mac アプリ。順番・シャッフル・リピート再生、使い方、実画面を紹介します。開発中・非公開、一般未配布です。">
+  <title>CueletDrop | egyo apps</title>
+  <link rel="canonical" href="https://egyo.github.io/app-showcase/apps/cueletdrop/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="CueletDrop | 好きな曲を、30秒ずつ。">
+  <meta property="og:description" content="YouTube の1:00〜1:30を、映像と一緒に楽しむ Mac アプリ。開発中・非公開、一般未配布。">
+  <meta property="og:url" content="https://egyo.github.io/app-showcase/apps/cueletdrop/">
+  <meta property="og:image" content="https://egyo.github.io/app-showcase/apps/cueletdrop/playback.jpg">
+  <meta property="og:image:alt" content="CueletDrop 0.1.3 の通常画面。公開サンプルでの表示例。">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="cueletdrop.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body class="cuelet-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
+  </div></header>
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>macOS<span>/</span>CueletDrop</nav>
+    <section class="app-hero cuelet-hero" aria-labelledby="app-title">
+      <div>
+        <div class="cuelet-identity"><img class="app-icon" src="../../assets/cueletdrop-icon.png" alt="流星と音符を描いた CueletDrop のアプリアイコン" width="72" height="72"><span>macOS アプリ</span></div>
+        <h1 id="app-title" class="page-title">CueletDrop</h1>
+        <p class="cuelet-tagline">好きな曲を、30秒ずつ。</p>
+        <p class="lead">YouTube の各曲の1:00〜1:30を、映像と一緒に次々と。好きな曲のリストを短いダイジェストのように楽しむ、Mac のためのプレイヤーです。</p>
+        <div class="hero-meta"><span class="status">開発中・非公開</span><span class="chip">macOS 14以降</span></div>
+        <a class="cuelet-jump" href="#howto">使い方を見る ↓</a>
+      </div>
+      <figure class="cuelet-timeline">
+        <p>1曲の中から、この30秒を。</p>
+        <div class="cuelet-time-labels" aria-hidden="true"><span>0:00</span><span>1:00</span><span>1:30</span></div>
+        <div class="cuelet-time-track" role="img" aria-label="動画の最初の60秒を飛ばし、60秒から90秒までの30秒間を再生します"><span></span><strong>再生する区間</strong></div>
+        <div class="cuelet-next">1:30になったら、次の曲の1:00へ →</div>
+        <figcaption>再生区間の説明図です。曲ごとの開始位置・長さを編集する機能はありません。</figcaption>
+      </figure>
+    </section>
+    <div class="notice">CueletDrop は開発段階のアプリです。アプリ本体・ソースコードは非公開で、一般向けの公開・配布や試用募集は行っていません。機能・画面は変更される場合があります。</div>
+    <figure class="cuelet-screenshot cuelet-overview" id="screenshots">
+      <a href="playback.jpg" aria-label="CueletDrop の通常画面を大きく見る"><img src="playback.jpg" alt="左に動画URLを追加する曲リスト、右に映像・音量・字幕と再生操作、下に再生順と曲の切替設定がある CueletDrop の実画面" width="1800" height="1340" fetchpriority="high" decoding="async"></a>
+      <figcaption>0.1.3（ビルド4）の実画面。2026年11月3日、公開されている YouTube 公式APIサンプルで撮影しました。音楽・動画の同梱を示すものではありません。画像を選ぶと拡大できます。</figcaption>
+    </figure>
+    <div class="page-layout">
+      <article class="article">
+        <section id="about"><h2>いつものリストを、短いダイジェストに</h2>
+          <p>好きな曲を少しずつ、映像も眺めながら楽しみたい。そんな時間のために作っています。1曲を最後まで聴く代わりに、動画上の60秒から90秒までを再生し、次の曲へ自動で進みます。</p>
+          <p>順番どおりに聴く日も、シャッフルで出会い直す日も。自分の非公開再生リストを読み込む方法と、動画URLから小さな曲リストを作る方法を用意しています。</p>
+        </section>
+        <section id="features"><h2>聴き方と、画面の楽しみ方</h2>
+          <h3>順番・シャッフル・リピート</h3><p>再生順を選び、リピートでリストを繰り返せます。一時停止・停止・次へに加え、曲リストから再生する曲を選ぶ操作に対応。再生順とリピートの設定は、アプリを開き直しても復元します。</p>
+          <h3>URLをまとめて追加</h3><p>YouTube の動画URLや動画IDを入力して追加できます。複数行の貼り付け、Chrome／SafariからのURL・テキストのドロップにも対応。同じ動画は1曲にまとめます。</p>
+          <h3>2つの曲間表示</h3><p>「サムネイルを2秒表示」は、再生前に動画の画像を最低2秒表示します。「完全ギャップレス」は、その追加待機を設けず次へ進むモードです。次曲の準備を先に始めますが、<strong>通信・読み込みによる待ちは残り、無音ゼロは保証しません。</strong>前曲を止めてから次曲を再生し、音を重ねるクロスフェードは行いません。</p>
+          <h3>映像に集中する全画面</h3><p>全画面では曲リストを畳み、映像と必要な再生操作を表示。アンビエント背景をオンにすると、映像から作ったぼかし背景を余白に敷きます。背景は間隔を置いて更新し、映像と完全に同じタイミングで動くものではありません。</p><p>映像内でポインタを2.5秒動かさないとカーソルを隠します。アプリを非表示・最小化するなど、映像が見えなくなったときは再生を止め、戻っただけでは自動再開しません。</p>
+          <h3>音量・字幕を引き継ぐ</h3><p>音量・ミュート、字幕のオン／オフと希望言語を保存します。区間の最後の1秒では音量を下げて曲を終えます。字幕と言語の有無は動画によって異なり、アプリ側で字幕設定を変えると再生中の曲を1:00から読み直します。</p>
+        </section>
+        <section id="howto"><h2>基本の使い方</h2>
+          <p>以下は、開発・限定試用環境での操作の紹介です。</p>
+          <ol>
+            <li><strong>曲を追加する。</strong>左下の「動画 URL / ID を追加」に入力して「追加」を押します。曲リストへURLをドロップする方法や、「サンプル」で動きを試す方法もあります。手動追加にはGoogle接続は不要です。</li>
+            <li><strong>聴き方を選ぶ。</strong>「再生順」で順番／シャッフル、必要ならリピートを選びます。「曲の切替」でサムネイル2秒／完全ギャップレスを選びます。</li>
+            <li><strong>「再生」を押す。</strong>1:00から始まり、1:30で次へ進みます。一時停止からは同じ位置で再開。「次へ」で次曲へ進めます。一時停止中の「次へ」は曲を選んで待機します。</li>
+            <li><strong>映像の見方を変える。</strong>音量・字幕を調整し、「映像を全画面表示」で大きく表示します。Escapeまたは全画面終了ボタンで通常画面へ戻ります。</li>
+          </ol>
+          <p><kbd>Space</kbd> は再生／一時停止、<kbd>→</kbd> は次の曲へ。URLなどの入力中と設定画面では、文字入力を優先します。</p>
+        </section>
+        <section id="connection"><h2>自分の非公開リストを使うには</h2>
+          <p>非公開再生リストの取得には、本人のGoogle接続が必要です。リストを公開へ変更する必要はありません。現段階は個人向けの試作で、Google Cloudでの初回設定も本人が行います。</p>
+          <ol>
+            <li>Google CloudでYouTube Data APIを有効にし、デスクトップアプリ用のOAuth設定を用意します。</li>
+            <li>アプリの「設定・接続」で本人のMacに保存したJSONを取り込み、「Google に接続」から外部ブラウザで認証します。</li>
+            <li>「自分のリストを取得」から選ぶか、リストのURL／IDを指定して読み込みます。現在の曲リストが置き換わり、停止状態で待機します。</li>
+          </ol>
+          <p>取得は読み取り専用で、YouTube側の元リストは変更しません。許可する権限は選択した1リストだけに限らず、YouTubeアカウントのデータへの閲覧権限です。認証用JSONやトークンを、お問い合わせやGitHubに貼り付ける必要はありません。</p>
+          <figure class="cuelet-screenshot"><a href="setup.jpg" aria-label="CueletDrop の接続前の設定画面を大きく見る"><img src="setup.jpg" alt="初回設定とGoogle接続の実画面。未接続の状態で、手動URL追加と非公開リスト用の設定手順を案内している" width="1800" height="1340" loading="lazy" decoding="async"></a><figcaption>0.1.3（ビルド4）、2026年11月3日撮影。個人の接続情報を読み込まない、未接続状態の実画面です。</figcaption></figure>
+          <p class="small-note">アプリのOAuth接続と、動画プレイヤー内のYouTubeログインは別です。Premiumでの利用を想定していますが、ブラウザのログインやPremiumの状態がプレイヤーへ引き継がれるとは限りません。Googleのテスト用設定では接続が失効し、再接続が必要になる場合があります。</p>
+        </section>
+        <section id="limits"><h2>利用範囲と、知っておきたいこと</h2>
+          <ul>
+            <li>インターネット接続と、YouTubeで埋め込み再生できる動画が必要です。非公開の<strong>リスト</strong>を取得することと、非公開の<strong>動画</strong>を再生することは別です。</li>
+            <li>60秒以下の動画はスキップし、60秒を超え90秒未満の動画は末尾まで再生します。削除済み・埋め込み禁止などの動画は再生できません。</li>
+            <li>再生区間は1:00〜1:30固定です。通信や動画の状態によって開始・切替に差が出るため、厳密な30秒間隔を保証するものではありません。</li>
+            <li>YouTubeの公式プレイヤーを使用します。動画のダウンロード、音声抽出、オフライン再生、バックグラウンド再生には対応しません。</li>
+          </ul>
+          <p class="small-note">CueletDrop は個人開発のアプリで、Google／YouTubeが提供・推奨する公式アプリではありません。YouTubeのサービス・動画の利用条件に従って利用します。</p>
+        </section>
+        <section id="privacy"><h2>データの扱い</h2>
+          <p>接続情報はMacのキーチェーンに、音量・字幕・再生順などの設定はMac内に保存します。読み込んだ曲リストは表示中のメモリで扱い、終了後の自動復元の対象ではありません。</p>
+          <p>認証・リスト取得・動画やサムネイルの表示ではGoogle／YouTubeへ通信します。開発者のサーバーへリストや認証情報を送る機能はありません。接続解除と、このMacの接続情報の削除は別の操作です。詳しくは<a href="../../privacy.html#cueletdrop">プライバシーポリシーのCueletDrop欄</a>をご覧ください。</p>
+        </section>
+        <section id="status"><h2>開発状況と対応環境</h2>
+          <p><time datetime="2026-11-03">2026年11月3日</time>時点の0.1.3（ビルド4）に基づく紹介です。macOS 14以降、Apple Silicon／Intel向けのUniversal版を開発しています。実行確認はApple Siliconの開発用Macで行っており、Intel・macOS 14実機、長時間の連続再生、Premiumの動作は引き続き確認が必要です。</p>
+          <p>アクセス権のある利用者向けには署名・Apple公証済みの限定配布版がありますが、一般配布は行っていません。公開時期・価格は未定です。掲載画像は操作・表示の例で、すべての利用条件での動作を保証するものではありません。</p>
+          <p>ご意見・お問い合わせは<a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a>へ。最初はアプリ名と内容の概要だけをお知らせください。</p>
+        </section>
+      </article>
+      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">目的</a><a href="#features">主な機能</a><a href="#howto">基本の使い方</a><a href="#connection">非公開リストの接続</a><a href="#limits">利用範囲と制約</a><a href="#privacy">データの扱い</a><a href="#status">開発状況・対応環境</a><p>開発中・非公開のアプリです。一般向けのダウンロードは提供していません。</p><a class="share-link" data-share="CueletDrop" href="https://x.com/intent/tweet">X で紹介する</a><a href="../../#macos">macOS アプリ一覧に戻る</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#cueletdrop">プライバシーポリシー</a><span>掲載内容は開発中のアプリに基づきます。</span></div></footer>
+</body>
+</html>

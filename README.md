@@ -1,6 +1,6 @@
 # egyo apps
 
-egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder、ExpressGenesis を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
+egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder、ExpressGenesis、CueletDrop を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
 
 ## 更新方法
 
@@ -187,3 +187,20 @@ Apple がいう「収集」と、端末内の読み取り・処理は同じ意�
 ## ExpressGenesis 0.1.18の紹介更新（2026年10月29日）
 
 14項目836候補、参考三欄の各30候補、年齢・同意・非露骨な制作の条件、保存エラー復旧を紹介へ反映しました。自動コピーをこのMac内へ限定する現在の挙動へプライバシー説明を更新し、旧配布版0.1.16との違いを明記しました。既存の本人提供3枚は0.1.15の画面であることを維持しています。
+
+
+## CueletDrop の掲載内容と画像
+
+- 紹介ページ：`apps/cueletdrop/index.html`、個別CSS：`apps/cueletdrop/cueletdrop.css`
+- 採用AppIcon：`assets/cueletdrop-icon.png`（256px）。一覧カードにも共通使用。
+- 通常画面・未接続の設定画面：`apps/cueletdrop/playback.jpg`、`setup.jpg`。由来と撮影版は同フォルダの`assets.md`。
+- 一覧：`index.html#macos`（5アプリ）。データの扱い：`privacy.html#cueletdrop`。
+- 公開URL：https://egyo.github.io/app-showcase/apps/cueletdrop/
+
+2026年11月3日、0.1.3（ビルド4）の現行README・接続／保存仕様・検証記録と照合しました。動画の1:00〜1:30固定、順番／シャッフル／リピート、URL追加とドロップ、2秒画像／追加待機なしの曲間表示、音量フェード、字幕・設定復元、全画面とアンビエント、非表示時停止を紹介しています。「完全ギャップレス」はUI上の名称で、通信待ち・無音ゼロを保証しないことを明記します。
+
+開発中・非公開・一般未配布と、アクセス権のある利用者への署名・公証済み限定配布を区別します。公開時期・価格未定。Privateへのダウンロード導線、アプリ本体・私有ソース・仕様全文・配布ZIP・認証情報をPublicに含めません。Google OAuthとプレイヤーのYouTube／Premiumログインは別で、非公開リストと非公開動画も区別します。
+
+画像は同日の配布版0.1.3（4）を認証情報・通常設定から分離した公開サンプル用起動でagent-desktop撮影。通常画面はGoogleの公式IFrame APIサンプルを表示し、音楽の同梱・全機能合格の証拠とは扱いません。設定画面は未接続です。画像内のUI・映像は合成せず、幅1800pxのJPEGへ縮小・圧縮しました。再生区間の図はHTML/CSSの説明図と明記しています。
+
+更新時は機能・撮影版・保存範囲・接続と解除・Premiumの確認状況・対応OSの実機確認・配布状態を合わせて確認してください。
