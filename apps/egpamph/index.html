@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egpamph は旅行のしおりやパンフレットを読むための iPad 専用 PDF リーダー。単独・2ページ表示、ページ一覧、履歴、Webリンク・QR認識と使い方を紹介します。現在は開発中・非公開です。">
+  <meta name="description" content="egpamph は旅行のしおりやパンフレットを読むための iPad 専用 PDF リーダーです。単独表示・2ページ表示、ページ一覧、履歴、Webリンク・QRの認識機能と使い方を紹介します。現在は開発中・非公開です。">
   <title>egpamph | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -14,7 +14,7 @@
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
-    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ipados">iPadOS アプリ</a><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a></nav>
   </div></header>
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iPadOS<span>/</span>egpamph</nav>
@@ -30,8 +30,9 @@
     </section>
     <div class="notice">アプリ本体とソースコードは非公開で、現在は一般向けに公開・配布していません。このページでは開発中の機能と画面を紹介しています。</div>
     <div class="page-layout">
+      <nav class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screens">画面写真</a><a href="#features">主な機能</a><a href="#howto">基本の使い方</a><a href="#controls">操作の早見表</a><a href="#notes">利用前の確認</a><a href="#privacy">PDF と閲覧記録</a><a href="#status">開発状況・入手</a><p>手元の PDF を、紙面のまま読み進める iPad 専用リーダーです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="egpamph" href="https://x.com/intent/tweet?text=%23egpamph%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegpamph%2F" target="_blank" rel="noopener noreferrer">#egpamph で X に共有 ↗</a></nav>
       <article class="article">
-        <section id="about"><h2>どんなアプリ？</h2><p>外出先でしおりを確認したり、家で旅先のパンフレットをゆっくり眺めたり。egpamph は、手元の PDF を開き、紙面のレイアウトを保ったまま読むためのアプリです。</p><p>縦持ちでは1ページ、横持ちでは1ページまたは2ページを表示。拡大して細部を確認し、一覧で目当てのページへ移動できます。文書ごとに読んでいた位置を記憶するので、開き直したときも続きから読めます。</p><p class="small-note">パンフレットを制作・編集する機能はありません。掲載画面の冊子は閲覧例で、アプリに同梱するコンテンツや配布物ではありません。</p></section>
+        <section id="about"><h2>どんなアプリ？</h2><p>外出先でしおりを確認したり、家で旅先のパンフレットをゆっくり眺めたり。egpamph は手元の PDF を開き、紙面のレイアウトを保ったまま読むためのアプリです。</p><p>縦持ちでは1ページ、横持ちでは1ページまたは2ページを表示します。拡大して細部を確認し、一覧で目当てのページへ移動できます。文書ごとに読んでいた位置を記憶するので、開き直したときも続きから読めます。</p><p class="small-note">パンフレットを制作・編集する機能はありません。掲載画面の冊子は閲覧例で、アプリに同梱するコンテンツや配布物ではありません。</p></section>
         <section id="screens"><h2>画面で見る egpamph</h2><div class="screenshot-grid pamph-screens">
           <figure><a href="start-portrait.png" aria-label="開始画面を大きく見る"><img src="start-portrait.png" alt="青緑の開始画面。中央にegpamphのアイコンと、PDFファイルを開く・最近使った項目のボタン" width="1488" height="2266" loading="lazy" decoding="async"></a><figcaption><strong>01 / PDF を開く</strong><br>ファイルを選ぶか、最近使った PDF を開いて読み始めます。</figcaption></figure>
           <figure><a href="page-list-portrait.jpg" aria-label="ページ一覧の画面を大きく見る"><img src="page-list-portrait.jpg" alt="写真散歩のパンフレットを縦持ちで表示。画面下の横一列のサムネイルからページを選択" width="1182" height="1800" loading="lazy" decoding="async"></a><figcaption><strong>02 / ページを選ぶ</strong><br>下部のサムネイルで全体を見渡し、読みたいページへジャンプ。</figcaption></figure>
@@ -67,7 +68,6 @@
         <section id="privacy"><h2>PDF と閲覧記録の扱い</h2><p>元の PDF を上書きせず、閲覧中は端末内の一時コピーを使用します。URL・QR の認識も端末内で行い、PDF の内容や閲覧記録を開発者のサーバーへ自動送信しません。</p><p>文書名・最近開いた日時・再アクセス用の参照、ページ位置・横持ちモード・送り方向を端末内に保存します。「設定 → 閲覧記録をリセット」で履歴と全 PDF のページ位置・横持ちモードを消去できます。元の PDF と送り方向の設定は残ります。</p><p>クラウド上のファイル取得や、タップしたリンク先へのアクセスには外部通信が伴います。詳しくは<a href="../../privacy.html#egpamph">プライバシーポリシーの egpamph 節</a>をご覧ください。</p></section>
         <section id="status"><h2>開発状況・入手について</h2><div class="callout"><p><strong>現在は開発中・非公開です。アプリ本体とソースコードは一般公開・配布していません。</strong>公開時期・価格は未定です。機能や画面は今後変更される場合があります。</p></div><p class="pamph-status-copy">掲載内容は <time datetime="2026-10-16">2026年10月16日</time>時点のプロトタイプ 0.1.5 の実装・仕様に基づきます。自動テストとビルドを確認しながら、実機での動作検証を続けています。大きな PDF の性能、ファイル提供サービスごとの動作、リンク・QR の認識精度は継続確認中です。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#screens">画面写真</a><a href="#features">主な機能</a><a href="#howto">基本の使い方</a><a href="#controls">操作の早見表</a><a href="#notes">利用前の確認</a><a href="#privacy">PDF と閲覧記録</a><a href="#status">開発状況・入手</a><p>手元の PDF を、紙面のまま読み進める iPad 専用リーダーです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="egpamph" href="https://x.com/intent/tweet?text=%23egpamph%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegpamph%2F" target="_blank" rel="noopener noreferrer">#egpamph で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#egpamph">プライバシーポリシー</a><a href="../../#ipados">アプリ一覧に戻る</a></div></footer>

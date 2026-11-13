@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egviewは、Tumblrの画像・無音動画を黒背景の全画面で眺める個人用ビューア。iPhone・iPadの4方向表示、Duo／iPadのデュアル表示、サムネイルバー、スライドショーに対応。英語・日本語対応。TestFlightでテスト中・一般未配布。">
+  <meta name="description" content="egviewはTumblrの画像・無音動画を黒背景の全画面で眺める個人用ビューアです。iPhone・iPadの4方向表示、Duo／iPadのデュアル表示、サムネイルバー、スライドショーを備え、英語・日本語に対応しています。TestFlightでテスト中で、一般配布はしていません。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="egview | egyo apps">
   <meta property="og:description" content="好きな写真を、自分のペースで。Tumblrの画像・無音動画を眺める個人用ビューア。iPhone・iPad・Duoでの使い方と、通常iPhoneとDuoの提供画面をもとにした掲載用の画面例を紹介します。">
@@ -21,7 +21,7 @@
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
-    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
   </div></header>
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS / iPadOS<span>/</span>egview</nav>
@@ -37,6 +37,11 @@
     </div>
     <div class="notice">現在は個人用のiOS／iPadOSプロトタイプ0.1.45を開発し、TestFlightでテストしています。一般配布や試用の募集は行っていません。画像閲覧・キューへのリブログ・動画切り替えのほか、iPadの認証・縦横閲覧・デュアル表示・スライドショーにも開発者の動作確認報告があります。長時間の総メモリ・発熱・通信量などは引き続き検証中です。</div>
     <div class="page-layout">
+      <nav class="side-panel" aria-label="ページ案内">
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#language">Englishと日本語</a><a href="#screen">通常iPhoneの画面</a><a href="#duo-screen">Duoの画面例</a><a href="#features">主な機能</a><a href="#ipad">iPadの画面と操作</a><a href="#duo">Duoの画面と操作</a><a href="#slideshow">スライドショー</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
+        <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
+        <a class="share-link" data-share="egview" href="https://x.com/intent/tweet?text=%23egview%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegview%2F" target="_blank" rel="noopener noreferrer">#egview で X に共有 ↗</a>
+      </nav>
       <article class="article">
         <section id="about">
           <h2>写真に集中するために。</h2>
@@ -62,7 +67,7 @@
             </figure>
             <div class="view-screen-notes">
               <h3>サムネイルから、次の投稿へ。</h3>
-              <p>画像全体をフィットさせ、縦横比の違いは黒い余白で受け止めます。出典ラベルの下には小画像が横一列に並び、タップや横スワイプで投稿を選べます。中央のサムネイルと本画面が連動します。</p>
+              <p>画像全体が収まるように表示し、画面と画像の縦横比の違いによる余白は黒く表示します。出典ラベルの下には小画像が横一列に並び、タップや横スワイプで投稿を選べます。中央のサムネイルと本画面が連動します。</p>
               <p>下部の操作バーには、再生・リブログ・ライク・設定。通常iPhoneでも、今見ている画像・動画からスライドショーを始められます。</p>
               <p class="small-note">通常シングル閲覧のサムネイルを示す日本語UIの例です。対応機器ではスワイプによる表示切替時に軽く振動し、タップでは振動しません。下スワイプで出典・サムネイル・操作バーをまとめて隠せます。</p>
             </div>
@@ -100,7 +105,7 @@
         <section id="features">
           <h2>主な機能</h2>
           <ul class="view-features">
-            <li><h3>画像と無音動画を、全画面で</h3><p>画像全体をフィットし、ピンチで1〜5倍に拡大。直接再生できる動画は無音で自動ループします。動画専用の再生・シーク・音量UIは表示しません。</p></li>
+            <li><h3>画像と無音動画を、全画面で</h3><p>画像全体が収まるように表示し、ピンチで1〜5倍に拡大できます。直接再生できる動画は無音で自動ループします。動画専用の再生・シーク・音量UIは表示しません。</p></li>
             <li><h3>PhotosetとGIF</h3><p>投稿内の画像・動画は左右スワイプで移動し、GIFはアニメーション再生。Duoデュアルではどちらの面のスワイプでも左右の表示組が連動します。</p></li>
             <li><h3>サムネイルから素早く移動</h3><p>通常シングル閲覧では小画像を横一列に表示。小画像のタップや横スワイプで投稿を選べます。対応機器では、スワイプで画像・動画の表示が切り替わったときに軽く振動し、タップでは振動しません。Photosetは先頭の1枚が代表で、バーから移動すると先頭へ戻ります。GIF・動画の小画像は静止画です。表示済みの小画像は容量の範囲内で再利用し、読み込み失敗は、バーを表示したまま操作を止めて3秒たつと自動再試行します。デュアル表示とスライドショーではバーを表示しません。</p></li>
             <li><h3>必要な画像を先読み</h3><p>通常は現在を含む10投稿、省エネルギーモードでは3投稿を順次準備します。Photosetは1投稿として全画像が対象。APIが提供する高画質候補を優先します。動画の小画像を準備する際にも通信が発生する場合があります。</p></li>
@@ -163,7 +168,7 @@
         <section id="slideshow">
           <h2>自分のペースで、スライドショー。</h2>
           <p>iPhone・iPad・Duoとも常設の再生ボタンから現在の画像・動画で始まります。デュアルなら右を引き継いで単一表示になります。開始だけを理由に最新フィードを取り直しません。</p>
-          <p>開始した現在投稿を起点に、60生投稿ずつ、最大720生投稿の範囲から表示候補を集めて周回します。自分の投稿・重複・対象外も上限に数えるため、720件すべてが表示される意味ではありません。順再生は投稿内の全メディア、シャッフルは各投稿の先頭を中心に再生。上限後もアクセス再確認・画像再取得・動画通信は続きます。</p>
+          <p>開始時の投稿を起点に、除外前の投稿を60件ずつ、最大720件の範囲から表示候補として集めて周回します。自分の投稿・重複・対象外も上限に数えるため、720件すべてが表示される意味ではありません。順再生は投稿内の全メディア、シャッフルは各投稿の先頭を中心に再生。上限に達した後もアクセスの再確認・画像の再取得・動画の通信は続きます。</p>
           <p>操作バーは一時停止／再開・シャッフル・時計・終了。下スワイプで表示し、UI操作から10秒で隠れます。自動送り中は手動の投稿移動・リブログ・ライク・設定を無効にし、停止中はピンチと画像保存を使えます。時計は操作UIを隠しても表示します。</p>
           <p>一時停止は投稿の自動送りを止め、表示中のGIF・動画はループを続けます。背景から戻ると送り停止。モード中は停止中も自動ロックを抑え、終了確認後は選択フィードを再読み込みします。iPad・Duoは開始前のレイアウトへ戻ります。</p>
         </section>
@@ -188,11 +193,6 @@
           <p class="small-note">掲載内容は<time datetime="2026-10-25">2026年10月25日</time>に、0.1.45／仕様v0.52／認証サービス0.6.1と照合しました。今回の更新は紹介文の整合で、新しい実機性能測定は行っていません。画面例は通常iPhoneが2026年10月25日提供、Duoが10月16日提供のSimulator画面を参考にしています。提供画像のビルド番号は未確認です。</p>
         </section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内">
-        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#language">Englishと日本語</a><a href="#screen">通常iPhoneの画面</a><a href="#duo-screen">Duoの画面例</a><a href="#features">主な機能</a><a href="#ipad">iPadの画面と操作</a><a href="#duo">Duoの画面と操作</a><a href="#slideshow">スライドショー</a><a href="#network">通信量と推奨環境</a><a href="#howto">使い方</a><a href="#mature">表示範囲とラベル</a><a href="#privacy">アカウントと画像</a><a href="#status">開発状況</a>
-        <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
-        <a class="share-link" data-share="egview" href="https://x.com/intent/tweet?text=%23egview%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegview%2F" target="_blank" rel="noopener noreferrer">#egview で X に共有 ↗</a>
-      </aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a><a href="../../privacy.html#egview">プライバシーポリシー</a></div></footer>

@@ -1,58 +1,58 @@
 /* egview: a monochrome accent within the existing showcase layout. */
 .view-page .view-tagline { margin: 20px 0 0; color: var(--ink); font-size: clamp(1.25rem, 2.5vw, 1.7rem); font-weight: 750; letter-spacing: -.045em; }
-.view-page .view-art { margin: 0; padding: 26px 18px; gap: 22px; background: #e6e7e5; }
-.view-art figcaption { color: #535e61; font-size: .76rem; }
-.article .view-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 22px 0; padding: 0; list-style: none; }
+.view-page .view-art { margin: 0; padding: 28px 20px; gap: 24px; background: #e6e7e5; }
+.view-art figcaption { color: #535e61; font-size: .8125rem; }
+.article .view-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; padding: 0; list-style: none; }
 .view-features li { min-width: 0; margin: 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .view-features h3 { margin: 0 0 8px; line-height: 1.6; }
 .view-features p { margin: 0; font-size: .89rem; }
-.article .view-followup { margin-top: 15px; }
-.view-table { margin: 22px 0 16px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.article .view-followup { margin-top: 16px; }
+.view-table { margin: 24px 0 16px; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .view-table table { width: 100%; border-collapse: collapse; text-align: left; font-size: .88rem; overflow-wrap: anywhere; }
-.view-table caption { padding: 14px 17px; background: #e9ece9; text-align: left; font-weight: 750; }
-.view-table th, .view-table td { padding: 13px 17px; vertical-align: top; }
+.view-table caption { padding: 16px 16px; background: #e9ece9; text-align: left; font-weight: 750; }
+.view-table th, .view-table td { padding: 12px 16px; vertical-align: top; }
 .view-table thead { background: #f2f4f2; }
 .view-table tbody, .view-table tr + tr { border-top: 1px solid var(--line); }
 .view-table th[scope="row"] { width: 35%; font-weight: 650; }
 @media (max-width: 560px) {
   .article .view-features { grid-template-columns: 1fr; }
-  .view-table th, .view-table td { padding: 11px 12px; }
+  .view-table th, .view-table td { padding: 12px 12px; }
   .view-table th[scope="row"] { width: 38%; }
 }
 .view-screen-notes { min-width: 0; }
-.duo-outer-layout { display: grid; grid-template-columns: minmax(0, 290px) minmax(0, 1fr); gap: 32px; align-items: center; margin: 28px 0 38px; }
+.duo-outer-layout { display: grid; grid-template-columns: minmax(0, 290px) minmax(0, 1fr); gap: 32px; align-items: center; margin: 28px 0 40px; }
 .duo-example { min-width: 0; margin: 0; }
 .article .duo-label { margin: 0 0 16px; color: var(--ink); font-weight: 750; font-size: .95rem; letter-spacing: -.015em; }
-.duo-label span { display: block; margin-top: 3px; color: #53615f; font-size: .76rem; font-weight: 500; }
+.duo-label span { display: block; margin-top: 4px; color: #53615f; font-size: .8125rem; font-weight: 500; }
 /* Original schematic shells, not Apple device artwork. Keep generated screen ratios. */
-.duo-device { position: relative; display: block; padding: 7px; border: 2px solid #797b79; border-radius: 30px; background: linear-gradient(125deg, #a7aaa7, #292c2a 25%, #8d918e 70%, #444745); box-shadow: 0 16px 32px #12231b24, inset 0 0 0 2px #171a18; text-decoration: none; }
-.duo-display { display: block; overflow: hidden; border-radius: 22px; background: #000; }
+.duo-device { position: relative; display: block; padding: 8px; border: 2px solid #797b79; border-radius: 32px; background: linear-gradient(125deg, #a7aaa7, #292c2a 25%, #8d918e 70%, #444745); box-shadow: 0 16px 32px #12231b24, inset 0 0 0 2px #171a18; text-decoration: none; }
+.duo-display { display: block; overflow: hidden; border-radius: 24px; background: #000; }
 .duo-display img { display: block; width: 100%; height: auto; }
-.duo-device-outer::before { content: ""; position: absolute; z-index: -1; inset: 4px 4px 4px -5px; border: 2px solid #777b77; border-radius: 30px; background: #444844; }
+.duo-device-outer::before { content: ""; position: absolute; z-index: -1; inset: 4px 4px 4px -4px; border: 2px solid #777b77; border-radius: 32px; background: #444844; }
 .duo-device-outer { isolation: isolate; }
 .duo-camera { position: absolute; top: 5.1%; right: 7.4%; width: 4.6%; aspect-ratio: 1; border: 1px solid #24292c; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #1b293a 0, #06090e 45%, #000 65%); box-shadow: 0 0 0 3px #0008; pointer-events: none; }
-.duo-device-inner { padding: 8px; border-radius: 26px; }
-.duo-device-inner .duo-display { border-radius: 17px; }
+.duo-device-inner { padding: 8px; border-radius: 24px; }
+.duo-device-inner .duo-display { border-radius: 16px; }
 .duo-device-inner::after { content: ""; position: absolute; left: calc(50% - 3px); top: 0; bottom: 0; width: 6px; border-radius: 3px; background: linear-gradient(90deg, #0002, #ffffff0c, #0002); pointer-events: none; }
-.duo-example figcaption { margin: 17px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.85; }
-.duo-inner-example { margin-top: 30px; }
-.article .duo-disclosure { margin-top: 24px; padding: 16px 18px; border-left: 3px solid #9aa69b; background: #edf0ec; }
+.duo-example figcaption { margin: 16px 0 0; color: var(--muted); font-size: .8125rem; line-height: 1.85; }
+.duo-inner-example { margin-top: 32px; }
+.article .duo-disclosure { margin-top: 24px; padding: 16px 20px; border: 1px solid var(--line); background: #edf0ec; }
 .duo-device:focus-visible { outline: 3px solid #40684e; outline-offset: 7px; }
 @media (max-width: 680px) {
-  .duo-outer-layout { grid-template-columns: 1fr; gap: 25px; align-items: start; }
+  .duo-outer-layout { grid-template-columns: 1fr; gap: 24px; align-items: start; }
   .duo-outer-example { width: min(100%, 290px); margin-inline: auto; }
-  .duo-device-inner { padding: 5px; border-radius: 19px; }
+  .duo-device-inner { padding: 4px; border-radius: 20px; }
   .duo-device-inner .duo-display { border-radius: 12px; }
 }
 
 /* Ordinary iPhone: the provided portrait screen, with generated media. */
 .iphone-screen-layout { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 32px; align-items: center; margin: 28px 0; }
 .iphone-example { min-width: 0; margin: 0; }
-.iphone-screen { display: block; overflow: hidden; border: 1px solid #343a36; border-radius: 22px; background: #000; box-shadow: 0 16px 32px #12231b24; }
+.iphone-screen { display: block; overflow: hidden; border: 1px solid #343a36; border-radius: 24px; background: #000; box-shadow: 0 16px 32px #12231b24; }
 .iphone-screen img { display: block; width: 100%; height: auto; }
-.iphone-example figcaption { margin: 17px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.85; }
+.iphone-example figcaption { margin: 16px 0 0; color: var(--muted); font-size: .8125rem; line-height: 1.85; }
 .iphone-screen:focus-visible { outline: 3px solid #40684e; outline-offset: 7px; }
 @media (max-width: 680px) {
-  .iphone-screen-layout { grid-template-columns: 1fr; gap: 25px; align-items: start; }
+  .iphone-screen-layout { grid-template-columns: 1fr; gap: 24px; align-items: start; }
   .iphone-example { width: min(100%, 280px); margin-inline: auto; }
 }

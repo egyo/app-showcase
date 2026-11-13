@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="StartMyMac は、ログイン後の共有への再接続・アプリ起動・フォルダ表示と、作業終了時のアプリ終了・共有解除・ディスプレイスリープをまとめる macOS アプリ。目的・機能・使い方を紹介します。現在は開発中・非公開です。">
+  <meta name="description" content="StartMyMac はログイン後の共有への再接続・アプリの起動・フォルダの表示と、作業終了時のアプリの終了・共有の解除・ディスプレイスリープをまとめて実行する macOS アプリです。目的・機能・使い方を紹介します。現在は開発中・非公開です。">
   <title>StartMyMac | egyo apps</title>
   <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/styles.css">
@@ -14,7 +14,7 @@
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
-    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
   </div></header>
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>macOS<span>/</span>StartMyMac</nav>
@@ -24,8 +24,9 @@
     </div>
     <div class="notice">アプリ本体とソースコードは非公開で、現在は一般向けに配布していません。このページは開発中の1.4.1の機能を紹介するものです。</div>
     <div class="page-layout">
+      <nav class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#workflow">起動時の順序</a><a href="#shutdown">作業終了時の順序</a><a href="#howto">初回の使い方</a><a href="#notifications">通知のおすすめ設定</a><a href="#notes">注意点</a><a href="#privacy">設定・認証情報とログ</a><a href="#status">開発状況</a><p>ログイン後の準備と、作業終了時の片付けをまとめるアプリです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="StartMyMac" href="https://x.com/intent/tweet?text=%23StartMyMac%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fstartmymac%2F" target="_blank" rel="noopener noreferrer">#StartMyMac で X に共有 ↗</a></nav>
       <article class="article">
-        <section id="about"><h2>どんなアプリ？</h2><p>StartMyMac は、Automator の起動時ワークフローと、ショートカット.app の終了時ワークフローを、設定画面のある macOS アプリに置き換えるために生まれました。NAS などのネットワーク共有をつなぎ直し、その共有を使うアプリやフォルダを順番に開く、毎回の準備をまとめます。ネットワーク接続を使わず、アプリとフォルダだけを開く設定もできます。</p><p>待機時間、接続先、開くアプリとフォルダを日本語の設定画面で調整できます。設定画面を閉じてもメニューバーに常駐し、手動実行、中止、ログの確認にアクセスできます。</p>
+        <section id="about"><h2>どんなアプリ？</h2><p>StartMyMac は Automator の起動時ワークフローと、ショートカット.app の終了時ワークフローを、設定画面のある macOS アプリに置き換えるために生まれました。NAS などのネットワーク共有をつなぎ直し、その共有を使うアプリやフォルダを順番に開く、毎回の準備をまとめます。ネットワーク接続を使わず、アプリとフォルダだけを開く設定もできます。</p><p>待機時間、接続先、開くアプリとフォルダを日本語の設定画面で調整できます。設定画面を閉じてもメニューバーに常駐し、手動実行、中止、ログの確認ができます。</p>
           <ol class="startup-flow" aria-label="作業環境を準備する流れ"><li><span>01 / 接続を整える</span><strong>共有をつなぎ直す</strong><small>待機 → 解除 → 待機 → 接続</small></li><li><span>02 / 道具を開く</span><strong>アプリを順に起動</strong><small>共有の接続結果にかかわらず実行</small></li><li><span>03 / 作業を始める</span><strong>フォルダを表示</strong><small>Finder で開き、結果を通知</small></li></ol>
         </section>
         <section id="features"><h2>主な機能</h2><ul>
@@ -49,7 +50,7 @@
           <li>指定したフォルダを一覧順に Finder で開きます。</li>
           <li>処理結果と日時を通知します。失敗の詳細は実行ログで確認できます。</li>
         </ol><p class="small-note">各待機時間は0〜3600秒、操作のタイムアウトは5〜600秒（初期値60秒）です。同じ Bundle Identifier の保存済み設定がある場合は、その値を引き継ぎます。1.3以前からの更新では再設定が必要です。タイムアウト欄の範囲外入力を拒否し、1〜4秒や空欄のまま確定すると直前の有効値に戻します。アプリ・フォルダの存在確認と OS への起動・表示要求には、それぞれ操作タイムアウトを適用します。</p>
-          <div class="callout"><p><strong>共有への接続に失敗しても、アプリ起動とフォルダ表示を続けます。</strong>解除・キー送信・接続・起動・表示の失敗やタイムアウトはログに残し、残りの項目と後段へ進みます。対象が存在しなければ、その項目の失敗として記録します。マウント情報を取得できない場合は解除対象を推測せず、解除だけを省略します。実行前の設定が不正な場合と、利用者が「中止」した場合は停止します。</p></div>
+          <div class="callout"><p><strong>共有への接続に失敗しても、アプリ起動とフォルダ表示を続けます。</strong>解除・キー送信・接続・起動・表示の失敗やタイムアウトはログに残し、残りの項目とその後の処理へ進みます。対象が存在しなければ、その項目の失敗として記録します。マウント情報を取得できない場合は解除対象を推測せず、解除だけを省略します。実行前の設定が不正な場合と、利用者が「中止」した場合は停止します。</p></div>
         </section>
         <section id="shutdown"><h2>作業終了時のワークフロー</h2>
           <p>メニューバーの「システム終了を実行」、または StartMyMac の起動中に <strong>Ctrl + Shift + W（⌃⇧W）</strong> を押して開始します。他のアプリを操作中でも使えます。メニュー名は「システム終了」ですが、実際の処理は次の片付けとディスプレイスリープです。</p>
@@ -67,7 +68,7 @@
           <div class="callout"><p><strong>Mac の電源オフ・ログアウト・システム全体のスリープは行いません。</strong>StartMyMac や macOS の終了に連動して自動実行する機能ではありません。</p></div>
           <p>アプリの強制終了や共有の強制解除は行いません。未保存の書類は事前に保存し、保存確認が出たら応答してください。<strong>終了拒否や終了待ちのタイムアウト、共有の解除失敗・残存・再マウントがあっても、エラーを記録して共有解除・ディスプレイスリープ要求へ進みます。</strong>利用者が明示的に「中止」した場合は停止し、5秒待機中の中止では再要求しません。終了待ち全体と各解除・スリープ要求には設定した操作タイムアウトを適用します。3秒・3秒・7秒・5秒の待機は固定です。</p>
           <p class="small-note">スリープ要求の成功は OS への要求処理が正常終了したことを表し、物理的な消灯を検知した結果ではありません。再要求に成功しても、最初の要求などのエラー記録は残ります。</p>
-          <p>未保存の設定変更がある場合は先に保存してください。未保存の変更がなければ、初回の起動設定保存前でも利用できます。開始通知は成功を示すものではなく、完了・エラーの追加通知は出しません。結果は「設定・実行ログ…」で確認します。通知が未許可でもログに記録して続けます。「操作せず確認」は起動時専用で、この終了時ワークフローには対応しません。</p>
+          <p>未保存の設定変更がある場合は先に保存してください。未保存の変更がなければ、起動時の設定を初めて保存する前でも利用できます。開始通知は成功を示すものではなく、完了・エラーの追加通知は出しません。結果は「設定・実行ログ…」で確認します。通知が未許可でもログに記録して続けます。「操作せず確認」は起動時専用で、この終了時ワークフローには対応しません。</p>
           <p class="small-note">既存のショートカット.app などの Ctrl + Shift + W 割り当てを解除してください。登録できない場合は設定画面に理由を表示します。割り当てを解除して StartMyMac を再起動すると再登録します。メニューからも実行できます。</p>
         </section>
         <section id="howto"><h2>初回の使い方</h2><p class="small-note">以下は検証用アプリにアクセスできる方に向けた手順です。一般向けのダウンロードは用意していません。</p><ol>
@@ -80,7 +81,7 @@
           <li><strong>次のログインから自動実行する：</strong>「アプリ起動時にワークフローを自動実行」を有効にして保存し、「ログイン時にStartMyMacを起動」も有効にします。承認待ちの場合はログイン項目の承認画面で許可します。置き換える Automator のログイン項目は外し、次のログインで結果を確認します。</li>
         </ol><p>設定画面を閉じた後も、メニューバーから設定・ログ・起動時の実行・終了時の実行・中止・アプリ終了を選べます。設定保存後に起動時の自動実行が有効なら、次のアプリ起動時に実行します。起動済みの StartMyMac を Finder から再度開いた場合も、設定済み・起動時の自動実行が有効で、未保存の編集や実行中の処理がなければ再実行します。ログイン項目のオン・オフは保存ボタンを押す前に OS へ反映されます。自動起動をやめる場合は、設定でログイン時の起動をオフにします。</p>
           <p>設定やパスワードを編集したままウインドウを閉じる、またはアプリを終了すると、「保存して閉じる」「キャンセル」「保存せずに閉じる」を選べます。ログイン項目の変更と保存パスワードの削除は操作時に即時反映されるため、この確認で破棄しても元に戻りません。</p>
-          <div class="callout"><p><strong>1.3以前からの更新では再設定が必要です。</strong>1.4以降はアプリ識別子を <code>com.egyo.StartMyMac</code> へ変更したため、旧版の設定・保存パスワード・ログイン項目・OS の許可は自動移行しません。旧版の内容を確認してから終了し、新版で再設定・パスワードの再保存と権限の確認を行い、ログイン項目の二重登録を整理してください。1.4の同じ識別子の版からは設定とキーチェーンの保存先を維持します。</p></div>
+          <div class="callout"><p><strong>1.3以前からの更新では再設定が必要です。</strong>1.4以降はアプリ識別子を <code>com.egyo.StartMyMac</code> へ変更したため、旧版の設定・保存パスワード・ログイン項目・OS の許可は自動移行しません。旧版の内容を確認してから終了し、新版で再設定・パスワードの再保存と権限の確認を行い、ログイン項目の二重登録を整理してください。同じ識別子を使う1.4からの更新では、設定とキーチェーンの保存先を維持します。</p></div>
         </section>
         <section id="notifications"><h2>通知のおすすめ設定</h2>
           <p>準備が終わったことを見逃さず、起動時の音は控える設定です。StartMyMac の「通知を許可」で許可した後、<strong>システム設定 → 通知 → StartMyMac</strong>を開いて調整します。ここでのおすすめは使い方に合わせた設定例で、アプリの初期値ではありません。</p>
@@ -111,7 +112,6 @@
         <section id="privacy"><h2>設定・認証情報とログ</h2><p>接続先、ユーザー名、アプリ・フォルダのパス、待機時間などは Mac 内に保存し、パスワードは macOS キーチェーンのアプリ専用項目に保存します。設定やログにパスワードを埋め込みません。接続時の認証情報は、指定した共有への接続に利用します。</p><p>実行ログは直近の起動時・確認モード・終了時のいずれか1回分をメモリに最大500行保持します。次の実行開始時に置き換わり、アプリ終了で失われるため、必要なときに「ログを書き出す」で保存します。接続先名、パス、終了対象のアプリ名、エラーが含まれる場合があるため、共有する際は内容を確認してください。詳しくは<a href="../../privacy.html#startmymac">プライバシーポリシー</a>をご覧ください。</p></section>
         <section id="status"><h2>開発状況</h2><div class="callout"><p><strong>現在は開発中・非公開です。アプリ本体とソースコードの一般公開・配布は行っていません。</strong>公開時期・価格は未定です。機能や画面は今後変更される場合があります。</p></div><p>掲載内容は <time datetime="2026-10-21">2026年10月21日</time>時点の1.4.1（ビルド6）の実装・現行仕様・配布記録に基づきます。アクセス権のある利用者向けには Private リポジトリの Releases で1.4.1を配布しています。Apple Silicon / Intel 向けの Universal ビルド、Developer ID 署名と Apple の公証、配布 ZIP 展開後の署名・公証チケットの検証が記録されています。</p><p>自動テストは203項目（コア155・入力18・設定とメニュー30）です。NAS操作・キー送信・一般アプリの起動や終了・実際の消灯は模擬処理で検証しています。1.4は利用者から動作に問題がないとの報告がありますが、1.4.1の全機能・macOS 13・Intel実機・長時間利用を全面的に確認したものではありません。実際の接続、ログイン時の動作、入力切り替え、ショートカット、画面の消灯は利用環境での確認が必要です。</p><p class="small-note">掲載アイコンは、この紹介ページ用に制作した独自の図案です。検証版のアプリアイコンとは異なります。通知設定の画面写真は、提供された macOS の実際の画面を掲載しています。</p></section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内"><h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">主な機能</a><a href="#workflow">起動時の順序</a><a href="#shutdown">作業終了時の順序</a><a href="#howto">初回の使い方</a><a href="#notifications">通知のおすすめ設定</a><a href="#notes">注意点</a><a href="#privacy">設定・認証情報とログ</a><a href="#status">開発状況</a><p>ログイン後の準備と、作業終了時の片付けをまとめるアプリです。</p><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo にお問い合わせ ↗</a><a class="share-link" data-share="StartMyMac" href="https://x.com/intent/tweet?text=%23StartMyMac%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fstartmymac%2F" target="_blank" rel="noopener noreferrer">#StartMyMac で X に共有 ↗</a></aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../privacy.html#startmymac">プライバシーポリシー</a><a href="../../#macos">アプリ一覧に戻る</a></div></footer>

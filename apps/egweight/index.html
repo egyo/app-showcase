@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="egweight は、ヘルスケアの体重を朝・夜に分け、7日間の移動平均とひとことメモで変化を振り返る iPhone アプリです。現在は設計・開発段階で、一般公開・配布していません。">
+  <meta name="description" content="egweight はヘルスケアの体重を朝・夜に分け、7日間の移動平均とひとことメモで変化を振り返る iPhone アプリです。現在は設計・開発段階で、一般公開・配布していません。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="egweight | egyo apps">
   <meta property="og:description" content="朝と夜の体重を分けて、変化をやさしく振り返る。開発中・非公開の iPhone アプリ。">
@@ -20,7 +20,7 @@
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../../" aria-label="egyo apps トップ"><span class="brand-mark">eg</span><span>egyo apps</span></a>
-    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
+    <nav class="site-nav" aria-label="メインナビゲーション"><a href="../../#ios">iOS アプリ</a><a href="../../#ipados">iPadOS アプリ</a><a href="../../#macos">macOS アプリ</a><a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">お問い合わせ</a></nav>
   </div></header>
   <main id="main" class="container">
     <nav class="breadcrumb" aria-label="パンくずリスト"><a href="../../">アプリ一覧</a><span>/</span>iOS<span>/</span>egweight</nav>
@@ -29,13 +29,18 @@
         <p class="eyebrow">iOS / Daily journal</p>
         <h1 class="page-title">egweight</h1>
         <p class="lead">朝と夜の体重を分けて、<br>変化をやさしく振り返る。</p>
-        <p class="weight-hero-copy">毎日の測定値と7日間の平均を眺めながら、言い訳も、がんばったこともひとこと残す。自分のペースで続けるための体重日記です。</p>
+        <p class="weight-hero-copy">毎日の測定値と7日間の平均を眺めながら、言い訳もがんばったこともひとこと残す。自分のペースで続けるための体重日記です。</p>
         <div class="hero-meta"><span class="chip">iPhone</span><span class="chip">ヘルスケア連携を予定</span><span class="status">開発中・非公開</span></div>
       </div>
       <div class="hero-art weight"><img class="app-icon" src="../../assets/egweight-icon.png" alt="egweight の採用アイコン。セージ色を背景に、体重計の表示窓に小文字のeg" width="1254" height="1254"></div>
     </div>
     <div class="notice">現在は設計・開発段階で、アプリは一般公開・配布していません。このページは予定している機能と使い方の紹介です。掲載画像はUIデザイン案で、実機スクリーンショットではありません。</div>
     <div class="page-layout">
+      <nav class="side-panel" aria-label="ページ案内">
+        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">予定している機能</a><a href="#howto">使い方</a><a href="#design">画面のイメージ</a><a href="#questions">利用に向けて</a><a href="#status">開発状況</a>
+        <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
+        <a class="share-link" data-share="egweight" href="https://x.com/intent/tweet?text=%23egweight%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegweight%2F" target="_blank" rel="noopener noreferrer">#egweight で X に共有 ↗</a>
+      </nav>
       <article class="article">
         <section id="about">
           <h2>どんなアプリ？</h2>
@@ -47,11 +52,11 @@
         <section id="features">
           <h2>予定している主な機能</h2>
           <ul class="weight-features">
-            <li><h3>ヘルスケアから体重と歩数を取得</h3><p>体重を測定時刻で分類し、同じ時間帯に複数回測ったときは最後の測定値を使います。歩数も読み取り、1日10,000歩以上の日は、その日の夜の測定カードに🎖️を添える予定です。朝カードには付けず、カードでの歩数の数値表示は保留しています。日別一覧では歩数を数値で確認できる予定です。</p></li>
+            <li><h3>ヘルスケアから体重と歩数を取得</h3><p>体重を測定時刻で分類し、同じ時間帯に複数回測ったときは最後の測定値を使います。歩数も読み取り、1日10,000歩以上の日は、その日の夜の測定カードにメダルを添える予定です。朝カードには付けず、カードでの歩数の数値表示は保留しています。日別一覧では歩数を数値で確認できる予定です。</p></li>
             <li><h3>朝と夜を分けて表示</h3><p>朝はオレンジ、夜は青。横の位置も少しずらして見分けやすくします。昼の記録は参考情報として持ち、グラフには朝と夜だけを表示します。</p></li>
             <li><h3>朝・夜それぞれの7日平均</h3><p>過去7日間にある測定値だけで平均を計算し、測定日数も確認できます。測れなかった日を0kgとして扱うことはありません。</p></li>
             <li><h3>期間を動かして振り返る</h3><p>今週・2週間・1ヶ月・3ヶ月を切り替え、矢印やグラフの左右スワイプで過去へ。下の最新測定値はそのままに、以前の変化を見られます。</p></li>
-            <li><h3>日別一覧で記録を確認</h3><p>日付・朝・夜・歩数・メダル・メモを1日1行にまとめ、最新の日付を上にして、スクロールで過去へ進める予定です。一覧も「やさしい日記帳」の雰囲気を引き継ぎ、年ごとの見出しと柔らかな表に分け、年の境目に区切りを設けます。朝か夜の片方が未測定なら空白にし、両方とも記録がない日は歩数があっても一覧から省きます。一覧のメダルは日別の歩数で判定し、朝だけ測った日でも10,000歩以上なら🎖️を表示します。コメントがある日はメダルの右に📝を添え、日付から📝まで行のどこをタップしてもコメントをポップアップで確認できる予定です。</p></li>
+            <li><h3>日別一覧で記録を確認</h3><p>日付・朝・夜・歩数・メダル・メモを1日1行にまとめ、最新の日付を上にして、スクロールで過去へ進める予定です。一覧も「やさしい日記帳」の雰囲気を引き継ぎ、年ごとの見出しと柔らかな表に分け、年の境目に区切りを設けます。朝か夜の片方が未測定なら空白にし、両方とも記録がない日は歩数があっても一覧から省きます。一覧のメダルは日別の歩数で判定し、朝だけ測った日でも10,000歩以上ならメダルを表示します。コメントがある日はメダルの右にメモのアイコンを添え、日付からメモのアイコンまで行のどこをタップしてもコメントをポップアップで確認できる予定です。</p></li>
           </ul>
           <h3>差分と、ひとことの振り返り</h3>
           <p>朝と夜、夜と翌朝の変動を確認し、設定した目安に応じてひとことの振り返りを促します。「ひとこと言い訳・がんばったこと」は、注意の有無にかかわらず任意で記録できる予定です。コメントは入力した日（午前3時〜翌午前3時未満）に保存し、その日の内容は再起動後も表示します。設定から日付ごとに削除できる予定です。</p>
@@ -65,7 +70,7 @@
             <li><strong>自分のペースで測る。</strong> 朝だけ、夜だけ、測れない日があっても続けられる設計です。朝は03:00〜11:59、夜は18:00〜翌02:59に分類し、深夜の測定は前日の夜として扱います。</li>
             <li><strong>グラフで変化を眺める。</strong> 期間を選び、＜ ＞または左右スワイプで移動します。初期案では右へのスワイプで過去、左で新しい期間へ。上の日付範囲がグラフに連動し、下の最新値は維持されます。</li>
             <li><strong>一覧で日々の記録を見る。</strong> 日付ごとの朝・夜の体重と歩数、メダルを確認します。最新の日から下へスクロールして、測定した日を振り返ります。</li>
-            <li><strong>ひとこと残す。</strong> メモ欄をタップして、言い訳やがんばったことをその日のコメントとして記録します。同じ記録日の保存済みコメントは再起動後も表示し、一覧の📝がある行をタップすると読めます。削除は設定から日付ごとに行えます。カードの変動とグラフの点では比較する測定が異なるため、詳細で比較元も確認できるようにします。</li>
+            <li><strong>ひとこと残す。</strong> メモ欄をタップして、言い訳やがんばったことをその日のコメントとして記録します。同じ記録日の保存済みコメントは再起動後も表示し、一覧のメモのアイコンがある行をタップすると読めます。削除は設定から日付ごとに行えます。カードの変動とグラフの点では比較する測定が異なるため、詳細で比較元も確認できるようにします。</li>
           </ol>
           <div class="weight-range-table">
             <table>
@@ -101,7 +106,7 @@
           <h3>どの体重計でも使えますか？</h3>
           <p>ヘルスケアに体重が保存されることが前提です。体重計への直接接続は初期版の対象に含めず、使用する測定元アプリとの連携を実機で確認する予定です。</p>
           <h3>記録がない日や、片方しか測っていない日は？</h3>
-          <p>測定値を作って補わず、ある記録を使って振り返ります。グラフの下は、右に最新、左にひとつ前の朝・夜の測定値を表示します。例えば3日ぶりに測った場合、左には前回の日付と「3日前」を併記する予定です。差分は必要な朝夜ペアがそろう場合に計算し、比較できない場合はそのことが分かる表示にします。</p>
+          <p>測定値を作って補わず、ある記録を使って振り返ります。グラフの下では、右に最新、左にひとつ前の朝・夜の測定値を表示します。例えば3日ぶりに測った場合、左には前回の日付と「3日前」を併記する予定です。差分は比較に必要な朝と夜の測定値がそろう場合に計算し、比較できない場合はそのことが分かる表示にします。</p>
           <h3>体重やメモはどこに保存しますか？</h3>
           <p>体重の原本はヘルスケア、メモは端末内に保存する方針です。メモの復元や機種変更時の扱いは検討中です。保存範囲とプライバシーの説明は、配布前に整えます。</p>
         </section>
@@ -112,11 +117,6 @@
           <p class="small-note">掲載内容は2026年10月1日時点の設計に基づきます。機能・操作・画面は今後変更される場合があります。健康状態や減量の成否を判断するアプリではなく、数値とメモを振り返るための道具として設計しています。</p>
         </section>
       </article>
-      <aside class="side-panel" aria-label="ページ案内">
-        <h2>このページ</h2><a href="#about">アプリの目的</a><a href="#features">予定している機能</a><a href="#howto">使い方</a><a href="#design">画面のイメージ</a><a href="#questions">利用に向けて</a><a href="#status">開発状況</a>
-        <p>ご意見やお問い合わせは <a href="https://x.com/egyo" target="_blank" rel="noopener noreferrer">X の @egyo</a> へ。</p>
-        <a class="share-link" data-share="egweight" href="https://x.com/intent/tweet?text=%23egweight%20https%3A%2F%2Fegyo.github.io%2Fapp-showcase%2Fapps%2Fegweight%2F" target="_blank" rel="noopener noreferrer">#egweight で X に共有 ↗</a>
-      </aside>
     </div>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© egyo</span><a href="../../">アプリ一覧に戻る</a></div></footer>
