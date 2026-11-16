@@ -1,6 +1,6 @@
 # egyo apps
 
-egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder、ExpressGenesis、CueletDrop を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
+egcamera、eglut、egtency、egweight、egsplan、egview、egpamph、QuietBlack、StartMyMac、PairFinder、ExpressGenesis、CueletDrop、egxee、egweb、Musubi、Side Keyboard Editor、egstat を紹介する静的サイトです。GitHub Pages で `https://egyo.github.io/app-showcase/` に公開します。掲載アプリは開発中・非公開で、一般向けの配布は行っていません。
 
 ## 更新方法
 

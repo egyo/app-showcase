@@ -1,0 +1,37 @@
+.showcase-intro {
+  padding-block: 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.showcase-subject {
+  margin: 16px 0 0;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 650;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.showcase-preview {
+  width: min(100%, 960px);
+  margin: 32px auto 0;
+}
+
+.showcase-preview-compact {
+  width: min(100%, 560px);
+}
+
+.showcase-preview a {
+  display: block;
+}
+
+.showcase-preview img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.showcase-preview figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .875rem;
+  text-wrap: pretty;
+}
